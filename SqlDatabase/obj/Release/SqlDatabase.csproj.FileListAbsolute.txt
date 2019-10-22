@@ -1,0 +1,14 @@
+D:\Wrok\ECOA\sourcecode\SqlDatabase\bin\Release\SqlDatabase.dll
+D:\Wrok\ECOA\sourcecode\SqlDatabase\bin\Release\SqlDatabase.pdb
+D:\Wrok\ECOA\sourcecode\SqlDatabase\obj\Release\SqlDatabase.dll
+D:\Wrok\ECOA\sourcecode\SqlDatabase\obj\Release\SqlDatabase.pdb
+D:\Wrok\ECOA\sourcecode\SqlDatabase\obj\Release\SqlDatabase.csprojResolveAssemblyReference.cache
+E:\files\ZYCode\ECOA\Terminal01\SqlDatabase\bin\Release\SqlDatabase.dll
+E:\files\ZYCode\ECOA\Terminal01\SqlDatabase\bin\Release\SqlDatabase.pdb
+E:\files\ZYCode\ECOA\Terminal01\SqlDatabase\obj\Release\SqlDatabase.dll
+E:\files\ZYCode\ECOA\Terminal01\SqlDatabase\obj\Release\SqlDatabase.pdb
+E:\files\ZYCode\ECOA\Local\SqlDatabase\bin\Release\SqlDatabase.dll
+E:\files\ZYCode\ECOA\Local\SqlDatabase\bin\Release\SqlDatabase.pdb
+E:\files\ZYCode\ECOA\Local\SqlDatabase\obj\Release\SqlDatabase.csprojResolveAssemblyReference.cache
+E:\files\ZYCode\ECOA\Local\SqlDatabase\obj\Release\SqlDatabase.dll
+E:\files\ZYCode\ECOA\Local\SqlDatabase\obj\Release\SqlDatabase.pdb

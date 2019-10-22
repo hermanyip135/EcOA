@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SendMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vAuthorizationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vDestURI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vDestName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessageResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendMessage1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vSenderAccount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vSenderPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vSenderUri" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vDestURI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vDestName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessage1Response">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMessage1SoapIn">
+    <wsdl:part name="parameters" element="tns:SendMessage1" />
+  </wsdl:message>
+  <wsdl:message name="SendMessage1SoapOut">
+    <wsdl:part name="parameters" element="tns:SendMessage1Response" />
+  </wsdl:message>
+  <wsdl:portType name="LCSServiceSoap">
+    <wsdl:operation name="SendMessage">
+      <wsdl:input message="tns:SendMessageSoapIn" />
+      <wsdl:output message="tns:SendMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <wsdl:input name="SendMessage1" message="tns:SendMessage1SoapIn" />
+      <wsdl:output name="SendMessage1" message="tns:SendMessage1SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LCSServiceSoap" type="tns:LCSServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendMessage">
+      <soap:operation soapAction="http://tempuri.org/SendMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <soap:operation soapAction="http://tempuri.org/SendMessage1" style="document" />
+      <wsdl:input name="SendMessage1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SendMessage1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LCSService">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="LCSServiceSoap" binding="tns:LCSServiceSoap">
+      <soap:address location="http://10.1.1.25/LCS/LCSService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

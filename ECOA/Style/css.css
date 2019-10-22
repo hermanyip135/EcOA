@@ -1,0 +1,97 @@
+﻿input[type=submit]{border:0;vertical-align:middle}
+input[type=button]{border:0;vertical-align:middle}
+input[type=submit].commonbtn{padding:0 10px;border:1px solid #4c68d5;*border:0;background:url(../images/btn_save1_03.png) repeat-x;color:#fff;font-weight:700;font-family:微软雅黑;border-radius:5px;cursor:pointer;height:34px;overflow:hidden}
+#tbAround input[type=text]{border:1px solid #98b8b5}
+#tbAround input.buttonimg{border:0}
+.btntr td{text-align:left}
+textarea{border:1px solid #98b8b5}
+#tbAround input.btnaddRow{border:1px #4663d1 solid;font-size:11px}
+.btnaddRow{background:url(../Images/bsm_add1_33.png) repeat-x;height:18px;border:1px #4663d1 solid;font-size:11px;color:#fff;border-radius:3px;padding-top:0;padding-bottom:0;margin-right:5px}
+.btnaddRowN{background:url(../Images/bsm_add1_33.png) repeat-x;height:18px;border:1px #4663d1 solid;font-size:11px;color:#fff;border-radius:3px;padding-top:0;padding-bottom:0;margin-right:5px}
+.signbtn{background:url(../images/btnSureS1.png) no-repeat;width:43px;height:25px;text-indent:999px;overflow:hidden;cursor:pointer}
+.songShenbtn{background:url(../images/btnprosave1.png) no-repeat;width:45px;height:25px;text-indent:999px;overflow:hidden;cursor:pointer}
+.tbflows{width:640px;margin:0 auto;border-left:1px solid #98b8b5;border-top:1px solid #98b8b5}
+.tbflows tr{background:#fff}
+.tbflows td.auto-style2{width:120px}
+.tbflows tr.noborder td{border:0;border-right:1px solid #98b8b5;border-bottom:1px solid #98b8b5;overflow:hidden}
+
+.fielddate .signdate{margin:0;margin-right:20px}
+.fielddate{text-align:right;padding:10px 0px}
+.l{cursor:pointer}
+.signyes,.signother{color:rgb(0,129,98)}
+.signno{color:rgb(254,1,0)}
+.signbtn{display:none}
+.fieldtext{padding:10px 0 0 0}
+.fieldtext textarea{width:99%;overflow:hidden;font-size:12px;height:77px}
+.fieldsign{overflow:hidden}
+.signdiv{display:inline-block;float:left;width:130px;overflow:hidden;margin:10px 5px 0 0 }
+.signdiv img{width:100%}
+.signdiv p{margin:0}
+.cancelbtn{background:url(../Images/btnCancelSignIDx1.png) no-repeat;width:46px;height:25px;overflow:hidden;cursor:pointer; font-size:0px;color:#ffffff; }
+.tbflows .fieldradio,.tbflows .fieldtext,.tbflows .fieldsign,.tbflows .fieldbtn,.tbflows .fielddate{overflow:hidden;margin:0;width:500px}
+.tbflows .fieldtext{line-height:220%}
+.tbflows tr, .tbflows td{border:0;border-right:1px solid #98b8b5;border-bottom:1px solid #98b8b5;}
+.tips{position:absolute;display:inline-block;right:0px;padding:70px 0 0 0}
+.tbflows th{text-align:center;font-size:14px}
+input.readonly{background: rgb(227, 227, 227)}
+table[id*="tbAround"]{border:1px solid #98b8b5;border-collapse:collapse;margin:0 auto}
+.tbAround table{border:1px solid #98b8b5}
+.tbAround td,.tbAround tr,.tbAround th{border:1px solid #98b8b5;color:#022241}
+.tbAround input{border:1px solid #98b8b5}
+.tbAround input[type=button]{border:0}
+.tbAround table.sample td{border:1px solid #98b8b5}
+.tbAround th{line-height:46px;background-image:url(/Images/th_there.png)}
+.gvAttach{margin:0 auto;border:1px solid #6b92b4}
+.gvAttach td,.gvAttach th{border:1px solid #8dbce3;padding:3px}
+.AttachTrOdd{background-color:#D4EDFF}
+.AttachTrEven{background-color:#fff}
+.AttachTrFirst{color:#000;background-color:#e9f6ff;font-weight:700}
+.tdf{width:40px}
+input[type=radio],input[type=image],input[type=checkbox]{border:0}
+.btnPrint{background:url(/Images/btn_print1.png) no-repeat}
+.btnPrint:hover{background:url(/Images/btn_print2.png) no-repeat}
+.btnBack{background:url(/Images/btnback1.png) no-repeat}
+.btnBack:hover{background:url(/Images/btnback2.png) no-repeat}
+.btnUpload{background:url(/Images/btn_upload1.png) no-repeat}
+.btnUpload:hover{background:url(/Images/btn_upload2.png) no-repeat; cursor:pointer;}
+.btnUpload1{background:url(/Images/bsm_upload1.png) no-repeat;cursor:pointer;}
+.btnUpload1:hover{background:url(/Images/bsm_upload2.png) no-repeat}
+.btnDownload{background:url(/Images/btn_down1.png) no-repeat}
+.btnDownload:hover{background:url(/Images/btn_down2.png) no-repeat}
+.btnSPDF{background:url(/Images/btnspdf1.png) no-repeat}
+.btnSPDF:hover{background:url(/Images/btnspdf2.png) no-repeat}
+.btnSave{background:url(/Images/btn_save1.png) no-repeat}
+.btnSave:hover{background:url(/Images/btn_save2.png) no-repeat}
+.btnsSearch{background:url(/Images/search1.png) no-repeat}
+.btnsSearch:hover{background:url(/Images/search2.png) no-repeat}
+input.btnAgentNew{background:url(/Images/btn_newa1.png) no-repeat;border:0}
+input.btnAgentNew:hover{background:url(/Images/btn_newa2.png) no-repeat}
+input.btnAgentEdit{background:url(/Images/btn_sa1.png) no-repeat}
+input.btnAgentEdit:hover{background:url(/Images/btn_sa2.png) no-repeat}
+.rdbYes{color:#008162}
+.rdbNo{color:#fe0100}
+.rdbOther{color:#008162}
+.btnReWrite{background:url(/Images/btnReWrite1.png) no-repeat}
+.btnReWrite:hover{background:url(/Images/btnReWrite1.png) no-repeat}
+.btnSignSave{background:url(/Images/btnSignSave1.png) no-repeat}
+.btnSignSave:hover{background:url(/Images/btnSignSave2.png) no-repeat}
+.btnSignBad{background:url(/Images/btnSignBad1.png) no-repeat}
+.btnSignBad:hover{background:url(/Images/btnSignBad2.png) no-repeat}
+.btnSAlterC{background:url(/Images/btnSAlterC1.png) no-repeat}
+.btnSAlterC:hover{background:url(/Images/btnSAlterC2.png) no-repeat}
+.btnEditFlow{background:url(/Images/btnEditFlow1.png) no-repeat}
+.btnEditFlow:hover{background:url(/Images/btnEditFlow2.png) no-repeat}
+.btExcel{background:url(/Images/btExcel1.png) no-repeat;margin-left:10px;margin-bottom:10px;}
+.btExcel:hover{background:url(/Images/btExcel2.png) no-repeat}
+.btnSearch{background:url(/Images/search1.png) no-repeat;margin-left:10px;margin-bottom:10px}
+.btnSearch:hover{background:url(/Images/search2.png) no-repeat}
+.btnInterestsExcel{background:url(/Images/btExcel1.png) no-repeat;margin-left:10px;margin-bottom:10px;cursor:pointer}
+.btnInterestsExcel:hover{background:url(/Images/btExcel2.png) no-repeat}
+[id^=btnSignIDx]:hover{background:url("../Images/btn_sign2.png") no-repeat}
+[id^=btDiagram]:hover{background:url(/Images/btnCancelDiagram2.png) no-repeat}
+[id^=btnCancelSignIDx]:hover{background:url(/Images/btnCancelSignIDx2.png) no-repeat}
+[id*=btnShouldJumpIDx]:hover{background:url(/Images/btnShouldJump2.png) no-repeat}
+[id*=btnReturnJumpIDx]:hover{background:url(/Images/btnAddDesign2.png) no-repeat}
+[id*=btnWillEnd]:hover{background:url(/Images/btnWillEnd2.png) no-repeat}
+[id*=btnADelete]:hover{background:url(/Images/btnIsADelete2.png) no-repeat}
+[id^=btnFYQSave1]:hover{background:url("../Images/btn_sign2.png") no-repeat}

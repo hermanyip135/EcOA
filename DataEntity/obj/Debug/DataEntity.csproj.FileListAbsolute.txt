@@ -1,0 +1,9 @@
+D:\Wrok\ECOA\sourcecode\DataEntity\bin\Debug\DataEntity.dll
+D:\Wrok\ECOA\sourcecode\DataEntity\bin\Debug\DataEntity.pdb
+D:\Wrok\ECOA\sourcecode\DataEntity\obj\Debug\DataEntity.csprojResolveAssemblyReference.cache
+D:\Wrok\ECOA\sourcecode\DataEntity\obj\Debug\DataEntity.dll
+D:\Wrok\ECOA\sourcecode\DataEntity\obj\Debug\DataEntity.pdb
+E:\files\ZYCode\ECOA\Local\DataEntity\bin\Debug\DataEntity.dll
+E:\files\ZYCode\ECOA\Local\DataEntity\bin\Debug\DataEntity.pdb
+E:\files\ZYCode\ECOA\Local\DataEntity\obj\Debug\DataEntity.dll
+E:\files\ZYCode\ECOA\Local\DataEntity\obj\Debug\DataEntity.pdb

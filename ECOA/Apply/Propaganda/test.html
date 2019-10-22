@@ -1,0 +1,1736 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>广告宣传需求申请表 - 广州中原电子审批系统
+    </title>
+
+    <script type="text/javascript" src="../../Script/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="../../Script/jquery-ui-1.10.1.custom.min.js"></script>
+    <script type="text/javascript" src="../../Script/jquery.ui.datepicker-zh-CN.js"></script>
+
+    <script type="text/javascript" src="../../Script/function.js"></script>
+    <style type="text/css" media="print">
+        .noprint {
+            display: none;
+        }
+    </style>
+    <style type="text/css">
+        /*背景css*/
+        .mainmask {
+            overflow: hidden;
+            position: absolute;
+            z-index: -7;
+        }
+
+        .maskno {
+            text-align: center;
+            color: #f2f3f2;
+            font-size: 30px;
+            font-weight: 700;
+            float: left;
+            display: inline-block;
+            opacity: 0.6;
+            transform: rotate(-30deg);
+        }
+    </style>
+    <link rel="Stylesheet" href="../../Style/DotLuv/jquery-ui-1.10.1.custom.css" />
+    <link rel="Stylesheet" href="../../Style/style.css" type="text/css" />
+    <link href="../../Style/dropdown/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../../Style/dropdown/themes/lwis.celebrity/default.advanced.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../Style/css.css" />
+    <script src="../../Script/jquery.backgroundpos.js" type="text/javascript"></script>
+
+    <script type="text/javascript"> //M_Begin-20141020-NoName-彩色化系统
+        $(function () {
+            //页面初始化
+            $("[id*=tbAround]").addClass("tbAround");
+            $("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdo]:even").addClass("rdoeven");
+            //附件列表
+            var $attach = $("[id*=gvAttach]");
+            $attach.find("tr:odd").addClass("AttachTrOdd");
+            $attach.find("tr:odd").addClass("AttachTrEven");
+            var $trf = $attach.find("tr:first");
+            $trf.addClass("AttachTrFirst");
+            $trf.find("td:eq(1)").addClass("tdf");
+            $attach.find("[id*=iBtnDelete]").attr("src", "../../Images/delete.gif");
+
+            //同意、不同意、其他意见样式
+            $("label[for*=rdbYesIDx]").addClass("rdbYes");
+            $("label[for*=rdbNoIDx]").addClass("rdbNo");
+            $("label[for*=rdbOtherIDx]").addClass("rdbOther");
+
+            $("[id*=btnEditFlow]").addClass("btnEditFlow");
+            $("[id^=btnSignIDx]").addClass("btnSign");
+            /*这部分代码已移植至.css文件
+            //$("[id*=tbAround]").css({ "border": "1px solid #98b8b5", "border-collapse": "collapse", "margin": "0 auto" });
+            //$("[id*=tbAround] table").css({ "border": "1px solid #98b8b5" });
+            //$("[id*=tbAround] td").css({ "border": "1px solid #98b8b5", "color": "#022241" });
+            //$("[id*=tbAround] th").css({ "border": "1px solid #98b8b5", "color": "022241" });
+            //$("[id*=tbAround] :input").css("border", "1px solid #98b8b5");
+            //$("[id*=tbAround] th").css({ "line-height": "46px", "background-image": "url(../../Images/th_there.png)" });
+            //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdb]:even").css("color", "#0d9405");
+            这部分代码已移植至.css文件_END*/
+
+            //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdo]:even").css("color", "#0d9405");
+            //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=r2d2b2]:even").css("color", "#0d9405");
+            //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdb]:odd").css("color", "#186ebe");
+            //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdo]:odd").css("color", "#186ebe");
+            //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=r2d2b2]:odd").css("color", "#186ebe");
+            $(":input[onclick*=addRow]").click(function () {
+                //$(":input:not(:submit):not(:button)").css("border", "1px solid #98b8b5");
+                //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdb]:even").css("color", "#0d9405");
+                //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdo]:even").css("color", "#0d9405");
+                //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdb]:odd").css("color", "#186ebe");
+                //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdo]:odd").css("color", "#186ebe");
+                //$("[id*=tbAround]").find("td").find("label:contains('新增')").css("color", "#0d9405");
+                //$("[id*=tbAround]").find("td").find("label:contains('删除')").css("color", "#fe0200");
+                //$("[id*=tbAround]").find("td").find("label:contains('调动')").css("color", "#186ebe");
+                //$("[id*=tbAround]").find("table td").css("border", "1px solid #98b8b5");
+                //$("[id*=tbAround]").find("table th").css("border", "1px solid #98b8b5");
+                //$("#tOwner").find("td").css("border", "none");
+                //$("#tClient").find("td").css("border", "none");
+                //$("#tEB").find("td").css("border", "none");
+                //$(":image").css("border", "none");
+                //$(":radio").css("border", "none");
+                //$(":checkbox").css("border", "none");
+                //$("[id*=tbAround]").find("tr.noborder").each(function (i) {
+                //    $("label:contains('同意'):not(:contains('不'))").css("color", "#008162");
+                //    $("label:contains('不同意')").css("color", "#fe0100");
+                //    $("label:contains('其他意见')").css("color", "#008162");
+                //});
+            });
+
+
+            //$("[id*=gvAttach]").css("margin", "0 auto");
+            //$("[id*=gvAttach]").find("td").css("border", "1px solid #8dbce3");
+            //$("[id*=gvAttach]").find("th").css("border", "1px solid #8dbce3");  
+            //$("[id*=gvAttach]").css({ "border-color": "#6b92b4", "border-width": "1px", "border-style": "Solid" });
+            //$("[id*=gvAttach]").find("tr:odd").css({ "background-color": "#D4EDFF" });
+            //$("[id*=gvAttach]").find("tr:even").css({ "background-color": "White" });
+            //$("[id*=gvAttach]").find("tr:first").css({ "color": "Black", "background-color": "#E9F6FF", "font-weight": "bold" });
+            //$("[id*=gvAttach]").find("tr").find("td:eq(1)").css({ "width": "40px" }); 
+            //$("[id*=gvAttach]").find("[id*=iBtnDelete]").attr("src", "../../Images/delete.gif"); 
+
+            //审批流程
+            //$("[id*=tbAround]").find("tr[id^=trManager]:not(:first)").find("td").css("border-top-style", "none");
+            //$("[id*=tbAround]").find("tr[id^=trManager]").find("td:not(:first)").css("border-left-style", "none");
+            //$("[id*=tbAround]").find("tr.noborder").each(function (i) {
+            //    $("label:contains('完成')").css("color", "#008162");
+            //    $("label:contains('确认')").css("color", "#008162");
+            //    $("label:contains('同意'):not(:contains('不'))").css("color", "#008162");
+            //    $("label:contains('同　意')").css("color", "#008162");
+            //    $("label:contains('不同意')").css("color", "#fe0100");
+            //    $("label:contains('退回申请')").css("color", "#fe0100");
+            //    $("label:contains('其他意见')").css("color", "#008162");
+            //});
+
+            //按键设计
+            //$("[id$=btnSave][value=\"保存修改\"]").mousedown(function () { $(this).css("background-image", "url(../../Images/btn_sa2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(../../Images/btn_sa1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(../../Images/btn_sa1.png)"); });
+            //$("[id*=btnReWrite]").mousedown(function () { $(this).css("background-image", "url(../../Images/btnReWrite2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(../../Images/btnReWrite1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(../../Images/btnReWrite1.png)"); });
+            //$("[id*=btnSignSave]").mousedown(function () { $(this).css("background-image", "url(../../Images/btnSignSave2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(../../Images/btnSignSave1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(../../Images/btnSignSave1.png)"); });
+            //$("[id*=btnSignBad]").mousedown(function () { $(this).css("background-image", "url(../../Images/btnSignBad2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(../../Images/btnSignBad1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(../../Images/btnSignBad1.png)"); });
+            //$("[id*=btnSAlterC]").mousedown(function () { $(this).css("background-image", "url(../../Images/btnSAlterC2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(../../Images/btnSAlterC1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(../../Images/btnSAlterC1.png)"); });
+            //$("[id*=btnEditFlow]").mousedown(function () { $(this).css("background-image", "url(../../Images/btnEditFlow2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(../../Images/btnEditFlow1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(../../Images/btnEditFlow1.png)"); });
+            //$("[id*=btExcel]").mousedown(function () { $(this).css("background-image", "url(../../Images/btExcel2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(../../Images/btExcel1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(../../Images/btExcel1.png)"); });
+
+            //$("[id*=btnInterestsExcel]").mousedown(function () { $(this).css("background-image", "url(../../Images/btExcel2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(../../Images/btExcel1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(../../Images/btExcel1.png)"); });
+
+            //$("[id^=btnSignIDx]").mousedown(function () { $(this).css("background-image", "url(../../Images/btn_sign2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(../../Images/btn_sign1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(../../Images/btn_sign1.png)"); });
+
+            //$("[id^=btDiagram]").mousedown(function () { $(this).css("background-image", "url(../../Images/btnCancelDiagram2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(../../Images/btnCancelDiagram1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(../../Images/btnCancelDiagram1.png)"); });
+            //$("[id^=btnCancelSignIDx]").mousedown(function () { $(this).css("background-image", "url(../../Images/btnCancelSignIDx2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(../../Images/btnCancelSignIDx1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(../../Images/btnCancelSignIDx1.png)"); });
+            //$("[id*=btnShouldJumpIDx]").mousedown(function () { $(this).css("background-image", "url(../../Images/btnShouldJump2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(../../Images/btnShouldJump1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(../../Images/btnShouldJump1.png)"); });
+            //$("[id*=btnWillEnd]").mousedown(function () { $(this).css("background-image", "url(../../Images/btnWillEnd2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(../../Images/btnWillEnd1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(../../Images/btnWillEnd1.png)"); });
+
+            //$("[id*=btnADelete]").mousedown(function () { $(this).css("background-image", "url(../../Images/btnIsADelete2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(../../Images/btnIsADelete1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(../../Images/btnIsADelete1.png)"); });
+
+            $("[id*=btnTransmit]").mousedown(function () { $(this).css("background-image", "url(../../Images/btnTransmit2.png)"); })
+                .mouseup(function () { $(this).css("background-image", "url(../../Images/btnTransmit1.png)"); })
+                .mouseleave(function () { $(this).css("background-image", "url(../../Images/btnTransmit1.png)"); });
+            $("[id*=btnSavePlanTime]").mousedown(function () { $(this).css("background-image", "url(../../Images/bsm_save2.png)"); })
+                .mouseup(function () { $(this).css("background-image", "url(../../Images/bsm_save1.png)"); })
+                .mouseleave(function () { $(this).css("background-image", "url(../../Images/bsm_save1.png)"); });
+            $("[id$=btnUploadDetailed]").mousedown(function () { $(this).css("background-image", "url(../../Images/bsm_upload2.png)"); })
+                .mouseup(function () { $(this).css("background-image", "url(../../Images/bsm_upload1.png)"); })
+                .mouseleave(function () { $(this).css("background-image", "url(../../Images/bsm_upload1.png)"); });
+            $("[id$=btnUploadBadDebts]").mousedown(function () { $(this).css("background-image", "url(../../Images/bsm_upload2.png)"); })
+                .mouseup(function () { $(this).css("background-image", "url(../../Images/bsm_upload1.png)"); })
+                .mouseleave(function () { $(this).css("background-image", "url(../../Images/bsm_upload1.png)"); });
+
+            //列表（表头）
+            //$("ul#nav").find("li#li1").find("a").mouseenter(function () { $(this).css({ "background-image": "url(../../Images/ul_nav_left_n.png)", "color": "#000000" }); })
+            //    .mouseleave(function () { $(this).css({ "background-image": "url(../../Images/ul_nav_left.png)", "color": "#FFFFFF" }) });
+            $("ul#nav").find("li#li1").mouseenter(function () { $(this).css({ "background-image": "url(../../Images/ul_nav_left_n.png)", "color": "#000000" }); })
+                .mouseleave(function () { $(this).css({ "background-image": "url(../../Images/ul_nav_left.png)", "color": "#FFFFFF" }) });
+
+            $("ul#nav").find("li#li2").mouseenter(function () { $(this).css({ "background-image": "url(../../Images/ul_nav_right_n.png)", "color": "#000000" }); })
+                .mouseleave(function () { $(this).css({ "background-image": "url(../../Images/ul_nav_right.png)", "color": "#FFFFFF" }) });
+            $("ul#nav").find("li#li7").mouseenter(function () { $(this).css({ "background-image": "url(../../Images/ul_nav_right_1_n.png)", "color": "#000000" }); })
+                .mouseleave(function () { $(this).css({ "background-image": "url(../../Images/ul_nav_right_1.png)", "color": "#FFFFFF" }) });
+            $("ul#nav").find("li#li6").mouseenter(function () { $(this).css({ "background-image": "url(../../Images/ul_nav_right_3_n.png)", "color": "#000000" }); })
+                .mouseleave(function () { $(this).css({ "background-image": "url(../../Images/ul_nav_right_3.png)", "color": "#FFFFFF" }) });
+            $("ul#nav").find("li#li5").find("a").mouseenter(function () { $(this).css({ "background-image": "url(../../Images/ul_nav_right_3_n.png)", "color": "#000000" }); })
+                .mouseleave(function () { $(this).css({ "background-image": "url(../../Images/ul_nav_right_3.png)", "color": "#FFFFFF" }) });
+            $("ul#nav").find("li#li4").find("a").mouseenter(function () { $(this).css({ "background-image": "url(../../Images/ul_nav_right_4_n.png)", "color": "#000000" }); })
+                .mouseleave(function () { $(this).css({ "background-image": "url(../../Images/ul_nav_right_4.png)", "color": "#FFFFFF" }) });
+
+
+
+            //$.each($("textarea"), function (idx, item) { autoTextarea(this); }); //使对话框自适应
+            //$("#li2 li.div").hover(
+            //    function () {
+            //        $(this).find("ul").show();
+            //    },
+            //    function () {
+            //        $(this).find("ul").hide();
+            //    });
+            $("#ttul li.div").hover(
+                    function () {
+                        //alert("触发");
+                        $(this).find("ul").show();
+                    },
+                    function () {
+                        $(this).find("ul").hide();
+                    });
+            $("#ttul li.dir").each(function () {
+                $(this).hover(function () {
+                    //alert("触发了");
+                    $(this).find("ul").show();
+                },
+                function () {
+                    $(this).find("ul").hide();
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function AddOtherAgree() {
+            $rdbNoIDxA = $("[id*=rdbNoIDx]");
+            $rdbNoIDxA.each(function () {
+                var idname = $(this).attr("id");
+                var otheridname = "rdbOtherIDx" + idname.replace("rdbNoIDx", "");
+                var text = $(this).next().html();
+
+                if ($("#" + otheridname).length == 0 && text == "不同意") {
+                    var name = $(this).attr("name");
+                    $(this).next().after("<input type='radio' id='" + otheridname + "' name='" + name + "' /><label for='" + otheridname + "'>其他意见</label>");
+                }
+            });
+        }
+        ///背景
+        function PageInit(show, empoyeeID) {
+            if (show) {
+                var height = $('#aspnetForm').height();
+                var width = $('#aspnetForm').outerWidth(true);
+                var perw = parseInt(width / 9);
+                var perh = parseInt(perw / 2);
+                var hcount = parseInt(height / perh);
+                $("#mainmask").height(height);
+                var loopcount = hcount * 15;
+                for (var i = 0; i < loopcount; i++) {
+                    $("#mainmask").append("<div class='maskno' style='width:" + perw + "px;height:" + perh + "px' >" + empoyeeID + "</div>");
+                }
+            }
+        }
+        $(document).ready(function () {
+            PageInit(true, 39591);
+        });
+        ///end
+    </script>
+
+    <script type="text/javascript" src="../../Script/common_new.js"></script>
+    <style type="text/css">
+        #tr2 label {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .quegao {
+            background: url(../../images/btnquegao1.png) no-repeat;
+            text-indent: 999px;
+            cursor: pointer;
+            width: 50px;
+            height: 26px;
+        }
+
+        .btnSaveCityScore {
+            background: url(../../images/btnprosave1.png) no-repeat;
+            text-indent: 999px;
+            cursor: pointer;
+            width: 50px;
+            height: 26px;
+        }
+        /*#tr1 label  {
+            font-size:17px;
+            font-weight:bold;
+        }*/
+    </style>
+    <script type="text/javascript">
+        var i = 1, i2 = 1;
+        var jJSON = [];
+        var isNewApply = ('False' == 'True');
+
+        //var jaf = 20;//789
+        //var deleteidxs = "";
+        //var jJSONF = ;
+        //function split( val ) {
+        //    return val.split( /,\s*/ );
+        //}
+        //function extractLast( term ) {
+        //    return split( term ).pop();
+        //}
+
+        $.datepicker.setDefaults($.datepicker.regional["zh-CN"]);
+
+        $(function () {
+            if ('招琛彤' == "王萍" || '招琛彤' == "周燕妮" || '招琛彤' == "招琛彤" || '招琛彤' == "王珏萍") {
+
+                $("#ctl00_ContentPlaceHolder1_txtTNo").removeAttr("readonly");
+                $('#ctl00_ContentPlaceHolder1_btnSaveNo').show();
+
+            }
+            else {
+
+                $("#ctl00_ContentPlaceHolder1_txtTNo").attr("readonly", "readonly");
+                $('#ctl00_ContentPlaceHolder1_btnSaveNo').hide();
+            }
+            if ($("#btnSignIDx20").is(":visible")) {
+                $('#ctl00_ContentPlaceHolder1_btnShouldJumpIDx').show();
+                $('#ctl00_ContentPlaceHolder1_btnReturnJumpIDx').show();
+
+            }
+            else {
+                $('#ctl00_ContentPlaceHolder1_btnShouldJumpIDx').hide();
+                $('#ctl00_ContentPlaceHolder1_btnReturnJumpIDx').hide();
+            }
+            $("#ctl00_ContentPlaceHolder1_txtDepartment").autocomplete({
+                source: jJSON,
+                select: function (event, ui) {
+                    $("#ctl00_ContentPlaceHolder1_hdDepartmentID").val(ui.item.id);
+                }
+            });
+            var hfDesign1 = $('#ctl00_ContentPlaceHolder1_hfDesign1').val();
+
+            var hfCityService1 = $('#ctl00_ContentPlaceHolder1_hfCityService1').val()
+            var hfCityService2 = $('#ctl00_ContentPlaceHolder1_hfCityService2').val()
+            var hfCityService3 = $('#ctl00_ContentPlaceHolder1_hfCityService3').val()
+
+            if (hfDesign1 != 0)
+                $("#tr1 input[name=grade1][value=" + hfDesign1 + "]").get(0).checked = true;
+            //if(hfDesign2 !=0)
+            //    $("#tr1 input[name=grade2][value=" + hfDesign2 + "]").get(0).checked = true;   
+            //if(hfDesign3 !=0)
+            //    $("#tr1 input[name=grade3][value=" + hfDesign3 + "]").get(0).checked = true;
+            if (hfCityService1 != 0)
+                $("#tr2 input[name=grade4][value=" + hfCityService1 + "]").get(0).checked = true;
+            if (hfCityService2 != 0)
+                $("#tr2 input[name=grade5][value=" + hfCityService2 + "]").get(0).checked = true;
+            if (hfCityService3 != 0)
+                $("#tr2 input[name=grade6][value=" + hfCityService3 + "]").get(0).checked = true;
+            //$("#").autocomplete({ 
+            //    source: eval('([{"id":"1","value":"文玉仪"},{"id":"2","value":"周燕妮"},{"id":"3","value":"招琛彤"}])'),
+            //});
+
+            i = $("#tbDetail tr").length - 2;
+            i2 = $("#tbDetail2 tr").length - 2;
+
+            for (var x = 1; x <= i; x++) {
+                $("#txtDetail_Department" + x).autocomplete({ source: jJSON });
+            }
+            for (var x = 1; x <= i2; x++) {
+                $("#txtStatistical_SDepartment" + x).autocomplete({ source: jJSON });
+            }
+            //$("#txtStatistical_SDepartment1").autocomplete({source: jJSON});
+
+            $("#ctl00_ContentPlaceHolder1_txtApplyDate").datepicker();
+            $("#ctl00_ContentPlaceHolder1_txtAcceptDate").datepicker();
+            $("#ctl00_ContentPlaceHolder1_txtVerifyDate").datepicker();
+
+            for (var n = 1; n < $("#tbDetail2 tr").length; n++) {
+                $("#txtDemandDate" + n).datepicker();
+            }
+
+            for (var x = 1; x <= i; x++) {  //使详情表的日期变得可选
+                $("#ros1").attr("rowspan", i);
+                $("#ros2").attr("rowspan", i);
+                $("#txtBeginData" + x).datepicker();
+                $("#txtEndData" + x).datepicker();
+            }
+
+            $("#ctl00_ContentPlaceHolder1_rdbSumPrice1").click(function () {
+                //if(isNewApply)
+                if ($('#ctl00_ContentPlaceHolder1_txtApply').val() == '招琛彤')
+                    CaculateTno('SJ');
+            });
+            $("#ctl00_ContentPlaceHolder1_rdbSumPrice2").click(function () {
+                if ($('#ctl00_ContentPlaceHolder1_txtApply').val() == '招琛彤')
+                    CaculateTno('YS');
+            });
+            $("#ctl00_ContentPlaceHolder1_rdbSumPrice3").click(function () {
+                if ($('#ctl00_ContentPlaceHolder1_txtApply').val() == '招琛彤')
+                    CaculateTno('WL');
+            });
+            $("#ctl00_ContentPlaceHolder1_rdbSumPrice4").click(function () {
+                if ($('#ctl00_ContentPlaceHolder1_txtApply').val() == '招琛彤')
+                    CaculateTno('HD');
+            });
+            $("#ctl00_ContentPlaceHolder1_rdbSumPrice5").click(function () {
+                if ($('#ctl00_ContentPlaceHolder1_txtApply').val() == '招琛彤')
+                    CaculateTno('DT');
+            });
+            $("#ctl00_ContentPlaceHolder1_rdbSumPrice6").click(function () {
+                if ($('#ctl00_ContentPlaceHolder1_txtApply').val() == '招琛彤')
+                    CaculateTno('LP');
+            });
+            $("#ctl00_ContentPlaceHolder1_rdbSumPrice7").click(function () {
+                if ($('#ctl00_ContentPlaceHolder1_txtApply').val() == '招琛彤')
+                    CaculateTno('PS');
+            });
+            $("#ctl00_ContentPlaceHolder1_rdbSumPrice8").click(function () {
+                if ($('#ctl00_ContentPlaceHolder1_txtApply').val() == '招琛彤')
+                    CaculateTno('QT');
+            });
+
+            $(".propagandatype input:checkbox").click(function () {
+                var rdb = $(this).siblings("input:radio");
+
+                var sichecked = rdb.is(":checked");
+                var id = $(this).attr("id");
+                var num = id.substring(id.length - 1);
+
+                var rdbid = rdb.attr("id");
+                var rdbnum = rdbid.substring(rdbid.length - 1);
+
+                if (sichecked == false) {
+                    $(this).attr("checked", false);
+                    alert("清先选择类型！");
+                } else {
+                    if ($(this).is(":checked") == true) {
+                        var count = $(this).parent().children('input:checkbox:checked').length;
+                        if (count > 3) {
+                            $(this).attr("checked", false);
+                            alert("每种宣传类型只能选择3项！");
+                        } else {
+                            addProductRow(num, $(this).next('label').text(), rdbnum);
+                        }
+                    } else {
+                        $("tr [id=trDetail3" + num + "]").remove();
+                    }
+                }
+
+
+            });
+
+            $(".propagandatype input:radio").click(function () {
+                $("#tbDetail3 tr").remove();
+                $(".propagandatype input:checkbox").attr("checked", false);
+            });
+
+            $.each($("textarea:not([id*=txtDescribe])"), function (idx, item) { autoTextarea(this); }); //使对话框自适应
+        });
+
+        // 对Date的扩展，将 Date 转化为指定格式的String 
+        // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+        // 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+        // 例子： 
+        // (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+        // (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+        Date.prototype.Format = function (fmt) { //author: meizz 
+            var o = {
+                "M+": this.getMonth() + 1,                 //月份 
+                "d+": this.getDate(),                    //日 
+                "h+": this.getHours(),                   //小时 
+                "m+": this.getMinutes(),                 //分 
+                "s+": this.getSeconds(),                 //秒 
+                "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+                "S": this.getMilliseconds()             //毫秒 
+            };
+            if (/(y+)/.test(fmt))
+                fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt))
+                    fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+
+        function CaculateTno(s) {
+            //$("#ctl00_ContentPlaceHolder1_txtTNo").val(s + new Date().Format("yyyyMMddhhmmssS"));
+        }
+
+        function check() {
+            if ($.trim($("#ctl00_ContentPlaceHolder1_txtApplyID").val()) == "") {
+                alert("内M不可为空！");
+                $("#ctl00_ContentPlaceHolder1_txtApplyID").focus();
+                return false;
+            }
+
+            if ($.trim($("#ctl00_ContentPlaceHolder1_txtDepartment").val()) == "") {
+                alert("申请部门/分行/组别不可为空！");
+                $("#ctl00_ContentPlaceHolder1_txtDepartment").focus();
+                return false;
+            }
+
+            if ($.trim($("#ctl00_ContentPlaceHolder1_txtApplyDate").val()) == "") {
+                alert("申请日期不可为空！");
+                $("#ctl00_ContentPlaceHolder1_txtApplyDate").focus();
+                return false;
+            }
+
+            if ($.trim($("#ctl00_ContentPlaceHolder1_txtApply").val()) == "") {
+                alert("申请人不可为空！");
+                $("#ctl00_ContentPlaceHolder1_txtApply").focus();
+                return false;
+            }
+
+            if ($.trim($("#ctl00_ContentPlaceHolder1_txtConneter").val()) == "") {
+                alert("联系人/电话(手机)不可为空！");
+                $("#ctl00_ContentPlaceHolder1_txtConneter").focus();
+                return false;
+            } else {
+                var reg = /^1[3|4|5|8][0-9]\d{8}$|^\d{8}$/;
+                if (!reg.test($.trim($("#ctl00_ContentPlaceHolder1_txtConneter").val()))) {
+                    alert("请输入正确的11位手机号码或8位数字的号码！");
+                    $("#ctl00_ContentPlaceHolder1_txtConneter").focus();
+                    return false;
+                }
+
+            }
+
+            if ($.trim($("#ctl00_ContentPlaceHolder1_txtBranchAddress").val()) == "") {
+                alert("分行地址不可为空！");
+                $("#ctl00_ContentPlaceHolder1_txtBranchAddress").focus();
+                return false;
+            }
+
+            if (!$("#ctl00_ContentPlaceHolder1_rdbPaySituation1").prop("checked")
+                && !$("#ctl00_ContentPlaceHolder1_rdbPaySituation2").prop("checked")
+                && !$("#ctl00_ContentPlaceHolder1_rdbPaySituation3").prop("checked")
+                && !$("#ctl00_ContentPlaceHolder1_rdbAnother").prop("checked")) {
+                alert("请选择支付情况！");
+                $("#ctl00_ContentPlaceHolder1_rdbPaySituation1").focus();
+                return false;
+            }
+
+            if ($("#ctl00_ContentPlaceHolder1_rdbPaySituation2").prop("checked")) {
+                if ($.trim($("#ctl00_ContentPlaceHolder1_txtPayProjectName").val()) == "") {
+                    alert("请输入项目名称！");
+                    $("#ctl00_ContentPlaceHolder1_txtPayProjectName").focus();
+                    return false;
+                }
+            }
+
+            if ($("#ctl00_ContentPlaceHolder1_rdbPaySituation3").prop("checked")) {
+                if ($.trim($("#ctl00_ContentPlaceHolder1_txtFearNo").val()) == "") {
+                    alert("请输入费用申请编号！");
+                    $("#ctl00_ContentPlaceHolder1_txtFearNo").focus();
+                    return false;
+                }
+            }
+
+            if ($("#ctl00_ContentPlaceHolder1_rdbAnother").prop("checked")) {
+                if ($.trim($("#ctl00_ContentPlaceHolder1_txtOtherDescript").val()) == "") {
+                    alert("请输入其他描述！");
+                    $("#ctl00_ContentPlaceHolder1_txtOtherDescript").focus();
+                    return false;
+                }
+            }
+
+            if (!$("#ctl00_ContentPlaceHolder1_rdbSumPrice1").prop("checked")
+               && !$("#ctl00_ContentPlaceHolder1_rdbSumPrice2").prop("checked")
+               && !$("#ctl00_ContentPlaceHolder1_rdbSumPrice3").prop("checked")
+               && !$("#ctl00_ContentPlaceHolder1_rdbSumPrice4").prop("checked")
+               && !$("#ctl00_ContentPlaceHolder1_rdbSumPrice5").prop("checked")
+               && !$("#ctl00_ContentPlaceHolder1_rdbSumPrice6").prop("checked")
+               && !$("#ctl00_ContentPlaceHolder1_rdbSumPrice7").prop("checked")
+               && !$("#ctl00_ContentPlaceHolder1_rdbSumPrice8").prop("checked")
+               ) {
+                alert("请选择宣传类型");
+                $("#ctl00_ContentPlaceHolder1_rdbSumPrice1").focus();
+                return false;
+            }
+
+            if ($("#ctl00_ContentPlaceHolder1_rdbSumPrice1").prop("checked")) {
+                if (!$("#ctl00_ContentPlaceHolder1_cbKindOfAdvertising1").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfAdvertising2").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfAdvertising3").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfAdvertising4").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfAdvertising5").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfAdvertising6").prop("checked")
+                    ) {
+                    alert("请选择广告类");
+                    $("#ctl00_ContentPlaceHolder1_cbKindOfAdvertising1").focus();
+                    return false;
+                }
+                if ($("#ctl00_ContentPlaceHolder1_cbKindOfAdvertising6").prop("checked")) {
+                    if ($.trim($("#ctl00_ContentPlaceHolder1_txtAnotherAdvertising").val()) == "") { alert("请填写其它广告类！"); $("#ctl00_ContentPlaceHolder1_txtAnotherAdvertising").focus(); return false; }
+                }
+            }
+
+            if ($("#ctl00_ContentPlaceHolder1_rdbSumPrice2").prop("checked")) {
+                if (!$("#ctl00_ContentPlaceHolder1_cbKindOfPrinting1").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfPrinting2").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfPrinting3").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfPrinting4").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfPrinting5").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfPrinting6").prop("checked")
+                    ) {
+                    alert("请选择印刷类");
+                    $("#ctl00_ContentPlaceHolder1_cbKindOfPrinting1").focus();
+                    return false;
+                }
+                if ($("#ctl00_ContentPlaceHolder1_cbKindOfPrinting6").prop("checked")) {
+                    if ($.trim($("#ctl00_ContentPlaceHolder1_txtAnotherPrinting").val()) == "") { alert("请填写其它印刷类！"); $("#ctl00_ContentPlaceHolder1_txtAnotherPrinting").focus(); return false; }
+                }
+            }
+
+            if ($("#ctl00_ContentPlaceHolder1_rdbSumPrice3").prop("checked")) {
+                if (!$("#ctl00_ContentPlaceHolder1_cbKindOfMaterial1").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfMaterial2").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfMaterial3").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfMaterial4").prop("checked")
+                    ) {
+                    alert("请选择物料类");
+                    $("#ctl00_ContentPlaceHolder1_cbKindOfMaterial1").focus();
+                    return false;
+                }
+                if ($("#ctl00_ContentPlaceHolder1_cbKindOfMaterial4").prop("checked")) {
+                    if ($.trim($("#ctl00_ContentPlaceHolder1_txtAnotherMaterial").val()) == "") { alert("请填写其它物料类！"); $("#ctl00_ContentPlaceHolder1_txtAnotherMaterial").focus(); return false; }
+                }
+            }
+
+            if ($("#ctl00_ContentPlaceHolder1_rdbSumPrice4").prop("checked")) {
+                if (!$("#ctl00_ContentPlaceHolder1_cbKindOfActivity1").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfActivity2").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfActivity3").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfActivity4").prop("checked")
+                    ) {
+                    alert("请选择活动类");
+                    $("#ctl00_ContentPlaceHolder1_cbKindOfActivity1").focus();
+                    return false;
+                }
+                if ($("#ctl00_ContentPlaceHolder1_cbKindOfActivity4").prop("checked")) {
+                    if ($.trim($("#ctl00_ContentPlaceHolder1_txtAnotherActivity").val()) == "") { alert("请填写其它活动类！"); $("#ctl00_ContentPlaceHolder1_txtAnotherActivity").focus(); return false; }
+                }
+            }
+
+            if ($("#ctl00_ContentPlaceHolder1_rdbSumPrice5").prop("checked")) {
+                if (!$("#ctl00_ContentPlaceHolder1_cbKindOfMap1").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfMap2").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfMap3").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfMap4").prop("checked")
+                    ) {
+                    alert("请选择地图类");
+                    $("#ctl00_ContentPlaceHolder1_cbKindOfMap1").focus();
+                    return false;
+                }
+                if ($("#ctl00_ContentPlaceHolder1_cbKindOfMap4").prop("checked")) {
+                    if ($.trim($("#ctl00_ContentPlaceHolder1_txtAnotherMap").val()) == "") { alert("请填写其它地图类！"); $("#ctl00_ContentPlaceHolder1_txtAnotherMap").focus(); return false; }
+                }
+            }
+
+            if ($("#ctl00_ContentPlaceHolder1_rdbSumPrice6").prop("checked")) {
+                if (!$("#ctl00_ContentPlaceHolder1_cbKindOfGift1").prop("checked")) {
+                    alert("请选择礼品类");
+                    $("#ctl00_ContentPlaceHolder1_cbKindOfGift1").focus();
+                    return false;
+                }
+                if ($("#ctl00_ContentPlaceHolder1_cbKindOfGift1").prop("checked")) {
+                    if ($.trim($("#ctl00_ContentPlaceHolder1_txtAnotherGift").val()) == "") { alert("请填写其它礼品类！"); $("#ctl00_ContentPlaceHolder1_txtAnotherGift").focus(); return false; }
+                }
+            }
+
+            if ($("#ctl00_ContentPlaceHolder1_rdbSumPrice7").prop("checked")) {
+                if (!$("#ctl00_ContentPlaceHolder1_cbKindOfSend1").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfSend2").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfSend3").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfSend4").prop("checked")
+                    ) {
+                    alert("请选择派送类");
+                    $("#ctl00_ContentPlaceHolder1_cbKindOfSend1").focus();
+                    return false;
+                }
+                if ($("#ctl00_ContentPlaceHolder1_cbKindOfSend4").prop("checked")) {
+                    if ($.trim($("#ctl00_ContentPlaceHolder1_txtAnotherSend").val()) == "") { alert("请填写其它派送类！"); $("#ctl00_ContentPlaceHolder1_txtAnotherSend").focus(); return false; }
+                }
+            }
+
+            if ($("#ctl00_ContentPlaceHolder1_rdbSumPrice8").prop("checked")) {
+                if (!$("#ctl00_ContentPlaceHolder1_cbKindOfAnother1").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfAnother2").prop("checked")
+                    && !$("#ctl00_ContentPlaceHolder1_cbKindOfAnother3").prop("checked")
+                    ) {
+                    alert("请选择其它类");
+                    $("#ctl00_ContentPlaceHolder1_cbKindOfAnother1").focus();
+                    return false;
+                }
+                if ($("#ctl00_ContentPlaceHolder1_cbKindOfAnother3").prop("checked")) {
+                    if ($.trim($("#ctl00_ContentPlaceHolder1_txtAnotherAnother").val()) == "") { alert("请填写其它其它类！"); $("#ctl00_ContentPlaceHolder1_txtAnotherAnother").focus(); return false; }
+                }
+            }
+
+
+
+            var data = "", data2 = "", data3 = "";
+            var flag = true, flag2 = true, flag3 = true;
+
+            $("#tbDetail3 tr").each(function () {
+                var id = $(this).attr("id");
+                var n = id.substring(id.length - 1);
+
+                if ($.trim($("#txtWidth" + n).val()) == "") {
+                    alert("第" + n + "个项目的宽必须填写。");
+                    $("#txtWidth" + n).focus();
+                    flag3 = false;
+                    return;
+                }
+                else if ($.trim($("#txtHeight" + n).val()) == "") {
+                    alert("第" + n + "个项目的高必须填写。");
+                    $("#txtHeight" + n).focus();
+                    flag3 = false;
+                    return;
+                }
+                else if (!($("#rdbAcross" + n).prop("checked")) && !($("#rdbUpright" + n).prop("checked"))) {
+                    alert("第" + n + "个项目的横版竖版必须选择。");
+                    $("#rdbAcross" + n).focus();
+                    flag3 = false;
+                    return;
+                }
+
+                else if ($.trim($("#txtCount" + n).val()) == "") {
+                    alert("第" + n + "个项目的数量/页数必须填写。");
+                    $("#txtCount" + n).focus();
+                    flag3 = false;
+                    return;
+                } else if ($.trim($("#txtDemandDate" + n).val()) == "") {
+                    alert("第" + n + "个项目的成品需求日期必须填写。");
+                    $("#txtDemandDate" + n).focus();
+                    flag3 = false;
+                    return;
+                }
+                else
+                    data3 += $("#hdprojtype" + n).val()
+                        + "&&" + n
+                        + "&&" + $.trim($("#txtSummary" + n).val())
+                        + "&&" + $.trim($("#txtWidth" + n).val())
+                        + "&&" + $.trim($("#txtHeight" + n).val())
+                        + "&&" + ($("#rdbAcross" + n).prop('checked') ? "1" : "2")
+                        + "&&" + $.trim($("#txtCount" + n).val())
+                        + "&&" + $.trim($("#txtPackage" + n).val())
+                        + "&&" + $.trim($("#txtDemandDate" + n).val())
+                        + "||";
+
+            });
+
+
+            $("#tbDetail tr").each(function (n) {
+                if (n != 0 && n < $("#tbDetail tr").size() - 1) {
+                    if ($.trim($("#txtDetail_Department" + n).val()) == "") {
+                        alert("第" + n + "行的分摊部门/分行/组别必须填写。");
+                        $("#txtDetail_Department" + n).focus();
+                        flag = false;
+                        return;
+                    }
+                    else if ($.trim($("#txtDetail_Count" + n).val()) == "") {
+                        alert("第" + n + "行的租分摊数量必须填写。");
+                        $("#txtDetail_Count" + n).focus();
+                        flag = false;
+                        return;
+                    }
+                    else
+                        data += $.trim($("#txtDetail_No" + n).html())
+                            + "&&" + $.trim($("#txtDetail_Department" + n).val())
+                            + "&&" + $.trim($("#txtDetail_Count" + n).val())
+                            + "||";
+                }
+            });
+
+
+            $("#tbDetail2 tr").each(function (n) {
+                if (n != 0 && n < $("#tbDetail2 tr").size() - 1) {
+                    if ($.trim($("#txtStatistical_SDepartment" + n).val()) == "") {
+                        alert("第" + n + "行的送货部门/分行/组必须填写。");
+                        $("#txtStatistical_SDepartment" + n).focus();
+                        flag = false;
+                        return;
+                    }
+                    else if ($.trim($("#txtStatistical_Address" + n).val()) == "") {
+                        alert("第" + n + "行的送货地址必须填写。");
+                        $("#txtStatistical_Address" + n).focus();
+                        flag = false;
+                        return;
+                    }
+                    else if ($.trim($("#txtStatistical_SCount" + n).val()) == "") {
+                        alert("第" + n + "行的送货数量必须填写。");
+                        $("#txtStatistical_SCount" + n).focus();
+                        flag = false;
+                        return;
+                    }
+                    else
+                        data2 += $.trim($("#txtStatistical_SNo" + n).html())
+                            + "&&" + $.trim($("#txtStatistical_SDepartment" + n).val())
+                            + "&&" + $.trim($("#txtStatistical_Address" + n).val())
+                            + "&&" + $.trim($("#txtStatistical_SCount" + n).val())
+                            + "||";
+                }
+            });
+
+            if (flag3) {
+                data3 = data3.substr(0, data3.length - 2);
+                $("#ctl00_ContentPlaceHolder1_hdDetail3").val(data3);
+            }
+            else
+                return false;
+
+            if (flag) {
+                data = data.substr(0, data.length - 2);
+                $("#ctl00_ContentPlaceHolder1_hdDetail").val(data);
+            }
+            else
+                return false;
+
+            if (flag2) {
+                data2 = data2.substr(0, data2.length - 2);
+                $("#ctl00_ContentPlaceHolder1_hdDetail2").val(data2);
+            }
+            else
+                return false;
+
+        }
+
+        function checkChecked() {
+            var gv = document.getElementById('ctl00_ContentPlaceHolder1_gvAttach');
+            var input = gv.getElementsByTagName("input");
+            var flagCheck = false;
+
+            for (var i = 0; i < input.length; i++) {
+                if (input[i].type == 'checkbox' && !input[i].disabled && input[i].checked) {
+                    flagCheck = true;
+                    break;
+                }
+            }
+
+            if (!flagCheck)
+                alert("请勾选文件再下载！");
+
+            return flagCheck;
+        }
+
+        function upload() {
+            var sReturnValue = window.showModalDialog("/Apply/Apply_UploadFile.aspx?MainID=6c67e6bb-7b85-41d6-82ff-da343354679f&AUpload=" + escape("招琛彤") + "&href=" + window.location.href, '6c67e6bb-7b85-41d6-82ff-da343354679f', "dialogHeight=165px");
+            if (sReturnValue == 'success')
+                window.location = 'Apply_Propaganda_Detail.aspx?MainID=6c67e6bb-7b85-41d6-82ff-da343354679f';
+        }
+
+        function editflow() {
+            var win = window.showModalDialog("Apply_Propaganda_Flow.aspx?MainID=6c67e6bb-7b85-41d6-82ff-da343354679f", "", "dialogWidth=800px;dialogHeight=320px");
+            if (win == 'success')
+                window.location = "Apply_NewPropaganda_Detail.aspx?MainID=6c67e6bb-7b85-41d6-82ff-da343354679f";
+        }
+
+        function CancelSign(idc) {
+            if (confirm("撤销后，在您之后的所有审批环节都必须重审，确定要撤销审核吗？"))  //20141202：CancelSign
+            {
+                $("#ctl00_ContentPlaceHolder1_hdCancelSign").val(idc);
+                document.getElementById("ctl00_ContentPlaceHolder1_btnCancelSign").click();
+            }
+        }
+
+        function sign(idx) {
+            //if(idx!='7'&&idx!='8'10||idx=='130'){
+            //if(idx=='1'||idx=='2'||idx=='3'||idx=='4'||idx=='5'||idx=='6'||idx=='9'||idx=='11'||idx=='131'){//789
+            if (!$("#rdbYesIDx" + idx).prop("checked") && !$("#rdbNoIDx" + idx).prop("checked") && !$("#rdbOtherIDx" + idx).prop("checked")) {
+                alert("请确定是否同意！");
+                return;
+            }
+            //}
+            //else{
+            //    if(!$("#rdbYesIDx"+idx).prop("checked")&&!$("#rdbNoIDx"+idx).prop("checked")&&!$("#rdbOtherIDx"+idx).prop("checked")) {
+            //        alert("请确定是否同意！");
+            //        return;
+            //    }
+            //}
+
+            if ($("#rdbNoIDx" + idx).prop("checked") && $.trim($("#txtIDx" + idx).val()) == "") {
+                alert("由于您不同意该申请，请填写具体原因。");
+                return;
+            }
+            if ($("#rdbOtherIDx" + idx).prop("checked") && $.trim($("#txtIDx" + idx).val()) == "") {
+                alert("由于您选其他意见，必须填写意见。");
+                return;
+            }
+
+            if (confirm("是否确认审核？")) {
+                if ($("#rdbYesIDx" + idx).prop("checked"))
+                    $("#ctl00_ContentPlaceHolder1_hdIsAgree").val("1");
+                else if ($("#rdbNoIDx" + idx).prop("checked"))
+                    $("#ctl00_ContentPlaceHolder1_hdIsAgree").val("0");
+                else if ($("#rdbOtherIDx" + idx).prop("checked"))
+                    $("#ctl00_ContentPlaceHolder1_hdIsAgree").val("2");
+
+                getSuggestion(idx);
+                document.getElementById("ctl00_ContentPlaceHolder1_btnSign").click();
+            }
+        }
+
+        function getSuggestion(idx) {
+            $("#ctl00_ContentPlaceHolder1_hdSuggestion").val($("#txtIDx" + idx).val());
+        }
+
+        function myPrint(start, end, extend) {
+            //start = "<!--" + start + "-->";    
+            //end = "<!--" + end + "-->";    
+            //if (typeof (extend) == 'undefined') {        
+            //    var temp = window.document.body.innerHTML;        
+            //    var printhtml = temp.substring(temp.indexOf(start) + start.length, temp.indexOf(end));        
+            //    window.document.body.innerHTML = printhtml;        
+            //    window.print();        
+            //    window.document.body.innerHTML = temp;    
+            //}    
+            //else { window.print(); }
+            cMyPrint();
+        }
+
+        function addProductRow(i3, name, rdbnum) {
+
+            var html = '<tr id="trDetail3' + i3 + '">'
+                + '<td colspan="4" class="tl PL10" style="line-height: 25px">'
+                + '<span style="font-weight: bold">◤' + name + '项目概念详述：</span><br />'
+                + '<input type="hidden" id="hdprojtype' + i3 + '" value="' + rdbnum + '" />'
+		        + '（请写明使用目的，设计要求[如颜色、排版等]，制作要求、数量等）如属费用支付事项，则需注明支付金额）：<br />'
+				+ '<textarea id="txtSummary' + i3 + '" style="width:98%;height:60px; overflow: hidden;"/></textarea><br />'
+                + '★规格大小：<input type="text" id="txtWidth' + i3 + '" Width="100px"/>(宽)X  '
+                + '<input type="text" id="txtHeight' + i3 + '" Width="100px"/>(高)　'
+                + '<input type=radio id="rdbAcross' + i3 + '" name="modelType' + i3 + '"/>横版 <input type=radio id="rdbUpright' + i3 + '" name="modelType' + i3 + '"/>竖版<br/> '
+                + '★数量/页数：<input type="text" id="txtCount' + i3 + '" Width="100px"/><br />'
+                + '包/安装要求：<input type="text" id="txtPackage' + i3 + '" Width="250px"/>　'
+                + '★成品需求日期：<input type="text" id="txtDemandDate' + i3 + '" Width="105px"/>'
+                + '</td>'
+                + '</tr>';
+
+            $("#tbDetail3").append(html);
+            $("#txtDemandDate" + i3).datepicker();
+        }
+
+        function addRow() {
+            i++;
+            var html = '<tr id="trDetail' + i + '">'
+                + '         <td><span id="txtDetail_No' + i + '">' + i + '</span></td>'
+				+ '         <td><input type="text" id="txtDetail_Department' + i + '" style="width:200px"/></td>'
+                + '         <td><input type="text" id="txtDetail_Count' + i + '" style="width:200px"/></td>'
+				+ '     </tr>';
+            //var html = '<tr id="trDetail' + i + '"><table><tr><td>这是'+ i +'个</td></tr></table></tr>'
+            $("#trFlag").before(html);
+            //$("#trFlag").before("<tr><td>这是"+ i +"个</td></tr>");
+            $("#txtDetail_Department" + i).autocomplete({ source: jJSON });
+        }
+
+        function addRow2() {
+            i2++;
+            var html = '<tr id="trDetail2' + i2 + '">'
+                + '         <td><span id="txtStatistical_SNo' + i2 + '">' + i2 + '</span></td>'
+				+ '         <td><input type="text" id="txtStatistical_SDepartment' + i2 + '" style="width:150px"/></td>'
+                + '         <td><input type="text" id="txtStatistical_Address' + i2 + '" style="width:150px"/></td>'
+                + '         <td><input type="text" id="txtStatistical_SCount' + i2 + '" style="width:150px"/></td>'
+				+ '     </tr>';
+            //var html = '<tr id="trDetail' + i2 + '"><table><tr><td>这是'+ i2 +'个</td></tr></table></tr>'
+            $("#trFlag2").before(html);
+            //$("#trFlag").before("<tr><td>这是"+ i2 +"个</td></tr>");
+            $("#txtStatistical_SDepartment" + i2).autocomplete({ source: jJSON });
+        }
+
+        function deleteRow() {
+            if (i > 1) {
+                i--;
+                $("#tbDetail tr:eq(" + (i + 1) + ")").remove();
+            } else
+                alert("不可删除第一行。");
+            $("#ros1").attr("rowspan", i);
+            $("#ros2").attr("rowspan", i);
+        }
+
+        function deleteRow2() {
+            if (i2 > 1) {
+                i2--;
+                $("#tbDetail2 tr:eq(" + (i2 + 1) + ")").remove();
+            } else
+                alert("不可删除第一行。");
+            //$("#tbDetail tr:eq(0)").remove();
+        }
+
+        function DeleteT() { //20141231：M_DeleteC
+            $("#btnADelete").hide();
+            var url = "/Apply/Apply_DeleteDialog.aspx?mainID=6c67e6bb-7b85-41d6-82ff-da343354679f&url=Nothing&apply=" + escape("招琛彤") + "&href=" + window.location.href;
+            var sReturnValue = window.showModalDialog(url, '6c67e6bb-7b85-41d6-82ff-da343354679f', "dialogHeight=260px;dialogWidth=665px;");
+            if (sReturnValue == 'deleted')
+                window.location = '/Apply/Apply_Search.aspx';
+            else
+                window.location.href = window.location.href;
+        }
+        function checkSaveNo() {
+            var no = $("#ctl00_ContentPlaceHolder1_txtTNo").val();
+            if (no == "") {
+                alert('请填写申请编号');
+                $("#ctl00_ContentPlaceHolder1_txtTNo").focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <style type="text/css">
+        .auto-style1 {
+            width: 15%;
+        }
+    </style>
+</head>
+<body style="margin-top: 0px;">
+    <form name="aspnetForm" method="post" action="Apply_NewPropaganda_Detail.aspx?MainID=6c67e6bb-7b85-41d6-82ff-da343354679f&amp;islawer=False&amp;dep=&amp;apply=&amp;start=&amp;end=&amp;type=&amp;state=&amp;ctype=0&amp;curpage=0&amp;serialnumber=Propaganda20170725115929933566+&amp;keyword=&amp;approver=&amp;apptime=&amp;DeleteA=False" id="aspnetForm">
+        <div>
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJLTg1MzY0ODU3D2QWAmYPZBYCAgEPZBYGAgEPDxYCHgRUZXh0BQnmi5vnkJvlvaRkZAIDDw8WAh8ABTvmgqjmnIk8c3BhbiBzdHlsZT0iY29sb3I6cmVkIj415Lu9PC9zcGFuPueUs+ivt+mcgOimgeWuoeaJuWRkAgcPZBYIAksPDxYCHgdWaXNpYmxlZ2RkAkwPDxYCHwFnZGQCUw88KwANAQAPFgQeC18hRGF0YUJvdW5kZx4LXyFJdGVtQ291bnRmZGQCVQ8PFgIfAWdkZBgCBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WPAUmY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRyZGJTdW1QcmljZTEFLmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2JLaW5kT2ZBZHZlcnRpc2luZzEFLmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2JLaW5kT2ZBZHZlcnRpc2luZzIFLmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2JLaW5kT2ZBZHZlcnRpc2luZzMFLmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2JLaW5kT2ZBZHZlcnRpc2luZzQFLmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2JLaW5kT2ZBZHZlcnRpc2luZzUFLmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2JLaW5kT2ZBZHZlcnRpc2luZzYFJmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkcmRiU3VtUHJpY2UyBSZjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJHJkYlN1bVByaWNlMgUrY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjYktpbmRPZlByaW50aW5nMQUrY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjYktpbmRPZlByaW50aW5nMgUrY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjYktpbmRPZlByaW50aW5nMwUrY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjYktpbmRPZlByaW50aW5nNAUrY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjYktpbmRPZlByaW50aW5nNQUrY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjYktpbmRPZlByaW50aW5nNgUmY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRyZGJTdW1QcmljZTMFJmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkcmRiU3VtUHJpY2UzBStjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNiS2luZE9mTWF0ZXJpYWwxBStjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNiS2luZE9mTWF0ZXJpYWwyBStjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNiS2luZE9mTWF0ZXJpYWwzBStjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNiS2luZE9mTWF0ZXJpYWw0BSZjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJHJkYlN1bVByaWNlNAUmY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRyZGJTdW1QcmljZTQFK2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2JLaW5kT2ZBY3Rpdml0eTEFK2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2JLaW5kT2ZBY3Rpdml0eTIFK2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2JLaW5kT2ZBY3Rpdml0eTMFK2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2JLaW5kT2ZBY3Rpdml0eTQFJmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkcmRiU3VtUHJpY2U1BSZjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJHJkYlN1bVByaWNlNQUmY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjYktpbmRPZk1hcDEFJmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2JLaW5kT2ZNYXAyBSZjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNiS2luZE9mTWFwMwUmY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjYktpbmRPZk1hcDQFJmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkcmRiU3VtUHJpY2U2BSZjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJHJkYlN1bVByaWNlNgUnY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjYktpbmRPZkdpZnQxBSZjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJHJkYlN1bVByaWNlNwUmY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRyZGJTdW1QcmljZTcFJ2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2JLaW5kT2ZTZW5kMQUnY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjYktpbmRPZlNlbmQyBSdjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNiS2luZE9mU2VuZDMFJ2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2JLaW5kT2ZTZW5kNAUmY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRyZGJTdW1QcmljZTgFJmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkcmRiU3VtUHJpY2U4BSpjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNiS2luZE9mQW5vdGhlcjEFKmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2JLaW5kT2ZBbm90aGVyMgUqY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjYktpbmRPZkFub3RoZXI0BSpjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNiS2luZE9mQW5vdGhlcjUFKmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2JLaW5kT2ZBbm90aGVyMwUqY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRyZGJQYXlTaXR1YXRpb24xBSpjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJHJkYlBheVNpdHVhdGlvbjEFKmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkcmRiUGF5U2l0dWF0aW9uMgUqY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRyZGJQYXlTaXR1YXRpb24zBSpjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJHJkYlBheVNpdHVhdGlvbjMFJGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkcmRiQW5vdGhlcgUkY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRyZGJBbm90aGVyBSNjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJHJkYkdyYWRlMQUjY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRyZGJHcmFkZTIFI2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkcmRiR3JhZGUzBSNjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJHJkYkdyYWRlNAUiY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndkF0dGFjaA88KwAKAQhmZDja0VPeqAPmzxhMtFewQ01Heorj" />
+        </div>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['aspnetForm'];
+            if (!theForm) {
+                theForm = document.aspnetForm;
+            }
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+            //]]>
+        </script>
+
+
+        <div>
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CDF7EBCF" />
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWbwKXi4G5DgKf4YKyDwKis+zlBwLSxeasDQLB7qbNCgKnv4r+BwKGvurtAQLtmOqHCAKn3pnCDgLS7cOWBwL95bSLAgKwmI7EDgLs1vjiDgLTk4OvBAKTsOAzApOw5DMCk7DoMwKTsOwzApOw8DMCk7D0MwKMn5vmAQLTk7fKDALlwsLcDwK2/pucDgKblf6GBAKUh+mcAQL5ncuHBwLK2aTHBQL4lrh1AtOTq5ULArWb+7sCApqy3aYIAv/Iv5EOArypkKYFAru9r8gEAtOT37ACAvrQsJgKAt/nkgMCxP707QUCgd/Fgg0C3OSXHgLTk/PbCgLph7+sAgLph7usAgLph7esAgLph7OsAgLLtsufCwLTk+fmAQKnj8LPBQLvq4utDQLTk5uCCALL2+H/DQLmxP+UCAKBrp2qAgKcl7u/DAKr4uxQAtOTz/oLAv24nLUBAv24oLUBAv24iLUBAv24jLUBAv24pLUBAtO+zYoMApb575EEApb5w8oMAr2Avf4MApb5t+cDAurF7p8JAqnPi6MFAvrekeEBAsv7qoELAvjR564MAtG8ivAOAtC8ivAOAtO8ivAOAtK8ivAOArfQ3KEIAqGXu9gFAvrAo5oLAunsq/8NAursjsEMAtnoz9MMAqCwt7oIApfWiYYKAsKg4vMIAp6mnuUDAp2WhLwGAriswb4HAsOeudULAoG5mrMHAsqt7LgDAoSvwKkDAqexnq4IAufIrpsBAqiRot8KApy7yQYCmpG69AMCx8ffpwUC0qqx0gUCo47uhgcCvaTEwg0C6vX58AgCz4zc2w4Cp+POnAQC17jo+A0CxpjNyQcC4q6AvgUCrNPk2QsCrNOoyAECrNO8owoC4PiAng3cVw+o0CaYYut9irIxwwBIbASIpg==" />
+        </div>
+        <div class="mainmask" id="mainmask"></div>
+        <div id="masterpage_form" class="noprint" style="background-image: url('../../Images/banner.jpg'); height: 110px; padding-left: 10px;">
+            <img src="../../Images/logo.png" style="margin-bottom: 5px; margin-top: 20px;" />
+            <ul id="nav" class="dropdown dropdown-horizontal">
+                <li id="li1">
+                    <a id="sec" href="/Apply/Apply_Search.aspx">查询</a>
+                </li>
+                <li style="padding-top: 1px; background-color: transparent;">
+                    <img src="../../Images/ul_nav_line.png" /></li>
+                <li id="li2" class="dir">申请类型
+                <ul id="ttul" style="border: none;">
+                    <li class="first dir">地铺营运类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/Feasibility/Apply_Feasibility_Detail.aspx">新建分行可行性报告</a></li>
+                            <li><a href="/Apply/TotalRev/Apply_TotalRev_Detail.aspx">新分行总启费用申请表</a></li>
+                            <li><a href="/Apply/CallCenterFeasibility/Apply_CallCenterFeasibility_Detail.aspx">新建呼叫中心可行性报告</a></li>
+                            <li><a href="/Apply/SuspendBusi/Apply_SuspendBusi_Detail.aspx">暂停营业申请表</a></li>
+                            <li><a href="/Apply/ResumeBusi/Apply_ResumeBusi_Detail.aspx">恢复营业申请表</a></li>
+                            <li><a href="/Apply/WithdrawShop/Apply_WithdrawShop_Detail.aspx">撤铺/转铺申请表</a></li>
+                            <li><a href="/Apply/BranchContract/Apply_NewBranchContract_Detail.aspx">分行续约申请报告</a></li>
+                            <li><a href="/Apply/Maintenance/Apply_Maintenance_Detail.aspx">大额维修申请表</a></li>
+                            <li class="last"><a href="/Apply/Repair/Apply_Repair_Detail.aspx">新增、维修项目报价（结算）明细表</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">接盘类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/UndertakeProj/201510/Apply_UtContract_Detail.aspx">物业部承接新项目/项目续约申请表</a></li>
+                            <li><a href="/Apply/EBAdjuct/Apply_EBAdjuct_Detail.aspx">发展商额外奖金新增申请及调整申请</a></li>
+                            <li><a href="/Apply/ProjCost/Apply_ProjCost_Detail.aspx">项目费用申请表</a></li>
+                            <li><a href="/Apply/ContractTerms/Apply_ContractTerms_Detail.aspx">合同条款申请表</a></li>
+
+
+
+                        </ul>
+                    </li>
+                    <li class="first dir">成交报数类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/ReduceComm/Apply_NewReduceComm_Detail.aspx">减佣/让佣申请表</a></li>
+                            <li><a href="/Apply/SpecialNumber/Apply_SpecialNumber_Detail.aspx">特殊上数申请表</a></li>
+                            <li><a href="/Apply/CoopCost/Apply_CoopCost_Detail.aspx">合作费申请表</a></li>
+                            <li><a href="/Apply/BadDebts/Apply_BadDebts_Detail.aspx">坏账申请表</a></li>
+                            <li><a href="/Apply/BackComm/Apply_BackComm_Detail.aspx">退佣申请表</a></li>
+
+
+                            <li><a href="/Apply/PullafewRd/Apply_PullafewRd_Detail.aspx">三级市场一手项目欠必要性文件拉数申请</a></li>
+                            <li class="last"><a href="/Apply/SolHold/Apply_SolHold_Detail.aspx">物业部批量解hold申请</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">项目部申请类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/ProjAgentClause/Apply_ProjAgentClause_Detail.aspx">项目销售代理合同条款申请表</a></li>
+                            <li><a href="/Apply/ProjWorkCloth/Apply_ProjWorkCloth_Detail.aspx">项目工衣申请表</a></li>
+                            <li><a href="/Apply/ProjDormSubsiby/Apply_ProjDormSubsiby_Detail.aspx">项目宿舍及津贴费用申请表</a></li>
+                            <li><a href="/Apply/ProjRepoData/Apply_ProjRepoData_Detail.aspx">项目报数申请表</a></li>
+                            <li><a href="/Apply/ProjLinkRepoData/Apply_ProjLinkRepoData_Detail.aspx">项目联动报数申请表</a></li>
+                            <li><a href="/Apply/ChangeData/Apply_ChangeData_Detail.aspx">变更资料申请表</a></li>
+                            <li><a href="/Apply/CommissionAdjust/Apply_CommissionAdjust_Detail.aspx">应收佣金调整报告</a></li>
+                            <li><a href="/Apply/WirelessFixedLine/Apply_WirelessFixedLine_Detail.aspx">无线固话申请表</a></li>
+
+                            <li><a href="/Apply/ProjectCarAllowance/Apply_ProjectCarAllowance_Detail.aspx">小汽车津贴申请表（项目部）</a></li>
+                            <li><a href="/Apply/PullafewTwo/Apply_PullafewTwo_Detail.aspx">二级市场一手项目欠必要性文件拉数申请</a></li>
+                            <li><a href="/Apply/ProjReDaAdd/Apply_ProjReDaAdd_Detail.aspx">项目报数申请表(物业部加签)</a></li>
+                            <li><a href="/Apply/ProjBaComm/Apply_ProjBaComm_Detail.aspx">项目部实收佣金调整申请表</a></li>
+                            <li><a href="/Apply/PartTime/Apply_PartTime_Detail.aspx">项目部兼职申请</a></li>
+                            <li><a href="/Apply/CommissionAssign/Apply_CommissionAssign_Detail.aspx">项目部佣金分配指引</a></li>
+                            <li class="last"><a href="/Apply/ExtraBonus/Apply_ExtraBonus_Detail.aspx">项目发展商额外奖金报备（仅适用于项目部）</a></li>
+                            <li class="last"><a href="/Apply/ProjGeneralApply/Apply_ProjGeneralApply_Detail.aspx">项目部通用申请</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">汇瀚按揭类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/NetSign/Apply_NetSign_Detail.aspx">超成数备案</a></li>
+                            <li><a href="/Apply/Guarantee/Apply_Guarantee_Detail.aspx">担保申请</a></li>
+                            <li><a href="/Apply/Changens/Apply_Changens_Detail.aspx">网签变更、特殊申请表</a></li>
+                            <li><a href="/Apply/Specialcase/Apply_Specialcase_Detail.aspx">特殊个案申请表</a></li>
+                            <li><a href="/Apply/HoldCoisn/20160712/Apply_HoldCoisn_Detail.aspx">解除汇瀚HOLD佣申请</a></li>
+                            <li><a href="/Apply/Record/Apply_Record_Detail.aspx">备案必须的内容</a></li>
+                            <li class="last"><a href="/Apply/SignedG/Apply_SignedG_Detail.aspx">关于签署两方版本担保协议书的申请</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">资产类
+                        <ul style="width: 260px; display: none;">
+
+                            <li class="first"><a href="/Apply/Scrap/Old/Apply_Scrap_Detail.aspx">报废申请表</a></li>
+                            <li><a href="/Apply/AssetTransfer/Old/Apply_AssetTransfer_Detail.aspx">资产调动表</a></li>
+                            <li><a href="/Apply/Secondment/Apply_Secondment_Detail.aspx">资产借调申请表</a></li>
+                            <li><a href="/Apply/ITBuy/20151207/Apply_ITBuy_Detail.aspx">计算机及相关设备购买申请表</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">软件系统类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/ITPower/Apply_ITPower_Detail.aspx">(物业部/工商铺)IT权限申请表(仅适用于三级市场系统、佣金系统、内部网（SPS）、电子传真)</a></li>
+                            <li><a href="/Apply/SysPower/Apply_SysPower_Detail.aspx">(后勤/汇瀚/二级市场)IT权限申请表</a></li>
+                            <li class="last"><a href="/Apply/SysReq/Apply_SysReq_Detail.aspx">软件系统开发需求申请表</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">薪酬福利类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/PersInterests/Apply_NewPersInterests_Detail.aspx">员工个人利益申报表</a></li>
+                            <li><a href="/Apply/BuyBuilding/Apply_NewBuyBuilding_Detail.aspx">员工购租楼宇申报及免佣福利申请表</a></li>
+                            <li><a href="/Apply/CarAllowance/Apply_CarAllowance_Detail.aspx">小汽车津贴申请表</a></li>
+                            <li><a href="/Apply/CommissionOfMonth/Apply_CommissionOfMonth_Detail.aspx">关于享受本月佣金按全年一次性奖金发放申请表</a></li>
+
+                            <li><a href="/Apply/OpenProve/Apply_OpenProve_Detail.aspx">薪酬福利类证明开具申请表</a></li>
+                            <li><a href="/Apply/HousingFundChange/Apply_HousingFundChange_Detail.aspx">公积金特殊申请表</a></li>
+                            <li class="last"><a href="/Apply/FurtherEducation/Apply_FurtherEducation_Detail.aspx">进修津贴申请表</a></li>
+                            <li class="last"><a href="/Apply/HousingFundAdjustment/Apply_HousingFundAdjustment_Detail.aspx">公积金缴存比例年度调整申请表</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">人事事务类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/OweSubmit/Apply_OweSubmit_Detail.aspx">延缓提交入职资料申请</a></li>
+                            <li class="last"><a href="/Apply/Tourism/Apply_Tourism_Detail.aspx">营运部门自组织外出活动申请</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">招聘类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/SpecialAdd/Apply_SpecialAdd_Detail.aspx">特殊增编申请表</a></li>
+                            <li><a href="/Apply/Recruit/Apply_Recruit_Detail.aspx">招聘需求申请</a></li>
+                            <li class="last"><a href="/Apply/WYRecruit/Apply_WYRecruit_Detail.aspx">营业部自主招聘申请</a></li>
+                            <li><a href="/Apply/StaffDataCheck/Apply_StaffDataCheck_Detail.aspx">六级及以上营业人员入职资料核查表</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">费用申请报销类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/CostOfActivity/Apply_CostOfActivity_Detail.aspx">三级市场季会活动费用申请表</a></li>
+                            <li><a href="/Apply/Marketing/Apply_Marketing_Detail.aspx">市场推广费用申请</a></li>
+                            <li><a href="/Apply/BorrowMoney/Apply_BorrowMoney_Detail.aspx">临时借用资金申请表</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="first dir">通用/其他
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/GeneralApply/Apply_GeneralApply_Detail.aspx  ">通用申请表</a></li>
+                            <li><a href="/Apply/OfficialSeal/Apply_OfficialSeal_Detail.aspx">公章使用申请表</a></li>
+                            <li><a href="/Apply/SysLogist/Apply_SysLogist_Detail.aspx">申请内容修改申请表</a></li>
+                            <li><a href="/Apply/Propaganda/Apply_NewPropaganda_Detail.aspx">广告宣传需求申请表</a></li>
+                            <li><a href="/Apply/Budgetab/Apply_Budgetab_Detail.aspx">广告宣传预算使用异常申请表</a></li>
+                            <li><a href="/Apply/Loan/Apply_Loan_Detail.aspx">放款申请表</a></li>
+                            <li class="last"><a href="/Apply/WrongSave/Apply_WrongSave_Detail.aspx">错存帐户调整申请表</a></li>
+                            <li class="last"><a href="/Apply/CPNShoot/Apply_CPNShoot_Detail.aspx">CPN拍摄需求申请表</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                </li>
+                <li id="li4" style="float: right;"><a href="javascript:window.close();">退出</a></li>
+                <li style="float: right; padding-top: 1px; background-color: transparent;">
+                    <img src="../../Images/ul_nav_line.png" /></li>
+                <li id="li5" style="float: right;"><a href="/Login.aspx">重新登录</a></li>
+                <li style="float: right; padding-top: 1px; background-color: transparent;">
+                    <img src="../../Images/ul_nav_line.png" /></li>
+
+                <li id="li6" class="dir" style="float: right;">使用说明
+                <ul style="border: none;">
+                    <li><a href="/资料/使用说明/中原电子审批系统-使用说明.docx" target="_blank">系统使用说明</a></li>
+                    <li><a href="/资料/使用说明/电子审批系统新增功能操作说明.docx" target="_blank">新增功能说明</a></li>
+                </ul>
+                </li>
+
+
+
+                <li style="float: right; padding-top: 1px; background-color: transparent;">
+                    <img src="../../Images/ul_nav_line.png" /></li>
+                <li id="li7" class="dir" style="float: right;">设置
+                <ul style="border: none;">
+                    <li><a href="/SysSetting/Agent_Setting.aspx">代理人</a></li>
+                </ul>
+                </li>
+                <li id="li8" style="float: right; line-height: 40px; margin-right: 20px; font-size: 15px; font-weight: bold; color: Black; background-color: Transparent;">当前用户：<span id="ctl00_lblUser">招琛彤</span></li>
+
+            </ul>
+
+
+
+            <div style="font-size: 18px; font-weight: bold; margin-left: 10px;">
+                <div id="divWaitForMe" style="background-image: url('../../Images/lb_waitforme.png'); background-repeat: no-repeat; padding-left: 6px; float: left; margin-left: 5px; line-height: 40px; padding-right: 10px;">
+                    <a id="ctl00_lbtnUnhandledApplyCount" href="javascript:__doPostBack('ctl00$lbtnUnhandledApplyCount','')">您有<span style="color: red">5份</span>申请需要审批</a>
+                </div>
+                <div id="divDeleteA" style="background-image: url('../../Images/lb_waitforme2.png'); background-repeat: no-repeat; padding-left: 6px; float: left; margin-left: 5px; line-height: 40px; padding-right: 15px;">
+                    <a id="ctl00_lbDeleteA" href="javascript:__doPostBack('ctl00$lbDeleteA','')">0</a>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+        <div id="masterpage_form_bottom" class="noprint" style="clear: both; padding-bottom: 10px; background-image: url('../../Images/banner_bottom.png'); height: 40px;"></div>
+
+        <div style="min-width: 800px; width: 80%; margin: 0px auto;">
+
+            <input name="ctl00$ContentPlaceHolder1$hdEmail" type="hidden" id="ctl00_ContentPlaceHolder1_hdEmail" />
+            <!--<div class="tips">
+        <p><b>一、申请部门填写：</b>“★”号为必须填写内容；</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;申请编号：由市场部填写</p>
+        <p><b>二、宣传类型包括（只可选单类）：</b>如项目内没有所需求内容，请选择“其他”并填上相关内容； </p>
+        <p><b>三、制作项目名称/概念详述：</b>请写明使用目的，设计要求[如颜色、排版等]，制作要求、数量等；</p>
+        <p><b>四、支付情况：</b>根据区域/部门实际支付情况进行选择：</p>
+        <p>1、区域有预算，可选择“由申请项目之预算费用中支付”；</p>
+        <p>2、区域预算其中一类别使用完毕，需进行调用，可选择“由预算中他项费用中调用，”并填写《广告宣传预算使用异常申请表》； </p> 
+        <p>3、如区域没有任何预算，或临时接到新项目，需制作或购买宣传物料，可选择“另行《费用申请》中支付”，前提先另行申请费用（市场推广费用申请）。</p>
+        <p><b>五、摊分情况：</b>如以片区进行申请，请提供摊分部门/分行/级别；</p>
+        <p><b>六、送货清单（必填）：</b>市内分行可送货；如以片区申请，物料制作供应商只能送至其中两间分行；外区：送总部后自取或快递寄至分行；</p>
+        <p><b>七、审批流程：</b></p>
+        <p>申请人：部门/分行组别主管签署——总监/区域负责人</p>
+        <p>审批人（市场部）：市务组：王萍/周燕妮/招琛彤/王珏萍</p>
+        <p>设计组：陈国辉/冯碧斯/冼颖诗</p>
+    </div>-->
+            <script type="text/javascript">
+                //function tipswidth()
+                //{
+                //    var tipswidth = (document.body.clientWidth - 700)/2
+                //    $(".tips").width(tipswidth);
+                //}
+                //tipswidth();
+                //window.onresize = function(){
+                //    tipswidth();
+                //}
+            </script>
+            <div style='text-align: center; width: 640px; margin: 0 auto;'>
+                <div class="noprint">
+                    <div class="flow">审批流程:<span class="other">招琛彤已完成审理</span></div>
+
+                </div>
+                <!--打印正文开始-->
+                <div style='text-align: center'>
+                    <h1>广东中原地产代理有限公司</h1>
+                    <h1>广告宣传需求申请表</h1>
+                    <input type="button" id="btnADelete" value="是否同意删除？" onclick="DeleteT();" style="display: none;" />
+
+                    <span style="float: right;" class="file_number">申请编号：
+                    <input name="ctl00$ContentPlaceHolder1$txtTNo" type="text" id="ctl00_ContentPlaceHolder1_txtTNo" style="width: 160px;" />
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnSaveNo" value="保存" onclick="return checkSaveNo();" id="ctl00_ContentPlaceHolder1_btnSaveNo" />
+                    </span>
+
+                    <table id="tbAround" width='640px'>
+                        <tr>
+                            <td colspan="4" class="tl PL10" bgcolor="Black"><span style="color: #FFFFFF; font-weight: bold;">申请部门填写 （ “★”号为必须填写内容）</span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="tl PL10" style="line-height: 25px">
+                                <div id="snum" style="width: 640px; margin: 0 auto;"><span class="file_number">文档编码(自动生成)：Propaganda20170725115929933566</span></div>
+                                ★申请部门/分行/组别：<input name="ctl00$ContentPlaceHolder1$txtDepartment" type="text" value="市场部" id="ctl00_ContentPlaceHolder1_txtDepartment" style="width: 215px;" /><input name="ctl00$ContentPlaceHolder1$hdDepartmentID" type="hidden" id="ctl00_ContentPlaceHolder1_hdDepartmentID" />
+                                ★申请日期：<input name="ctl00$ContentPlaceHolder1$txtApplyDate" type="text" value="2017-07-25" id="ctl00_ContentPlaceHolder1_txtApplyDate" /><br />
+                                ★申请人：<input name="ctl00$ContentPlaceHolder1$txtApply" type="text" value="招琛彤" id="ctl00_ContentPlaceHolder1_txtApply" style="width: 80px;" />
+                                ★内M：<input name="ctl00$ContentPlaceHolder1$txtApplyID" type="text" value="ADMM14" id="ctl00_ContentPlaceHolder1_txtApplyID" style="width: 80px;" />
+                                ★联系人/电话(手机)：<input name="ctl00$ContentPlaceHolder1$txtConneter" type="text" value="83926396" id="ctl00_ContentPlaceHolder1_txtConneter" /><br />
+                                ★分行地址：<input name="ctl00$ContentPlaceHolder1$txtBranchAddress" type="text" value="测试" id="ctl00_ContentPlaceHolder1_txtBranchAddress" style="width: 507px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="tl PL10" style="line-height: 25px">
+
+                                <span style="font-weight: bold">◤宣传类型包括：</span>(只可选单类)<br />
+                                <div class="propagandatype">
+                                    <input id="ctl00_ContentPlaceHolder1_rdbSumPrice1" type="radio" name="ctl00$ContentPlaceHolder1$SumPrice" value="rdbSumPrice1" checked="checked" /><label for="ctl00_ContentPlaceHolder1_rdbSumPrice1">广告类</label>
+                                    （<input id="ctl00_ContentPlaceHolder1_cbKindOfAdvertising1" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfAdvertising1" /><label for="ctl00_ContentPlaceHolder1_cbKindOfAdvertising1">报纸广告栏</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfAdvertising2" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfAdvertising2" /><label for="ctl00_ContentPlaceHolder1_cbKindOfAdvertising2">分类广告</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfAdvertising3" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfAdvertising3" /><label for="ctl00_ContentPlaceHolder1_cbKindOfAdvertising3">杂志广告</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfAdvertising4" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfAdvertising4" /><label for="ctl00_ContentPlaceHolder1_cbKindOfAdvertising4">户外广告</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfAdvertising5" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfAdvertising5" /><label for="ctl00_ContentPlaceHolder1_cbKindOfAdvertising5">网络广告</label><br />
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfAdvertising6" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfAdvertising6" checked="checked" /><label for="ctl00_ContentPlaceHolder1_cbKindOfAdvertising6">其它</label>
+                                    <input name="ctl00$ContentPlaceHolder1$txtAnotherAdvertising" type="text" value="测试" id="ctl00_ContentPlaceHolder1_txtAnotherAdvertising" style="width: 470px;" />）<br />
+                                </div>
+
+                                <div class="propagandatype">
+                                    <input id="ctl00_ContentPlaceHolder1_rdbSumPrice2" type="radio" name="ctl00$ContentPlaceHolder1$SumPrice" value="rdbSumPrice2" /><label for="ctl00_ContentPlaceHolder1_rdbSumPrice2">印刷类</label>
+                                    （<input id="ctl00_ContentPlaceHolder1_cbKindOfPrinting1" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfPrinting1" /><label for="ctl00_ContentPlaceHolder1_cbKindOfPrinting1">卡仔</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfPrinting2" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfPrinting2" /><label for="ctl00_ContentPlaceHolder1_cbKindOfPrinting2">单张</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfPrinting3" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfPrinting3" /><label for="ctl00_ContentPlaceHolder1_cbKindOfPrinting3">楼盘纸</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfPrinting4" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfPrinting4" /><label for="ctl00_ContentPlaceHolder1_cbKindOfPrinting4">小册子</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfPrinting5" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfPrinting5" /><label for="ctl00_ContentPlaceHolder1_cbKindOfPrinting5">书刊</label><br />
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfPrinting6" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfPrinting6" /><label for="ctl00_ContentPlaceHolder1_cbKindOfPrinting6">其它</label>
+                                    <input name="ctl00$ContentPlaceHolder1$txtAnotherPrinting" type="text" id="ctl00_ContentPlaceHolder1_txtAnotherPrinting" style="width: 470px;" />）<br />
+                                </div>
+
+                                <div class="propagandatype">
+                                    <input id="ctl00_ContentPlaceHolder1_rdbSumPrice3" type="radio" name="ctl00$ContentPlaceHolder1$SumPrice" value="rdbSumPrice3" /><label for="ctl00_ContentPlaceHolder1_rdbSumPrice3">物料类</label>
+                                    （<input id="ctl00_ContentPlaceHolder1_cbKindOfMaterial1" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfMaterial1" /><label for="ctl00_ContentPlaceHolder1_cbKindOfMaterial1">海报</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfMaterial2" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfMaterial2" /><label for="ctl00_ContentPlaceHolder1_cbKindOfMaterial2">横幅</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfMaterial3" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfMaterial3" /><label for="ctl00_ContentPlaceHolder1_cbKindOfMaterial3">展示用品（太阳伞/帐篷/折叠式桌椅）</label><br />
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfMaterial4" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfMaterial4" /><label for="ctl00_ContentPlaceHolder1_cbKindOfMaterial4">其它</label>
+                                    <input name="ctl00$ContentPlaceHolder1$txtAnotherMaterial" type="text" id="ctl00_ContentPlaceHolder1_txtAnotherMaterial" style="width: 470px;" />）<br />
+                                </div>
+
+                                <div class="propagandatype">
+                                    <input id="ctl00_ContentPlaceHolder1_rdbSumPrice4" type="radio" name="ctl00$ContentPlaceHolder1$SumPrice" value="rdbSumPrice4" /><label for="ctl00_ContentPlaceHolder1_rdbSumPrice4">活动类</label>
+                                    （<input id="ctl00_ContentPlaceHolder1_cbKindOfActivity1" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfActivity1" /><label for="ctl00_ContentPlaceHolder1_cbKindOfActivity1">联展活动</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfActivity2" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfActivity2" /><label for="ctl00_ContentPlaceHolder1_cbKindOfActivity2">专题讲座</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfActivity3" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfActivity3" /><label for="ctl00_ContentPlaceHolder1_cbKindOfActivity3">公司活动（季会/主管会）</label><br />
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfActivity4" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfActivity4" /><label for="ctl00_ContentPlaceHolder1_cbKindOfActivity4">其它</label>
+                                    <input name="ctl00$ContentPlaceHolder1$txtAnotherActivity" type="text" id="ctl00_ContentPlaceHolder1_txtAnotherActivity" style="width: 470px;" />）<br />
+                                </div>
+
+                                <div class="propagandatype">
+                                    <input id="ctl00_ContentPlaceHolder1_rdbSumPrice5" type="radio" name="ctl00$ContentPlaceHolder1$SumPrice" value="rdbSumPrice5" /><label for="ctl00_ContentPlaceHolder1_rdbSumPrice5">地图类</label>
+                                    （<input id="ctl00_ContentPlaceHolder1_cbKindOfMap1" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfMap1" /><label for="ctl00_ContentPlaceHolder1_cbKindOfMap1">A图</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfMap2" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfMap2" /><label for="ctl00_ContentPlaceHolder1_cbKindOfMap2">B图</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfMap3" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfMap3" /><label for="ctl00_ContentPlaceHolder1_cbKindOfMap3">C图</label><br />
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfMap4" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfMap4" /><label for="ctl00_ContentPlaceHolder1_cbKindOfMap4">其它</label>
+                                    <input name="ctl00$ContentPlaceHolder1$txtAnotherMap" type="text" id="ctl00_ContentPlaceHolder1_txtAnotherMap" style="width: 470px;" />）<br />
+                                </div>
+
+                                <div class="propagandatype">
+                                    <input id="ctl00_ContentPlaceHolder1_rdbSumPrice6" type="radio" name="ctl00$ContentPlaceHolder1$SumPrice" value="rdbSumPrice6" /><label for="ctl00_ContentPlaceHolder1_rdbSumPrice6">礼品类</label>
+                                    （<input id="ctl00_ContentPlaceHolder1_cbKindOfGift1" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfGift1" /><label for="ctl00_ContentPlaceHolder1_cbKindOfGift1">其它</label>
+                                    <input name="ctl00$ContentPlaceHolder1$txtAnotherGift" type="text" id="ctl00_ContentPlaceHolder1_txtAnotherGift" style="width: 470px;" />）<br />
+                                </div>
+
+                                <div class="propagandatype">
+                                    <input id="ctl00_ContentPlaceHolder1_rdbSumPrice7" type="radio" name="ctl00$ContentPlaceHolder1$SumPrice" value="rdbSumPrice7" /><label for="ctl00_ContentPlaceHolder1_rdbSumPrice7">派送类</label>
+                                    （<input id="ctl00_ContentPlaceHolder1_cbKindOfSend1" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfSend1" /><label for="ctl00_ContentPlaceHolder1_cbKindOfSend1">正常派送</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfSend2" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfSend2" /><label for="ctl00_ContentPlaceHolder1_cbKindOfSend2">加急派送</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfSend3" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfSend3" /><label for="ctl00_ContentPlaceHolder1_cbKindOfSend3">分装配送</label><br />
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfSend4" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfSend4" /><label for="ctl00_ContentPlaceHolder1_cbKindOfSend4">其它</label>
+                                    <input name="ctl00$ContentPlaceHolder1$txtAnotherSend" type="text" id="ctl00_ContentPlaceHolder1_txtAnotherSend" style="width: 470px;" />）<br />
+                                </div>
+
+                                <div class="propagandatype">
+                                    <input id="ctl00_ContentPlaceHolder1_rdbSumPrice8" type="radio" name="ctl00$ContentPlaceHolder1$SumPrice" value="rdbSumPrice8" /><label for="ctl00_ContentPlaceHolder1_rdbSumPrice8">其它类</label>
+                                    （<input id="ctl00_ContentPlaceHolder1_cbKindOfAnother1" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfAnother1" /><label for="ctl00_ContentPlaceHolder1_cbKindOfAnother1">邮局直投</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfAnother2" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfAnother2" /><label for="ctl00_ContentPlaceHolder1_cbKindOfAnother2">打印</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfAnother4" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfAnother4" /><label for="ctl00_ContentPlaceHolder1_cbKindOfAnother4">卡秀</label>
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfAnother5" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfAnother5" /><label for="ctl00_ContentPlaceHolder1_cbKindOfAnother5">协助拍照</label><br />
+                                    <input id="ctl00_ContentPlaceHolder1_cbKindOfAnother3" type="checkbox" name="ctl00$ContentPlaceHolder1$cbKindOfAnother3" /><label for="ctl00_ContentPlaceHolder1_cbKindOfAnother3">其它</label>
+                                    <input name="ctl00$ContentPlaceHolder1$txtAnotherAnother" type="text" id="ctl00_ContentPlaceHolder1_txtAnotherAnother" style="width: 470px;" />）<br />
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="4" class="tl PL10" style="line-height: 25px">
+                                <table id="tbDetail3" width='100%' class='sample tc' align="center">
+                                    <tr id="trDetail36">
+                                        <td colspan="4" class="tl PL10" style="line-height: 25px"><span style="font-weight: bold">◤其它项目概念详述：</span><br />
+                                            <input type="hidden" id="hdprojtype6" value="1" />（请写明使用目的，设计要求[如颜色、排版等]，制作要求、数量等）如属费用支付事项，则需注明支付金额）：<br />
+                                            <textarea id="txtSummary6" style="width: 98%; height: 60px; overflow: hidden;" /></textarea><br />
+                                            ★规格大小：<input type="text" id="txtWidth6" width="100px" />(宽)X 
+                                            <input type="text" id="txtHeight6" width="100px" />(高)
+                                            <input type="radio" id="rdbAcross6" name="modelType6" />横版
+                                            <input type="radio" id="rdbUpright6" name="modelType6" />竖版<br />
+                                            ★数量/页数：<input type="text" id="txtCount6" width="100px" /><br />
+                                            包/安装要求：<input type="text" id="txtPackage6" width="250px" />
+                                            ★成品需求日期：<input type="text" id="txtDemandDate6" width="105px" /></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="4" class="tl PL10" style="line-height: 25px">
+                                <span style="font-weight: bold">★支付情况：</span><br />
+                                <input id="ctl00_ContentPlaceHolder1_rdbPaySituation1" type="radio" name="ctl00$ContentPlaceHolder1$PaySituation" value="rdbPaySituation1" /><label for="ctl00_ContentPlaceHolder1_rdbPaySituation1">由申请项目之预算费用中支付</label><br />
+                                <input id="ctl00_ContentPlaceHolder1_rdbPaySituation2" type="radio" name="ctl00$ContentPlaceHolder1$PaySituation" value="rdbPaySituation2" checked="checked" /><label for="ctl00_ContentPlaceHolder1_rdbPaySituation2">由预算中他项费用中调用，项目名称为：</label>
+                                <input name="ctl00$ContentPlaceHolder1$txtPayProjectName" type="text" value="测试" id="ctl00_ContentPlaceHolder1_txtPayProjectName" style="width: 350px;" /><br />
+                                <input id="ctl00_ContentPlaceHolder1_rdbPaySituation3" type="radio" name="ctl00$ContentPlaceHolder1$PaySituation" value="rdbPaySituation3" /><label for="ctl00_ContentPlaceHolder1_rdbPaySituation3">另行《费用申请》中支付，《费用申请》编号：</label>
+                                <input name="ctl00$ContentPlaceHolder1$txtFearNo" type="text" id="ctl00_ContentPlaceHolder1_txtFearNo" style="width: 313px;" /><br />
+                                <input id="ctl00_ContentPlaceHolder1_rdbAnother" type="radio" name="ctl00$ContentPlaceHolder1$PaySituation" value="rdbAnother" /><label for="ctl00_ContentPlaceHolder1_rdbAnother">其他</label>
+                                <input name="ctl00$ContentPlaceHolder1$txtOtherDescript" type="text" id="ctl00_ContentPlaceHolder1_txtOtherDescript" style="width: 313px;" /><br />
+                                <span style="font-weight: bold">◤摊分情况：</span>（表格不尽之处可按以下格式另行附表）<br />
+                                <table id="tbDetail" width='95%' class='sample tc' align="center">
+                                    <thead>
+                                        <tr>
+                                            <td>序</td>
+                                            <td>分摊部门/分行/组别</td>
+                                            <td>送货数量</td>
+                                        </tr>
+                                    </thead>
+                                    <tr id="trDetail1">
+                                        <td><span id="txtDetail_No1">1</span></td>
+                                        <td>
+                                            <input type="text" id="txtDetail_Department1" style="width: 200px" /></td>
+                                        <td>
+                                            <input type="text" id="txtDetail_Count1" style="width: 200px" /></td>
+                                    </tr>
+                                    <tr id="trFlag">
+                                        <td colspan="4"></td>
+                                    </tr>
+                                </table>
+                                <input type="button" id="btnAddRow" value="添加新行" onclick="addRow();" style="float: left; display: none;" />
+                                <input type="button" id="btnDeleteRow" value="删除一行" onclick="deleteRow();" style="float: left; display: none" />
+                                <br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl PL10" colspan="4" style="line-height: 25px">
+                                <span style="font-weight: bold">◤送货清单：</span>（表格不尽之处可按以下格式另行附表[如有更多的派送点则需另行派送申请]）<br />
+                                <table id="tbDetail2" class='sample tc' width='95%' align="center">
+                                    <thead>
+                                        <tr>
+                                            <td>序</td>
+                                            <td>送货部门/分行/组</td>
+                                            <td>送货地址</td>
+                                            <td>送货数量</td>
+                                        </tr>
+                                    </thead>
+                                    <tr id="trDetail21">
+                                        <td><span id="txtStatistical_SNo1">1</span></td>
+                                        <td>
+                                            <input type="text" id="txtStatistical_SDepartment1" style="width: 150px" /></td>
+                                        <td>
+                                            <input type="text" id="txtStatistical_Address1" style="width: 150px" /></td>
+                                        <td>
+                                            <input type="text" id="txtStatistical_SCount1" style="width: 150px" /></td>
+                                    </tr>
+                                    <tr id="trFlag2">
+                                        <td colspan="4"></td>
+                                    </tr>
+                                </table>
+                                <input type="button" id="btnAddRow2" value="添加新行" onclick="addRow2();" style="float: left; display: none" />
+                                <input type="button" id="btnDeleteRow2" value="删除一行" onclick="deleteRow2();" style="float: left; display: none" />
+                                <br />
+                            </td>
+                        </tr>
+
+                        <tr id="trManager1" class="noborder" style="height: 85px;">
+                            <td class="auto-style1">部门/分行/组别主管签署</td>
+                            <td colspan="3" class="tl PL10" style="">
+                                <input id="rdbYesIDx1" type="radio" name="agree1" /><label for="rdbYesIDx1">同意</label><input id="rdbNoIDx1" type="radio" name="agree1" /><label for="rdbNoIDx1">不同意</label><br />
+                                <textarea id="txtIDx1" rows="5" style="width: 98%; overflow: auto;"></textarea><input type="button" id="btnSignIDx1" value="签名" onclick="sign('1')" style="display: none;" />
+
+                                <br />
+                                <span style="padding-right: 30px; padding-bottom: 10px; text-align: right; float: right;">日期：<span id="spanDateIDx1">_________</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr id="trManager2" class="noborder" style="height: 85px;">
+                            <td class="auto-style1">总监/区域负责人</td>
+                            <td colspan="3" class="tl PL10">
+                                <input id="rdbYesIDx2" type="radio" name="agree2" /><label for="rdbYesIDx2">同意</label><input id="rdbNoIDx2" type="radio" name="agree2" /><label for="rdbNoIDx2">不同意</label><br />
+                                <textarea id="txtIDx2" rows="5" style="width: 98%; overflow: auto;"></textarea><input type="button" id="btnSignIDx2" value="签名" onclick="sign('2')" style="display: none;" />
+                                <br />
+
+                                <span style="padding-right: 30px; padding-bottom: 10px; text-align: right; float: right;">日期：<span id="spanDateIDx2">_________</span>
+                                </span>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="tl PL10" bgcolor="Black"><span style="color: #FFFFFF; font-weight: bold">安排/完成情况（由市场部填写）</span></td>
+                        </tr>
+                        <tr id="trManager20" class="noborder" style="height: 85px;">
+                            <td class="auto-style1">市务组</td>
+                            <td colspan="3" class="tl PL10">
+                                <input id="rdbYesIDx20" type="radio" name="agree20" /><label for="rdbYesIDx20">同意</label><input id="rdbNoIDx20" type="radio" name="agree20" /><label for="rdbNoIDx20">不同意</label><br />
+                                <textarea id="txtIDx20" rows="5" style="width: 98%; overflow: auto;"></textarea>
+                                <br />
+                                <input type="button" id="btnSignIDx20" value="签名" onclick="sign('20')" style="display: none;" />
+
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnShouldJumpIDx" value="" onclick=" return confirm('跳过后，设计组的审批环节将会被删除，确实要跳过设计组审批吗？');" id="ctl00_ContentPlaceHolder1_btnShouldJumpIDx" style="display: none" />
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnReturnJumpIDx" value="增加设计组" onclick=" return confirm('增加，增加设计组审批，确实要设计组的审批吗？');" id="ctl00_ContentPlaceHolder1_btnReturnJumpIDx" style="display: none" />
+                                <br />
+
+                                <span style="padding-right: 30px; padding-bottom: 10px; text-align: right; float: right;">日期：<span id="spanDateIDx20">_________</span>
+                                </span>
+                                <br />
+
+                            </td>
+                        </tr>
+
+                        <tr id="trManager21" class="noborder" style="height: 85px;">
+                            <td class="auto-style1">设计组</td>
+                            <td colspan="3" class="tl PL10">
+                                <input value="1" name="ctl00$ContentPlaceHolder1$grade" type="radio" id="ctl00_ContentPlaceHolder1_rdbGrade1" /><label>A</label><input value="2" name="ctl00$ContentPlaceHolder1$grade" type="radio" id="ctl00_ContentPlaceHolder1_rdbGrade2" /><label>B</label>
+                                <input value="3" name="ctl00$ContentPlaceHolder1$grade" type="radio" id="ctl00_ContentPlaceHolder1_rdbGrade3" /><label>C</label><input value="4" name="ctl00$ContentPlaceHolder1$grade" type="radio" id="ctl00_ContentPlaceHolder1_rdbGrade4" /><label>D</label><br />
+                                <br />
+
+                                <input id="rdbYesIDx21" type="radio" name="agree21" /><label for="rdbYesIDx21">同意</label><input id="rdbNoIDx21" type="radio" name="agree21" /><label for="rdbNoIDx21">不同意</label><br />
+                                <textarea id="txtIDx21" rows="5" style="width: 98%; overflow: auto;"></textarea><input type="button" id="btnSignIDx21" value="签名" onclick="sign('21')" style="display: none;" />
+
+
+                                <br />
+                                <span style="padding-right: 30px; padding-bottom: 10px; text-align: right; float: right;">日期：<span id="spanDateIDx21">_________</span>
+                                </span>
+                                <br />
+
+                            </td>
+                        </tr>
+                        <tr id="tr2" class="noborder" style="height: 85px;">
+                            <td class="auto-style1">评分市务组</td>
+                            <td colspan="3" class="tl PL10">（1）沟通及时性：&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input id="Radio16" type="radio" name="grade4" value="1" /><label>1</label><input id="Radio17" type="radio" name="grade4" value="2" /><label>2</label>
+                                <input id="Radio18" type="radio" name="grade4" value="3" /><label>3</label><input id="Radio19" type="radio" name="grade4" value="4" /><label>4</label>
+                                <input id="Radio20" type="radio" name="grade4" value="5" /><label>5</label><br />
+                                <br />
+                                （2）成品到达时效：
+                        <input id="Radio21" type="radio" name="grade5" value="1" /><label>1</label><input id="Radio22" type="radio" name="grade5" value="2" /><label>2</label>
+                                <input id="Radio23" type="radio" name="grade5" value="3" /><label>3</label><input id="Radio24" type="radio" name="grade5" value="4" /><label>4</label>
+                                <input id="Radio25" type="radio" name="grade5" value="5" /><label>5</label><br />
+                                <br />
+                                <p>（3）成品质量：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input id="Radio26" type="radio" name="grade6" value="1" /><label>1</label><input id="Radio27" type="radio" name="grade6" value="2" /><label>2</label>
+                                <input id="Radio28" type="radio" name="grade6" value="3" /><label>3</label><input id="Radio29" type="radio" name="grade6" value="4" /><label>4</label>
+                                <input id="Radio30" type="radio" name="grade6" value="5" /><label>5</label>
+                                </p>
+                                <span style="color: red">备注：1分最低,5分最高 </span>
+                                <!--<span style="float: right">
+                                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnCityScore" value="保存" onclick="return checkSaveCityScore();" id="ctl00_ContentPlaceHolder1_btnCityScore" class="btnSaveCityScore" />
+                                </span>-->
+                                <div style="width:680px"><input type="submit" name="ctl00$ContentPlaceHolder1$btnCityScore" value="保存" onclick="return checkSaveCityScore();" id="ctl00_ContentPlaceHolder1_btnCityScore" class="btnSaveCityScore" /></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="4" class="tl PL10" style="line-height: 30px">接单日期：<input name="ctl00$ContentPlaceHolder1$txtAcceptDate" type="text" id="ctl00_ContentPlaceHolder1_txtAcceptDate" style="width: 135px;" />
+
+                                接单人：<select name="ctl00$ContentPlaceHolder1$ddlAccepter" id="ctl00_ContentPlaceHolder1_ddlAccepter" style="width: 140px;">
+                                    <option selected="selected" value="请选择">请选择</option>
+                                    <option value="王萍">王萍</option>
+                                    <option value="周燕妮">周燕妮</option>
+                                    <option value="招琛彤">招琛彤</option>
+                                    <option value="王珏萍">王珏萍</option>
+
+                                </select>
+                                设计员：<select name="ctl00$ContentPlaceHolder1$ddlDesigner" id="ctl00_ContentPlaceHolder1_ddlDesigner" style="width: 140px;">
+                                    <option selected="selected" value="请选择">请选择</option>
+                                    <option value="陈国辉">陈国辉</option>
+                                    <option value="冯碧斯">冯碧斯</option>
+                                    <option value="冼颖诗">冼颖诗</option>
+                                    <option value="黄莎莉">黄莎莉</option>
+                                    <option value="陈唯杰">陈唯杰</option>
+
+                                </select><br />
+                                <div>
+                                    <span style="vertical-align: top">完成情况/取消原因：</span>
+                                    <textarea name="ctl00$ContentPlaceHolder1$txtReason" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_txtReason" style="height: 100px; width: 79%;"></textarea>
+                                </div>
+                                核实人：<input name="ctl00$ContentPlaceHolder1$txtVerifyer" type="text" id="ctl00_ContentPlaceHolder1_txtVerifyer" />
+                                日期：<input name="ctl00$ContentPlaceHolder1$txtVerifyDate" type="text" id="ctl00_ContentPlaceHolder1_txtVerifyDate" />
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="tl PL10" style="padding-top: 10px; padding-left: 5px; padding-bottom: 10px">
+                        注意：1.	详细的制作流程请参阅市场部操作指引。2.	申请部门确定必须设计制作物料后再提交申请设计单。
+                    </div>
+                    <!--打印正文结束-->
+                </div>
+
+                <div class="noprint">
+                    <div>
+                    </div>
+                    <div id="PageBottom">
+                        <hr />
+
+
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnSave" value="保存" onclick="return check();" id="ctl00_ContentPlaceHolder1_btnSave" />
+
+                        <input type="button" id="btnUpload" value="上传附件..." onclick="upload();" style="margin-left: 5px; display: none;" />
+
+
+                        <input type="button" id="btnPrint" value="打印" onclick="myPrint('打印正文开始', '打印正文结束');" style="display: none;" />
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnSPDF" value="另存为PDF" id="ctl00_ContentPlaceHolder1_btnSPDF" />
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnBack" value="返回" id="ctl00_ContentPlaceHolder1_btnBack" />
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnSign" value="" id="ctl00_ContentPlaceHolder1_btnSign" style="display: none;" />
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hdIsAgree" id="ctl00_ContentPlaceHolder1_hdIsAgree" />
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hdSuggestion" id="ctl00_ContentPlaceHolder1_hdSuggestion" />
+                        <input name="ctl00$ContentPlaceHolder1$hdDetail" type="hidden" id="ctl00_ContentPlaceHolder1_hdDetail" />
+                        <input name="ctl00$ContentPlaceHolder1$hdDetail2" type="hidden" id="ctl00_ContentPlaceHolder1_hdDetail2" />
+                        <input name="ctl00$ContentPlaceHolder1$hdDetail3" type="hidden" id="ctl00_ContentPlaceHolder1_hdDetail3" />
+                        <input name="ctl00$ContentPlaceHolder1$hdLogisticsFlow" type="hidden" id="ctl00_ContentPlaceHolder1_hdLogisticsFlow" />
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hdCancelSign" id="ctl00_ContentPlaceHolder1_hdCancelSign" />
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfEmployeeName" id="ctl00_ContentPlaceHolder1_hfEmployeeName" />
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfDesign1" id="ctl00_ContentPlaceHolder1_hfDesign1" value="0" />
+
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfCityService1" id="ctl00_ContentPlaceHolder1_hfCityService1" />
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfCityService2" id="ctl00_ContentPlaceHolder1_hfCityService2" />
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfCityService3" id="ctl00_ContentPlaceHolder1_hfCityService3" />
+
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnCancelSign" value="" id="ctl00_ContentPlaceHolder1_btnCancelSign" style="display: none;" />
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">AddOtherAgree();</script>
+            <script type="text/javascript">$("#btnPrint").show(); i = 1; $('#txtDetail_No1').val('1'); $('#txtDetail_Department1').val('测试'); $('#txtDetail_Count1').val('测试'); i = 1; $('#txtStatistical_SNo1').val('1'); $('#txtStatistical_SDepartment1').val('测试'); $('#txtStatistical_Address1').val('测试'); $('#txtStatistical_SCount1').val('测试'); i = 1; $('#txtSummary6').val('测试'); $('#txtWidth6').val('测试'); $('#txtHeight6').val('测试'); $('#rdbAcross6').attr('checked', true); $('#rdbUpright6').attr('checked', false); $('#txtCount6').val('测试'); $('#txtPackage6').val('2'); $('#txtDemandDate6').val('2017-07-25'); $("#btnUpload").show(); $('#rdbNoIDx20').attr('allow', 'sayno'); $('#btnSignIDx20').before('<div style="width: 150px; line-height: 65px; height: 2px; margin-left:0px; float:left;">招琛彤</div><input type="button" value="撤消" onclick="CancelSign(20)" id="btnCancelSignIDx20"/><img src="http://gzs-terminal01/SignImage/39591.gif" height="60px"/>'); $('#rdbYesIDx20').attr('checked', 'checked'); $('#txtIDx20').hide(); $('#spanDateIDx20').text('2017-07-26 14:15:11'); $.each($("textarea:not([id*=txtDescribe])"), function (idx, item) { autoTextarea(this); });</script>
+            <script type="text/javascript">
+                $.each($("textarea:not([id*=txtDescribe])"), function (idx, item) { autoTextarea(this); }); //使对话框自适应
+                function checkSaveDesignScore() {
+                    $('input[name = "grade1"]').each(function () {
+                        if (this.checked) {
+                            $('#ctl00_ContentPlaceHolder1_hfDesign1').val(this.value);
+                        }
+                    });
+
+                    if ($('#ctl00_ContentPlaceHolder1_hfDesign1').val() == "") {
+                        alert('请选择（1）设计作品相符度')
+                        $("#Radio1").focus();
+                        return false;
+                    }
+                    if ($('#ctl00_ContentPlaceHolder1_hfDesign1').val() == "1") {
+                        if ($('#ctl00_ContentPlaceHolder1_txtDesignermarkes1').val() == "") {
+                            alert('请填写说明原因')
+                            $('#ctl00_ContentPlaceHolder1_txtDesignermarkes1').focus();
+                            return false;
+                        }
+                    }
+
+                    return true;
+                }
+                function checkSaveCityScore() {
+                    $('input[name = "grade4"]').each(function () {
+                        if (this.checked) {
+                            $('#ctl00_ContentPlaceHolder1_hfCityService1').val(this.value);
+                        }
+                    });
+                    $('input[name = "grade5"]').each(function () {
+                        if (this.checked) {
+                            $('#ctl00_ContentPlaceHolder1_hfCityService2').val(this.value);
+
+                        }
+                    });
+                    $('input[name = "grade6"]').each(function () {
+                        if (this.checked) {
+                            $('#ctl00_ContentPlaceHolder1_hfCityService3').val(this.value);
+
+                        }
+                    });
+                    if ($('#ctl00_ContentPlaceHolder1_hfCityService1').val() == "") {
+                        alert('请选择（1）沟通及时性分数')
+                        $("#Radio16").focus();
+                        return false;
+                    }
+                    if ($('#ctl00_ContentPlaceHolder1_hfCityService2').val() == "") {
+                        alert('请选择（2）成品到达时效分数')
+                        $("#Radio21").focus();
+                        return false;
+                    }
+                    if ($('#ctl00_ContentPlaceHolder1_hfCityService3').val() == "") {
+                        alert('请选择（3）成品质量分数')
+                        $("#Radio26").focus();
+                        return false;
+                    }
+                    return true;
+                }
+            </script>
+
+        </div>
+        <div style="min-width: 800px; width: 100%; margin: 0px auto;">
+        </div>
+    </form>
+    <script type="text/javascript">$("#divDeleteA").hide();</script>
+    <script type="text/javascript">
+        $.each($("textarea:not([id*=txtDescribe])"), function (idx, item) { autoTextarea(this); }); //使对话框自适应
+        //$("#tabs-5 texterea").each(function () {
+        //    $(this).css({ "height": "auto" });
+        //});
+
+        var $rdbNoIDx = $("[id*=rdbNoIDx]");
+        $rdbNoIDx.each(function () {
+            var text = $(this).next().html();
+            if (text == "不同意" && $(this).attr("allow") != "sayno") {
+                $(this).attr("disabled", "disabled");
+            }
+            else if ($(this).attr("allow") == "sayno") {
+                $(this).removeAttr("disabled");
+            }
+        });
+        var $fieldradio = $(".fieldradio");
+        $fieldradio.each(function () {
+            $radio = $(this).find("input[type='radio'][value='0']");
+            var text = $radio.next().html();
+            if (text == "不同意") {
+                $radio.attr("disabled", "disabled");
+            }
+
+            //最后一步审核流程允许不同意
+            var MaxIdx = 0;
+            $("#tbflows tr").each(function () {
+                //非隐藏的最后一步流程
+                if ($(this).css("display") != "none") {
+                    MaxIdx = parseInt($(this).attr("idx"));
+                }
+            });
+            //找出该流程的不同意按钮
+            if (MaxIdx != 0 && MaxIdx != undefined) {
+                $radio = $("#tbflows tr[idx=" + MaxIdx + "]").find(".fieldradio input[type='radio'][value='0']");
+                if ($radio != undefined && $radio.length > 0) {
+                    $radio.removeAttr("disabled");
+                }
+            }
+        });
+
+        $("#trGeneralManager [id*=rdbNoIDx]").each(function () {
+            $(this).removeAttr("disabled");
+        });
+        $("#trAddAnoF3 input[type=radio]").each(function () {
+            $(this).removeAttr("disabled");
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="isSecretary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmployeeID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="isSecretaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="isSecretaryResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegainAdjustment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegainAdjustmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegainAdjustmentResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Adjustment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="assetNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="place" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="company" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdjustmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AdjustmentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdjustmentWithEcoaCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="assetNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="place" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="company" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ecoaCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdjustmentWithEcoaCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AdjustmentWithEcoaCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewAdjustment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="assetId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="place" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="company" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ecoaCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewAdjustmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewAdjustmentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdjustmentUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="assetNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdjustmentUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AdjustmentUpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewAdjustmentUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="assetId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewAdjustmentUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewAdjustmentUpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKeyValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="value" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKeyValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKeyValueResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeptAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDeptAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDeptAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssetAdjustmentPass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssetAdjustmentPassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AssetAdjustmentPassResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssetAdjustmentReject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssetAdjustmentRejectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AssetAdjustmentRejectResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssetDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AssetId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inventoryId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssetDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssetDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAssetInventory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="place" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="empCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="empName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="begintime" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="obj" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAssetInventoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateAssetInventoryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EndAssetInventory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inventoryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EndAssetInventoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EndAssetInventoryResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="isSecretarySoapIn">
+    <wsdl:part name="parameters" element="tns:isSecretary" />
+  </wsdl:message>
+  <wsdl:message name="isSecretarySoapOut">
+    <wsdl:part name="parameters" element="tns:isSecretaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegainAdjustmentSoapIn">
+    <wsdl:part name="parameters" element="tns:RegainAdjustment" />
+  </wsdl:message>
+  <wsdl:message name="RegainAdjustmentSoapOut">
+    <wsdl:part name="parameters" element="tns:RegainAdjustmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdjustmentSoapIn">
+    <wsdl:part name="parameters" element="tns:Adjustment" />
+  </wsdl:message>
+  <wsdl:message name="AdjustmentSoapOut">
+    <wsdl:part name="parameters" element="tns:AdjustmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdjustmentWithEcoaCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:AdjustmentWithEcoaCode" />
+  </wsdl:message>
+  <wsdl:message name="AdjustmentWithEcoaCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:AdjustmentWithEcoaCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewAdjustmentSoapIn">
+    <wsdl:part name="parameters" element="tns:NewAdjustment" />
+  </wsdl:message>
+  <wsdl:message name="NewAdjustmentSoapOut">
+    <wsdl:part name="parameters" element="tns:NewAdjustmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdjustmentUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:AdjustmentUpdate" />
+  </wsdl:message>
+  <wsdl:message name="AdjustmentUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:AdjustmentUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewAdjustmentUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:NewAdjustmentUpdate" />
+  </wsdl:message>
+  <wsdl:message name="NewAdjustmentUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:NewAdjustmentUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKeyValueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetKeyValue" />
+  </wsdl:message>
+  <wsdl:message name="GetKeyValueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetKeyValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDeptAllSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDeptAll" />
+  </wsdl:message>
+  <wsdl:message name="GetDeptAllSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDeptAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssetAdjustmentPassSoapIn">
+    <wsdl:part name="parameters" element="tns:AssetAdjustmentPass" />
+  </wsdl:message>
+  <wsdl:message name="AssetAdjustmentPassSoapOut">
+    <wsdl:part name="parameters" element="tns:AssetAdjustmentPassResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssetAdjustmentRejectSoapIn">
+    <wsdl:part name="parameters" element="tns:AssetAdjustmentReject" />
+  </wsdl:message>
+  <wsdl:message name="AssetAdjustmentRejectSoapOut">
+    <wsdl:part name="parameters" element="tns:AssetAdjustmentRejectResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssetDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssetDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateAssetInventorySoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAssetInventory" />
+  </wsdl:message>
+  <wsdl:message name="CreateAssetInventorySoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAssetInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="EndAssetInventorySoapIn">
+    <wsdl:part name="parameters" element="tns:EndAssetInventory" />
+  </wsdl:message>
+  <wsdl:message name="EndAssetInventorySoapOut">
+    <wsdl:part name="parameters" element="tns:EndAssetInventoryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GetAssetDicSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="isSecretary">
+      <wsdl:input message="tns:isSecretarySoapIn" />
+      <wsdl:output message="tns:isSecretarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegainAdjustment">
+      <wsdl:input message="tns:RegainAdjustmentSoapIn" />
+      <wsdl:output message="tns:RegainAdjustmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Adjustment">
+      <wsdl:input message="tns:AdjustmentSoapIn" />
+      <wsdl:output message="tns:AdjustmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdjustmentWithEcoaCode">
+      <wsdl:input message="tns:AdjustmentWithEcoaCodeSoapIn" />
+      <wsdl:output message="tns:AdjustmentWithEcoaCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewAdjustment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用于提交申请时锁定资产</wsdl:documentation>
+      <wsdl:input message="tns:NewAdjustmentSoapIn" />
+      <wsdl:output message="tns:NewAdjustmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdjustmentUpdate">
+      <wsdl:input message="tns:AdjustmentUpdateSoapIn" />
+      <wsdl:output message="tns:AdjustmentUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewAdjustmentUpdate">
+      <wsdl:input message="tns:NewAdjustmentUpdateSoapIn" />
+      <wsdl:output message="tns:NewAdjustmentUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKeyValue">
+      <wsdl:input message="tns:GetKeyValueSoapIn" />
+      <wsdl:output message="tns:GetKeyValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptAll">
+      <wsdl:input message="tns:GetDeptAllSoapIn" />
+      <wsdl:output message="tns:GetDeptAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssetAdjustmentPass">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">资产调动审核通过</wsdl:documentation>
+      <wsdl:input message="tns:AssetAdjustmentPassSoapIn" />
+      <wsdl:output message="tns:AssetAdjustmentPassSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssetAdjustmentReject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ecoa删除报废申请表时，同时解除行政系统的锁定资产</wsdl:documentation>
+      <wsdl:input message="tns:AssetAdjustmentRejectSoapIn" />
+      <wsdl:output message="tns:AssetAdjustmentRejectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetDetails">
+      <wsdl:input message="tns:GetAssetDetailsSoapIn" />
+      <wsdl:output message="tns:GetAssetDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAssetInventory">
+      <wsdl:input message="tns:CreateAssetInventorySoapIn" />
+      <wsdl:output message="tns:CreateAssetInventorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EndAssetInventory">
+      <wsdl:input message="tns:EndAssetInventorySoapIn" />
+      <wsdl:output message="tns:EndAssetInventorySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetAssetDicSoap" type="tns:GetAssetDicSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isSecretary">
+      <soap:operation soapAction="http://tempuri.org/isSecretary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegainAdjustment">
+      <soap:operation soapAction="http://tempuri.org/RegainAdjustment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Adjustment">
+      <soap:operation soapAction="http://tempuri.org/Adjustment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdjustmentWithEcoaCode">
+      <soap:operation soapAction="http://tempuri.org/AdjustmentWithEcoaCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewAdjustment">
+      <soap:operation soapAction="http://tempuri.org/NewAdjustment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdjustmentUpdate">
+      <soap:operation soapAction="http://tempuri.org/AdjustmentUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewAdjustmentUpdate">
+      <soap:operation soapAction="http://tempuri.org/NewAdjustmentUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeyValue">
+      <soap:operation soapAction="http://tempuri.org/GetKeyValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptAll">
+      <soap:operation soapAction="http://tempuri.org/GetDeptAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssetAdjustmentPass">
+      <soap:operation soapAction="http://tempuri.org/AssetAdjustmentPass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssetAdjustmentReject">
+      <soap:operation soapAction="http://tempuri.org/AssetAdjustmentReject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetDetails">
+      <soap:operation soapAction="http://tempuri.org/GetAssetDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAssetInventory">
+      <soap:operation soapAction="http://tempuri.org/CreateAssetInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndAssetInventory">
+      <soap:operation soapAction="http://tempuri.org/EndAssetInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GetAssetDicSoap12" type="tns:GetAssetDicSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isSecretary">
+      <soap12:operation soapAction="http://tempuri.org/isSecretary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegainAdjustment">
+      <soap12:operation soapAction="http://tempuri.org/RegainAdjustment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Adjustment">
+      <soap12:operation soapAction="http://tempuri.org/Adjustment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdjustmentWithEcoaCode">
+      <soap12:operation soapAction="http://tempuri.org/AdjustmentWithEcoaCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewAdjustment">
+      <soap12:operation soapAction="http://tempuri.org/NewAdjustment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdjustmentUpdate">
+      <soap12:operation soapAction="http://tempuri.org/AdjustmentUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewAdjustmentUpdate">
+      <soap12:operation soapAction="http://tempuri.org/NewAdjustmentUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeyValue">
+      <soap12:operation soapAction="http://tempuri.org/GetKeyValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptAll">
+      <soap12:operation soapAction="http://tempuri.org/GetDeptAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssetAdjustmentPass">
+      <soap12:operation soapAction="http://tempuri.org/AssetAdjustmentPass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssetAdjustmentReject">
+      <soap12:operation soapAction="http://tempuri.org/AssetAdjustmentReject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetAssetDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAssetInventory">
+      <soap12:operation soapAction="http://tempuri.org/CreateAssetInventory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndAssetInventory">
+      <soap12:operation soapAction="http://tempuri.org/EndAssetInventory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetAssetDic">
+    <wsdl:port name="GetAssetDicSoap" binding="tns:GetAssetDicSoap">
+      <soap:address location="http://gzs-terminal01/Administration/Common/GetAssetDic.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GetAssetDicSoap12" binding="tns:GetAssetDicSoap12">
+      <soap12:address location="http://gzs-terminal01/Administration/Common/GetAssetDic.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

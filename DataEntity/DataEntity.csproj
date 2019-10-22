@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4F3FAFF9-B5FC-4DCF-BA3E-85010B428E05}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataEntity</RootNamespace>
+    <AssemblyName>DataEntity</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/DataEntity/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ECOA|AnyCPU'">
+    <OutputPath>bin\ECOA\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionProvider.cs" />
+    <Compile Include="CProperty.cs" />
+    <Compile Include="DBInteractionBase.cs" />
+    <Compile Include="DTO\SearchFilterDto.cs" />
+    <Compile Include="DTO\SignDto.cs" />
+    <Compile Include="ECS\T_Dic_Report_CashPrize.cs" />
+    <Compile Include="Json\CCES\JsonIn.cs" />
+    <Compile Include="Json\CCES\JsonOutEstateList.cs" />
+    <Compile Include="Json\CCES\JsonOutPropertyList.cs" />
+    <Compile Include="Model\DbTable.cs" />
+    <Compile Include="Model\FLowShowEntity.cs" />
+    <Compile Include="Model\FlowsSignEntity.cs" />
+    <Compile Include="PageModel\Apply_BackComm_Detail.cs" />
+    <Compile Include="PageModel\Apply_BadDebts_Detail.cs" />
+    <Compile Include="PageModel\Apply_BranchContract_Detail.cs" />
+    <Compile Include="PageModel\Apply_CoopCost_Detail.cs" />
+    <Compile Include="PageModel\Apply_ExemptionBadDebt_Detail.cs" />
+    <Compile Include="PageModel\Apply_Feasibility_Detail.cs" />
+    <Compile Include="PageModel\Apply_ProjAgentClause_Detail.cs" />
+    <Compile Include="PageModel\Apply_ProjCost_Detail.cs" />
+    <Compile Include="PageModel\Apply_ProjLinkRepoData_Detail.cs" />
+    <Compile Include="PageModel\Apply_ProjReDaAdd_Detail.cs" />
+    <Compile Include="PageModel\Apply_ProjRepoData_Detail.cs" />
+    <Compile Include="PageModel\Apply_PullafewRd_Detail.cs" />
+    <Compile Include="PageModel\Apply_PullafewTwo_Detail.cs" />
+    <Compile Include="PageModel\Apply_Recruit_Detail.cs" />
+    <Compile Include="PageModel\Apply_ReduceComm_Detail.cs" />
+    <Compile Include="PageModel\Apply_SpecialAdd_Detail.cs" />
+    <Compile Include="PageModel\Apply_TotalRev_Detail.cs" />
+    <Compile Include="PageModel\Apply_UtContract_Detail.cs" />
+    <Compile Include="PageModel\Apply_UtNewProj_Detail.cs" />
+    <Compile Include="PageModel\Apply_UtNewProj_Detail_New.cs" />
+    <Compile Include="PageModel\Apply_WithdrawShop_Detail.cs" />
+    <Compile Include="PageModel\PageModelBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T_Dic_OfficeAutomation_ApplyDetail.cs" />
+    <Compile Include="T_Dic_OfficeAutomation_ApplyType.cs" />
+    <Compile Include="T_Dic_OfficeAutomation_Document.cs" />
+    <Compile Include="T_OfficeAutomation_AddressArea.cs" />
+    <Compile Include="T_OfficeAutomation_Attach.cs" />
+    <Compile Include="T_OfficeAutomation_Document_AfterCommission.cs" />
+    <Compile Include="T_OfficeAutomation_Document_BorrowMoney.cs" />
+    <Compile Include="T_OfficeAutomation_Document_BorrowMoney_Details.cs" />
+    <Compile Include="T_OfficeAutomation_Document_BorrowMoney_Import.cs" />
+    <Compile Include="T_OfficeAutomation_Document_BranchContract.cs" />
+    <Compile Include="T_OfficeAutomation_Document_BranchContract_LeaseTerm.cs" />
+    <Compile Include="T_OfficeAutomation_Document_BranchContract_Statistical.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Budgetab.cs" />
+    <Compile Include="T_OfficeAutomation_Document_BusinessTravel.cs" />
+    <Compile Include="T_OfficeAutomation_Document_BuyBudiData.cs" />
+    <Compile Include="T_OfficeAutomation_Document_CallCenterFeasibility.cs" />
+    <Compile Include="T_OfficeAutomation_Document_CallCenterFeasibility_Competitors.cs" />
+    <Compile Include="T_OfficeAutomation_Document_CallCenterFeasibility_Diagram.cs" />
+    <Compile Include="T_OfficeAutomation_Document_CallCenterFeasibility_Menber.cs" />
+    <Compile Include="T_OfficeAutomation_Document_CallCenterFeasibility_YearRent.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ChangeData.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ChangeData_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ChangeFyq.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ChangeNS.cs" />
+    <Compile Include="T_OfficeAutomation_Document_CommissionAdjust.cs" />
+    <Compile Include="T_OfficeAutomation_Document_CommissionAdjust_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_CommissionAssign.cs" />
+    <Compile Include="T_OfficeAutomation_Document_CommissionAssign_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_CommissionOfMonth.cs" />
+    <Compile Include="T_OfficeAutomation_Document_CommissionOfMonth_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ContractTerms.cs" />
+    <Compile Include="T_OfficeAutomation_Document_CoopCost.cs" />
+    <Compile Include="T_OfficeAutomation_Document_CostOfActivity.cs" />
+    <Compile Include="T_OfficeAutomation_Document_CPNShoot.cs" />
+    <Compile Include="T_OfficeAutomation_Document_EBAdjuct.cs" />
+    <Compile Include="T_OfficeAutomation_Document_EBAdjuct_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_EBAdjuct_LeaseTerm.cs" />
+    <Compile Include="T_OfficeAutomation_Document_EBAdjuct_Statistical.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ExemptionBadDebt.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ExemptionBadDebt_AreaComm.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ExemptionBadDebt_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ExtraBonus.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ExtraBonus_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Fax.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Fax_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Fax_Detail_Flow.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Feasibility.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Feasibility_BuildingSituation.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Feasibility_Competitors.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Feasibility_DealOfRecord.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Feasibility_Menber.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Feasibility_Statistical.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Feasibility_YearRent.cs" />
+    <Compile Include="T_OfficeAutomation_Document_FinAffairsTransfer.cs" />
+    <Compile Include="T_OfficeAutomation_Document_FinAffairsTransfer_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_FinAffairsTransfer_HandleDetail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Flow.cs" />
+    <Compile Include="T_OfficeAutomation_Document_FurtherEducation.cs" />
+    <Compile Include="T_OfficeAutomation_Document_FyqBackProject.cs" />
+    <Compile Include="T_OfficeAutomation_Document_FyqNotUnProject.cs" />
+    <Compile Include="T_OfficeAutomation_Document_GeneralApply.cs" />
+    <Compile Include="T_OfficeAutomation_Document_GeneralApply_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Guarantee.cs" />
+    <Compile Include="T_OfficeAutomation_Document_HoldCoisn.cs" />
+    <Compile Include="T_OfficeAutomation_Document_HousingFundAdjustment.cs" />
+    <Compile Include="T_OfficeAutomation_Document_HousingFundAdjustment_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_HousingFundBaseAdjust.cs" />
+    <Compile Include="T_OfficeAutomation_Document_HousingFundBaseAdjust_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_HousingFundChange.cs" />
+    <Compile Include="T_OfficeAutomation_Document_HousingFundChange_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Image.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ITPower.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ITPower_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ITPower_Detail_Apply.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ITSpecialModify.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ITTest.cs" />
+    <Compile Include="T_OfficeAutomation_Document_LegalCommission.cs" />
+    <Compile Include="T_OfficeAutomation_Document_LinkageCoordination.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Loan.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Loan_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Maintenance.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Marketing.cs" />
+    <Compile Include="T_OfficeAutomation_Document_NetSign.cs" />
+    <Compile Include="T_OfficeAutomation_Document_NewPersInterests.cs" />
+    <Compile Include="T_OfficeAutomation_Document_NewPersInterests_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_OfficialSeal.cs" />
+    <Compile Include="T_OfficeAutomation_Document_OfficialSeal_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_OndutyVacation.cs" />
+    <Compile Include="T_OfficeAutomation_Document_OpenProve.cs" />
+    <Compile Include="T_OfficeAutomation_Document_OpenProve_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_OweSubmit.cs" />
+    <Compile Include="T_OfficeAutomation_Document_PartTime.cs" />
+    <Compile Include="T_OfficeAutomation_Document_PartTime_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_PortAssessment.cs" />
+    <Compile Include="T_OfficeAutomation_Document_PortAssessment_Menber.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Print.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Print_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ProjAgentClause.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ProjBaComm.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ProjBaComm_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ProjDormSubsiby.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ProjectCarAllowance.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ProjectOfficialSeal.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ProjectOfficialSeal_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ProjGeneralApply.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ProjLinkRepoData.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ProjReDaAdd.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ProjRepoData.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ProjWorkCloth.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Propaganda.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Propaganda_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Propaganda_Project.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Propaganda_Score.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Propaganda_Statistical.cs" />
+    <Compile Include="T_OfficeAutomation_Document_PullafewRd.cs" />
+    <Compile Include="T_OfficeAutomation_Document_PullafewRd_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_PullafewRd_LeaseTerm.cs" />
+    <Compile Include="T_OfficeAutomation_Document_PullafewRd_Statistical.cs" />
+    <Compile Include="T_OfficeAutomation_Document_PullafewTwo.cs" />
+    <Compile Include="T_OfficeAutomation_Document_PullafewTwo_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_PullafewTwo_LeaseTerm.cs" />
+    <Compile Include="T_OfficeAutomation_Document_PullafewTwo_Statistical.cs" />
+    <Compile Include="T_OfficeAutomation_Document_PunishTerms.cs" />
+    <Compile Include="T_OfficeAutomation_Document_PunishTerms_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Record.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Recruit.cs" />
+    <Compile Include="T_OfficeAutomation_Document_RecruitHRResult.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Recruit_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ReduceComm.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ReduceComm_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Repair.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Repair_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ResumeBusi.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Secondment.cs" />
+    <Compile Include="T_OfficeAutomation_Document_SignedG.cs" />
+    <Compile Include="T_OfficeAutomation_Document_SocialSecurity.cs" />
+    <Compile Include="T_OfficeAutomation_Document_SolHold.cs" />
+    <Compile Include="T_OfficeAutomation_Document_SpecialAdd.cs" />
+    <Compile Include="T_OfficeAutomation_Document_SpecialAdd_Statistical.cs" />
+    <Compile Include="T_OfficeAutomation_Document_SpecialCase.cs" />
+    <Compile Include="T_OfficeAutomation_Document_SpecialNumber.cs" />
+    <Compile Include="T_OfficeAutomation_Document_StaffDataCheck.cs" />
+    <Compile Include="T_OfficeAutomation_Document_StaffDataCheck_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_SuspendBusi.cs" />
+    <Compile Include="T_OfficeAutomation_Document_SysLogist.cs" />
+    <Compile Include="T_OfficeAutomation_Document_SYSPWDTransfer.cs" />
+    <Compile Include="T_OfficeAutomation_Document_SysReq.cs" />
+    <Compile Include="T_OfficeAutomation_Document_TaiwanDeclare.cs" />
+    <Compile Include="T_OfficeAutomation_Document_TotalRev.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Tourism.cs" />
+    <Compile Include="T_OfficeAutomation_Document_UIReq.cs" />
+    <Compile Include="T_OfficeAutomation_Document_UndertakeProj.cs" />
+    <Compile Include="T_OfficeAutomation_Document_UndertakeProj_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_UtContract.cs" />
+    <Compile Include="T_OfficeAutomation_Document_UtContract_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_UtNewProj_New.cs" />
+    <Compile Include="T_OfficeAutomation_Document_UtContract_PlanScale.cs" />
+    <Compile Include="T_OfficeAutomation_Document_UtNewProj.cs" />
+    <Compile Include="T_OfficeAutomation_Document_UtNewProj_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_UtNewProj_New_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_WirelessFixedLine.cs" />
+    <Compile Include="T_OfficeAutomation_Document_WirelessFixedLine_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_WithdrawShop.cs" />
+    <Compile Include="T_OfficeAutomation_Document_WrongSave.cs" />
+    <Compile Include="T_OfficeAutomation_Document_WYRecruit.cs" />
+    <Compile Include="T_OfficeAutomation_Flow.cs" />
+    <Compile Include="T_OfficeAutomation_Log.cs" />
+    <Compile Include="T_OfficeAutomation_Main.cs" />
+    <Compile Include="T_OfficeAutomation_MCOA_Attach.cs" />
+    <Compile Include="T_OfficeAutomation_Sign.cs" />
+    <Compile Include="T_OfficeAutomation_Document_SysPower.cs" />
+    <Compile Include="T_Dic_OfficeAutomation_SoftSystem.cs" />
+    <Compile Include="T_Dic_OfficeAutomation_ITStaff.cs" />
+    <Compile Include="T_OfficeAutomation_Document_SysPower_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_SysPower_Detail_Apply.cs" />
+    <Compile Include="T_OfficeAutomation_Agent.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Scrap.cs" />
+    <Compile Include="T_OfficeAutomation_Document_Scrap_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Message.cs" />
+    <Compile Include="T_OfficeAutomation_Document_AssetTransfer.cs" />
+    <Compile Include="T_OfficeAutomation_Document_AssetTransfer_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_DealOffice.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ITBuy.cs" />
+    <Compile Include="T_OfficeAutomation_Document_PersInterests.cs" />
+    <Compile Include="T_OfficeAutomation_Document_BuyBuilding.cs" />
+    <Compile Include="T_OfficeAutomation_Document_CarAllowance.cs" />
+    <Compile Include="T_OfficeAutomation_Document_BackComm.cs" />
+    <Compile Include="T_OfficeAutomation_Document_BackComm_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_BadDebts_Detail.cs" />
+    <Compile Include="T_OfficeAutomation_Document_BadDebts.cs" />
+    <Compile Include="T_OfficeAutomation_Document_ProjCost.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

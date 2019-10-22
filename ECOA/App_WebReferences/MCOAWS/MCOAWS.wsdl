@@ -1,0 +1,1739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="LoginCheck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="esn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginCheckResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginCheckV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="esn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginCheckV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginCheckV2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginByPush">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="esn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginByPushResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginByPushResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginRegister">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="empname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="esn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="imsi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="os" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phonemodel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginRegisterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginRegisterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginRegisterAgain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="empname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="esn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="imsi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="os" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phonemodel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginRegisterAgainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginRegisterAgainResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeviceChange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="empname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="esn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="imsi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="os" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phonemodel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeviceChangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceChangeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartApp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="appid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="registerid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartAppResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StartAppResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartApp2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="appid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="registerid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="localVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deviceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartApp2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StartApp2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendDirecePushMessageByEmpCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pushId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="empCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendDirecePushMessageByEmpCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendDirecePushMessageByEmpCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendDirecePushMessageByEmpCode2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pushId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="empCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isShowTip" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendDirecePushMessageByEmpCode2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendDirecePushMessageByEmpCode2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendDirecePushMessageByLoginID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pushId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendDirecePushMessageByLoginIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendDirecePushMessageByLoginIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendDirecePushMessageByLoginID2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pushId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isShowTip" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendDirecePushMessageByLoginID2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendDirecePushMessageByLoginID2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendDirectPushMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pushId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="registerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isShowTip" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendDirectPushMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendDirectPushMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPushMessageInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pmid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPushMessageInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPushMessageInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPushMessageByRegister">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="registerId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iPage" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iPageSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPushMessageByRegisterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPushMessageByRegisterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearMessageByRegister">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="registerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearMessageByRegisterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClearMessageByRegisterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppShowtip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="registerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppShowtipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAppShowtipResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearAppShowtip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="registerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="appid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearAppShowtipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClearAppShowtipResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppInstructionsByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="versionid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppInstructionsByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAppInstructionsByIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppVersionInstructionsList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="appid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="devicetype" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iPage" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iPageSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppVersionInstructionsListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAppVersionInstructionsListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppVersionInstructionsList2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="appid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="devicetype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iPage" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iPageSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppVersionInstructionsList2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAppVersionInstructionsList2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppVersionInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="versionid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppVersionInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAppVersionInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserPhoto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserPhotoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserPhotoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMyShortcut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deviceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="shortcutname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="myShortcutName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMyShortcutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddMyShortcutResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMyShortcut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deviceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMyShortcutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMyShortcutResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMyShortcut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appShortcutID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMyShortcutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteMyShortcutResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveMyInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ispublic" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="publicUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="localUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveMyInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveMyInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPublic">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ispublic" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPublicResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetPublicResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMyInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMyInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMyInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindContacts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iPagesize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iPageNum" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindContactsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindContactsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMyContacts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contractscode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMyContactsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddMyContactsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveMyContacts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contractscode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveMyContactsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RemoveMyContactsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindMyContacts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iPagesize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iPageNum" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="accesskey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindMyContactsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindMyContactsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginCheck" />
+  </wsdl:message>
+  <wsdl:message name="LoginCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginCheckV2SoapIn">
+    <wsdl:part name="parameters" element="tns:LoginCheckV2" />
+  </wsdl:message>
+  <wsdl:message name="LoginCheckV2SoapOut">
+    <wsdl:part name="parameters" element="tns:LoginCheckV2Response" />
+  </wsdl:message>
+  <wsdl:message name="LoginByPushSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginByPush" />
+  </wsdl:message>
+  <wsdl:message name="LoginByPushSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginByPushResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginRegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginRegister" />
+  </wsdl:message>
+  <wsdl:message name="LoginRegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginRegisterAgainSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginRegisterAgain" />
+  </wsdl:message>
+  <wsdl:message name="LoginRegisterAgainSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginRegisterAgainResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeviceChangeSoapIn">
+    <wsdl:part name="parameters" element="tns:DeviceChange" />
+  </wsdl:message>
+  <wsdl:message name="DeviceChangeSoapOut">
+    <wsdl:part name="parameters" element="tns:DeviceChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="StartAppSoapIn">
+    <wsdl:part name="parameters" element="tns:StartApp" />
+  </wsdl:message>
+  <wsdl:message name="StartAppSoapOut">
+    <wsdl:part name="parameters" element="tns:StartAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="StartApp2SoapIn">
+    <wsdl:part name="parameters" element="tns:StartApp2" />
+  </wsdl:message>
+  <wsdl:message name="StartApp2SoapOut">
+    <wsdl:part name="parameters" element="tns:StartApp2Response" />
+  </wsdl:message>
+  <wsdl:message name="SendDirecePushMessageByEmpCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:SendDirecePushMessageByEmpCode" />
+  </wsdl:message>
+  <wsdl:message name="SendDirecePushMessageByEmpCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:SendDirecePushMessageByEmpCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendDirecePushMessageByEmpCode2SoapIn">
+    <wsdl:part name="parameters" element="tns:SendDirecePushMessageByEmpCode2" />
+  </wsdl:message>
+  <wsdl:message name="SendDirecePushMessageByEmpCode2SoapOut">
+    <wsdl:part name="parameters" element="tns:SendDirecePushMessageByEmpCode2Response" />
+  </wsdl:message>
+  <wsdl:message name="SendDirecePushMessageByLoginIDSoapIn">
+    <wsdl:part name="parameters" element="tns:SendDirecePushMessageByLoginID" />
+  </wsdl:message>
+  <wsdl:message name="SendDirecePushMessageByLoginIDSoapOut">
+    <wsdl:part name="parameters" element="tns:SendDirecePushMessageByLoginIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendDirecePushMessageByLoginID2SoapIn">
+    <wsdl:part name="parameters" element="tns:SendDirecePushMessageByLoginID2" />
+  </wsdl:message>
+  <wsdl:message name="SendDirecePushMessageByLoginID2SoapOut">
+    <wsdl:part name="parameters" element="tns:SendDirecePushMessageByLoginID2Response" />
+  </wsdl:message>
+  <wsdl:message name="SendDirectPushMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:SendDirectPushMessage" />
+  </wsdl:message>
+  <wsdl:message name="SendDirectPushMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:SendDirectPushMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPushMessageInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPushMessageInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPushMessageInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPushMessageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPushMessageByRegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPushMessageByRegister" />
+  </wsdl:message>
+  <wsdl:message name="GetPushMessageByRegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPushMessageByRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClearMessageByRegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:ClearMessageByRegister" />
+  </wsdl:message>
+  <wsdl:message name="ClearMessageByRegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:ClearMessageByRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAppShowtipSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAppShowtip" />
+  </wsdl:message>
+  <wsdl:message name="GetAppShowtipSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAppShowtipResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClearAppShowtipSoapIn">
+    <wsdl:part name="parameters" element="tns:ClearAppShowtip" />
+  </wsdl:message>
+  <wsdl:message name="ClearAppShowtipSoapOut">
+    <wsdl:part name="parameters" element="tns:ClearAppShowtipResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAppInstructionsByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAppInstructionsByID" />
+  </wsdl:message>
+  <wsdl:message name="GetAppInstructionsByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAppInstructionsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAppVersionInstructionsListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAppVersionInstructionsList" />
+  </wsdl:message>
+  <wsdl:message name="GetAppVersionInstructionsListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAppVersionInstructionsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAppVersionInstructionsList2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetAppVersionInstructionsList2" />
+  </wsdl:message>
+  <wsdl:message name="GetAppVersionInstructionsList2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetAppVersionInstructionsList2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetAppVersionInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAppVersionInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetAppVersionInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAppVersionInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPhotoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserPhoto" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPhotoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserPhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddMyShortcutSoapIn">
+    <wsdl:part name="parameters" element="tns:AddMyShortcut" />
+  </wsdl:message>
+  <wsdl:message name="AddMyShortcutSoapOut">
+    <wsdl:part name="parameters" element="tns:AddMyShortcutResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMyShortcutSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMyShortcut" />
+  </wsdl:message>
+  <wsdl:message name="GetMyShortcutSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMyShortcutResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMyShortcutSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteMyShortcut" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMyShortcutSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteMyShortcutResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveMyInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveMyInfo" />
+  </wsdl:message>
+  <wsdl:message name="SaveMyInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveMyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetPublicSoapIn">
+    <wsdl:part name="parameters" element="tns:SetPublic" />
+  </wsdl:message>
+  <wsdl:message name="SetPublicSoapOut">
+    <wsdl:part name="parameters" element="tns:SetPublicResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMyInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMyInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetMyInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindContactsSoapIn">
+    <wsdl:part name="parameters" element="tns:FindContacts" />
+  </wsdl:message>
+  <wsdl:message name="FindContactsSoapOut">
+    <wsdl:part name="parameters" element="tns:FindContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddMyContactsSoapIn">
+    <wsdl:part name="parameters" element="tns:AddMyContacts" />
+  </wsdl:message>
+  <wsdl:message name="AddMyContactsSoapOut">
+    <wsdl:part name="parameters" element="tns:AddMyContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveMyContactsSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveMyContacts" />
+  </wsdl:message>
+  <wsdl:message name="RemoveMyContactsSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveMyContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindMyContactsSoapIn">
+    <wsdl:part name="parameters" element="tns:FindMyContacts" />
+  </wsdl:message>
+  <wsdl:message name="FindMyContactsSoapOut">
+    <wsdl:part name="parameters" element="tns:FindMyContactsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="McoaWSSoap">
+    <wsdl:operation name="LoginCheck">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用户登录验证</wsdl:documentation>
+      <wsdl:input message="tns:LoginCheckSoapIn" />
+      <wsdl:output message="tns:LoginCheckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginCheckV2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用户登录验证-V2版本</wsdl:documentation>
+      <wsdl:input message="tns:LoginCheckV2SoapIn" />
+      <wsdl:output message="tns:LoginCheckV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginByPush">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">推送用户登录信息</wsdl:documentation>
+      <wsdl:input message="tns:LoginByPushSoapIn" />
+      <wsdl:output message="tns:LoginByPushSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginRegister">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用户注册</wsdl:documentation>
+      <wsdl:input message="tns:LoginRegisterSoapIn" />
+      <wsdl:output message="tns:LoginRegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginRegisterAgain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用户再次注册(需要进行审核才会生效)</wsdl:documentation>
+      <wsdl:input message="tns:LoginRegisterAgainSoapIn" />
+      <wsdl:output message="tns:LoginRegisterAgainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeviceChange">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">设备切换</wsdl:documentation>
+      <wsdl:input message="tns:DeviceChangeSoapIn" />
+      <wsdl:output message="tns:DeviceChangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StartApp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">应用使用登记</wsdl:documentation>
+      <wsdl:input message="tns:StartAppSoapIn" />
+      <wsdl:output message="tns:StartAppSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StartApp2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">应用使用登记-返明是否显示更新说明界面</wsdl:documentation>
+      <wsdl:input message="tns:StartApp2SoapIn" />
+      <wsdl:output message="tns:StartApp2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendDirecePushMessageByEmpCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">以工号消息直推</wsdl:documentation>
+      <wsdl:input message="tns:SendDirecePushMessageByEmpCodeSoapIn" />
+      <wsdl:output message="tns:SendDirecePushMessageByEmpCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendDirecePushMessageByEmpCode2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">以工号消息直推</wsdl:documentation>
+      <wsdl:input message="tns:SendDirecePushMessageByEmpCode2SoapIn" />
+      <wsdl:output message="tns:SendDirecePushMessageByEmpCode2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendDirecePushMessageByLoginID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">以LoginID消息直推</wsdl:documentation>
+      <wsdl:input message="tns:SendDirecePushMessageByLoginIDSoapIn" />
+      <wsdl:output message="tns:SendDirecePushMessageByLoginIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendDirecePushMessageByLoginID2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">以LoginID消息直推</wsdl:documentation>
+      <wsdl:input message="tns:SendDirecePushMessageByLoginID2SoapIn" />
+      <wsdl:output message="tns:SendDirecePushMessageByLoginID2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendDirectPushMessage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">消息直推</wsdl:documentation>
+      <wsdl:input message="tns:SendDirectPushMessageSoapIn" />
+      <wsdl:output message="tns:SendDirectPushMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPushMessageInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回推送消息内部参数详细信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPushMessageInfoSoapIn" />
+      <wsdl:output message="tns:GetPushMessageInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPushMessageByRegister">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回指定注册ID的推送消息</wsdl:documentation>
+      <wsdl:input message="tns:GetPushMessageByRegisterSoapIn" />
+      <wsdl:output message="tns:GetPushMessageByRegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearMessageByRegister">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">清空指定注册ID的推送消息</wsdl:documentation>
+      <wsdl:input message="tns:ClearMessageByRegisterSoapIn" />
+      <wsdl:output message="tns:ClearMessageByRegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppShowtip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回应用气泡消息数</wsdl:documentation>
+      <wsdl:input message="tns:GetAppShowtipSoapIn" />
+      <wsdl:output message="tns:GetAppShowtipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearAppShowtip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">清空应用气泡消息数</wsdl:documentation>
+      <wsdl:input message="tns:ClearAppShowtipSoapIn" />
+      <wsdl:output message="tns:ClearAppShowtipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppInstructionsByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回指定的应用使用说明图片序列</wsdl:documentation>
+      <wsdl:input message="tns:GetAppInstructionsByIDSoapIn" />
+      <wsdl:output message="tns:GetAppInstructionsByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppVersionInstructionsList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回指定的版本说明书列表</wsdl:documentation>
+      <wsdl:input message="tns:GetAppVersionInstructionsListSoapIn" />
+      <wsdl:output message="tns:GetAppVersionInstructionsListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppVersionInstructionsList2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回指定的版本说明书列表</wsdl:documentation>
+      <wsdl:input message="tns:GetAppVersionInstructionsList2SoapIn" />
+      <wsdl:output message="tns:GetAppVersionInstructionsList2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppVersionInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回指定的版本信息</wsdl:documentation>
+      <wsdl:input message="tns:GetAppVersionInfoSoapIn" />
+      <wsdl:output message="tns:GetAppVersionInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回用户照片</wsdl:documentation>
+      <wsdl:input message="tns:GetUserPhotoSoapIn" />
+      <wsdl:output message="tns:GetUserPhotoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMyShortcut">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">设置快捷方式</wsdl:documentation>
+      <wsdl:input message="tns:AddMyShortcutSoapIn" />
+      <wsdl:output message="tns:AddMyShortcutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyShortcut">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回我的快捷键</wsdl:documentation>
+      <wsdl:input message="tns:GetMyShortcutSoapIn" />
+      <wsdl:output message="tns:GetMyShortcutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMyShortcut">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">删除我的快捷键</wsdl:documentation>
+      <wsdl:input message="tns:DeleteMyShortcutSoapIn" />
+      <wsdl:output message="tns:DeleteMyShortcutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMyInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">保存个人信息</wsdl:documentation>
+      <wsdl:input message="tns:SaveMyInfoSoapIn" />
+      <wsdl:output message="tns:SaveMyInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPublic">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">设置是否公开信息</wsdl:documentation>
+      <wsdl:input message="tns:SetPublicSoapIn" />
+      <wsdl:output message="tns:SetPublicSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回个人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetMyInfoSoapIn" />
+      <wsdl:output message="tns:GetMyInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindContacts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通讯录查询</wsdl:documentation>
+      <wsdl:input message="tns:FindContactsSoapIn" />
+      <wsdl:output message="tns:FindContactsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMyContacts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">添加至我的通讯录</wsdl:documentation>
+      <wsdl:input message="tns:AddMyContactsSoapIn" />
+      <wsdl:output message="tns:AddMyContactsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMyContacts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">移出我的通讯录</wsdl:documentation>
+      <wsdl:input message="tns:RemoveMyContactsSoapIn" />
+      <wsdl:output message="tns:RemoveMyContactsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindMyContacts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">我的通讯录查询</wsdl:documentation>
+      <wsdl:input message="tns:FindMyContactsSoapIn" />
+      <wsdl:output message="tns:FindMyContactsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="McoaWSSoap" type="tns:McoaWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoginCheck">
+      <soap:operation soapAction="http://tempuri.org/LoginCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginCheckV2">
+      <soap:operation soapAction="http://tempuri.org/LoginCheckV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginByPush">
+      <soap:operation soapAction="http://tempuri.org/LoginByPush" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginRegister">
+      <soap:operation soapAction="http://tempuri.org/LoginRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginRegisterAgain">
+      <soap:operation soapAction="http://tempuri.org/LoginRegisterAgain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeviceChange">
+      <soap:operation soapAction="http://tempuri.org/DeviceChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartApp">
+      <soap:operation soapAction="http://tempuri.org/StartApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartApp2">
+      <soap:operation soapAction="http://tempuri.org/StartApp2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendDirecePushMessageByEmpCode">
+      <soap:operation soapAction="http://tempuri.org/SendDirecePushMessageByEmpCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendDirecePushMessageByEmpCode2">
+      <soap:operation soapAction="http://tempuri.org/SendDirecePushMessageByEmpCode2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendDirecePushMessageByLoginID">
+      <soap:operation soapAction="http://tempuri.org/SendDirecePushMessageByLoginID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendDirecePushMessageByLoginID2">
+      <soap:operation soapAction="http://tempuri.org/SendDirecePushMessageByLoginID2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendDirectPushMessage">
+      <soap:operation soapAction="http://tempuri.org/SendDirectPushMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPushMessageInfo">
+      <soap:operation soapAction="http://tempuri.org/GetPushMessageInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPushMessageByRegister">
+      <soap:operation soapAction="http://tempuri.org/GetPushMessageByRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearMessageByRegister">
+      <soap:operation soapAction="http://tempuri.org/ClearMessageByRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppShowtip">
+      <soap:operation soapAction="http://tempuri.org/GetAppShowtip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearAppShowtip">
+      <soap:operation soapAction="http://tempuri.org/ClearAppShowtip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppInstructionsByID">
+      <soap:operation soapAction="http://tempuri.org/GetAppInstructionsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppVersionInstructionsList">
+      <soap:operation soapAction="http://tempuri.org/GetAppVersionInstructionsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppVersionInstructionsList2">
+      <soap:operation soapAction="http://tempuri.org/GetAppVersionInstructionsList2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppVersionInfo">
+      <soap:operation soapAction="http://tempuri.org/GetAppVersionInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPhoto">
+      <soap:operation soapAction="http://tempuri.org/GetUserPhoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMyShortcut">
+      <soap:operation soapAction="http://tempuri.org/AddMyShortcut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyShortcut">
+      <soap:operation soapAction="http://tempuri.org/GetMyShortcut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMyShortcut">
+      <soap:operation soapAction="http://tempuri.org/DeleteMyShortcut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMyInfo">
+      <soap:operation soapAction="http://tempuri.org/SaveMyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPublic">
+      <soap:operation soapAction="http://tempuri.org/SetPublic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyInfo">
+      <soap:operation soapAction="http://tempuri.org/GetMyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindContacts">
+      <soap:operation soapAction="http://tempuri.org/FindContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMyContacts">
+      <soap:operation soapAction="http://tempuri.org/AddMyContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMyContacts">
+      <soap:operation soapAction="http://tempuri.org/RemoveMyContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindMyContacts">
+      <soap:operation soapAction="http://tempuri.org/FindMyContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="McoaWSSoap12" type="tns:McoaWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoginCheck">
+      <soap12:operation soapAction="http://tempuri.org/LoginCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginCheckV2">
+      <soap12:operation soapAction="http://tempuri.org/LoginCheckV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginByPush">
+      <soap12:operation soapAction="http://tempuri.org/LoginByPush" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginRegister">
+      <soap12:operation soapAction="http://tempuri.org/LoginRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginRegisterAgain">
+      <soap12:operation soapAction="http://tempuri.org/LoginRegisterAgain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeviceChange">
+      <soap12:operation soapAction="http://tempuri.org/DeviceChange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartApp">
+      <soap12:operation soapAction="http://tempuri.org/StartApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartApp2">
+      <soap12:operation soapAction="http://tempuri.org/StartApp2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendDirecePushMessageByEmpCode">
+      <soap12:operation soapAction="http://tempuri.org/SendDirecePushMessageByEmpCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendDirecePushMessageByEmpCode2">
+      <soap12:operation soapAction="http://tempuri.org/SendDirecePushMessageByEmpCode2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendDirecePushMessageByLoginID">
+      <soap12:operation soapAction="http://tempuri.org/SendDirecePushMessageByLoginID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendDirecePushMessageByLoginID2">
+      <soap12:operation soapAction="http://tempuri.org/SendDirecePushMessageByLoginID2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendDirectPushMessage">
+      <soap12:operation soapAction="http://tempuri.org/SendDirectPushMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPushMessageInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetPushMessageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPushMessageByRegister">
+      <soap12:operation soapAction="http://tempuri.org/GetPushMessageByRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearMessageByRegister">
+      <soap12:operation soapAction="http://tempuri.org/ClearMessageByRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppShowtip">
+      <soap12:operation soapAction="http://tempuri.org/GetAppShowtip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearAppShowtip">
+      <soap12:operation soapAction="http://tempuri.org/ClearAppShowtip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppInstructionsByID">
+      <soap12:operation soapAction="http://tempuri.org/GetAppInstructionsByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppVersionInstructionsList">
+      <soap12:operation soapAction="http://tempuri.org/GetAppVersionInstructionsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppVersionInstructionsList2">
+      <soap12:operation soapAction="http://tempuri.org/GetAppVersionInstructionsList2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppVersionInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetAppVersionInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPhoto">
+      <soap12:operation soapAction="http://tempuri.org/GetUserPhoto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMyShortcut">
+      <soap12:operation soapAction="http://tempuri.org/AddMyShortcut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyShortcut">
+      <soap12:operation soapAction="http://tempuri.org/GetMyShortcut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMyShortcut">
+      <soap12:operation soapAction="http://tempuri.org/DeleteMyShortcut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMyInfo">
+      <soap12:operation soapAction="http://tempuri.org/SaveMyInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPublic">
+      <soap12:operation soapAction="http://tempuri.org/SetPublic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetMyInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindContacts">
+      <soap12:operation soapAction="http://tempuri.org/FindContacts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMyContacts">
+      <soap12:operation soapAction="http://tempuri.org/AddMyContacts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMyContacts">
+      <soap12:operation soapAction="http://tempuri.org/RemoveMyContacts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindMyContacts">
+      <soap12:operation soapAction="http://tempuri.org/FindMyContacts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="McoaWS">
+    <wsdl:port name="McoaWSSoap" binding="tns:McoaWSSoap">
+      <soap:address location="http://mcoa02.gzcentaline.com.cn/MCOA_MobileAppWS/MCOAWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="McoaWSSoap12" binding="tns:McoaWSSoap12">
+      <soap12:address location="http://mcoa02.gzcentaline.com.cn/MCOA_MobileAppWS/MCOAWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

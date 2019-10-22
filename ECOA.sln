@@ -1,0 +1,142 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ECOA", "ECOA", "{A48D6C7E-9594-41BA-8915-A8C75C35AAF6}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""
+		SccAuxPath = ""
+		SccLocalPath = ""
+		SccProvider = ""
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		ProjectReferences = "{fbbae5dd-38e8-4de5-99ba-b92b45fa4047}|DataAccess.dll;{4f3faff9-b5fc-4dcf-ba3e-85010b428e05}|DataEntity.dll;{a66c35e0-2d2e-463f-83eb-d0512f8f04ca}|SqlDatabase.dll;{a4074213-b193-496b-8c22-347c7bf3f67c}|Common.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/ECOA"
+		Debug.AspNetCompiler.PhysicalPath = "ECOA\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\ECOA\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/ECOA"
+		Release.AspNetCompiler.PhysicalPath = "ECOA\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\ECOA\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2442"
+		VWDVirtualPath = "/"
+		DefaultWebSiteLanguage = "Visual C#"
+		StartServerOnDebug = "false"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{FBBAE5DD-38E8-4DE5-99BA-B92B45FA4047}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataEntity", "DataEntity\DataEntity.csproj", "{4F3FAFF9-B5FC-4DCF-BA3E-85010B428E05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlDatabase", "SqlDatabase\SqlDatabase.csproj", "{A66C35E0-2D2E-463F-83EB-D0512F8F04CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoSentMessage", "AutoSentMessage\AutoSentMessage.csproj", "{3C26ABD1-6681-4FF5-924B-07DCE86B26D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoSendMessageWS", "AutoSendMessageWS\AutoSendMessageWS.csproj", "{BFA37BA6-CD85-4B5A-AFCA-9AB9FD0A171B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckUnAuditService", "CheckUnAuditService\CheckUnAuditService.csproj", "{86F0959F-C7BB-4357-91F8-238F2C203DA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{A4074213-B193-496B-8C22-347C7BF3F67C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoOverdue", "AutoOverdue\AutoOverdue.csproj", "{42E7F71D-A5A7-40B6-9183-011A4C01B8F0}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ECOAOS", "http://localhost:57920", "{72ACAD7B-C4B6-448B-BFAF-EED6FAAA1C5F}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		ProjectReferences = "{a4074213-b193-496b-8c22-347c7bf3f67c}|Common.dll;{fbbae5dd-38e8-4de5-99ba-b92b45fa4047}|DataAccess.dll;{4F3FAFF9-B5FC-4DCF-BA3E-85010B428E05}|DataEntity.dll;{A66C35E0-2D2E-463F-83EB-D0512F8F04CA}|SqlDatabase.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57920"
+		Debug.AspNetCompiler.PhysicalPath = "ECOAOS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57920\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57920"
+		Release.AspNetCompiler.PhysicalPath = "ECOAOS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57920\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "ECOAOS\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ECOA|Any CPU = ECOA|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A48D6C7E-9594-41BA-8915-A8C75C35AAF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A48D6C7E-9594-41BA-8915-A8C75C35AAF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A48D6C7E-9594-41BA-8915-A8C75C35AAF6}.ECOA|Any CPU.ActiveCfg = Debug|Any CPU
+		{A48D6C7E-9594-41BA-8915-A8C75C35AAF6}.ECOA|Any CPU.Build.0 = Debug|Any CPU
+		{A48D6C7E-9594-41BA-8915-A8C75C35AAF6}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A48D6C7E-9594-41BA-8915-A8C75C35AAF6}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{FBBAE5DD-38E8-4DE5-99BA-B92B45FA4047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBBAE5DD-38E8-4DE5-99BA-B92B45FA4047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBBAE5DD-38E8-4DE5-99BA-B92B45FA4047}.ECOA|Any CPU.ActiveCfg = ECOA|Any CPU
+		{FBBAE5DD-38E8-4DE5-99BA-B92B45FA4047}.ECOA|Any CPU.Build.0 = ECOA|Any CPU
+		{FBBAE5DD-38E8-4DE5-99BA-B92B45FA4047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBAE5DD-38E8-4DE5-99BA-B92B45FA4047}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F3FAFF9-B5FC-4DCF-BA3E-85010B428E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F3FAFF9-B5FC-4DCF-BA3E-85010B428E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F3FAFF9-B5FC-4DCF-BA3E-85010B428E05}.ECOA|Any CPU.ActiveCfg = ECOA|Any CPU
+		{4F3FAFF9-B5FC-4DCF-BA3E-85010B428E05}.ECOA|Any CPU.Build.0 = ECOA|Any CPU
+		{4F3FAFF9-B5FC-4DCF-BA3E-85010B428E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F3FAFF9-B5FC-4DCF-BA3E-85010B428E05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A66C35E0-2D2E-463F-83EB-D0512F8F04CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A66C35E0-2D2E-463F-83EB-D0512F8F04CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A66C35E0-2D2E-463F-83EB-D0512F8F04CA}.ECOA|Any CPU.ActiveCfg = ECOA|Any CPU
+		{A66C35E0-2D2E-463F-83EB-D0512F8F04CA}.ECOA|Any CPU.Build.0 = ECOA|Any CPU
+		{A66C35E0-2D2E-463F-83EB-D0512F8F04CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A66C35E0-2D2E-463F-83EB-D0512F8F04CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C26ABD1-6681-4FF5-924B-07DCE86B26D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C26ABD1-6681-4FF5-924B-07DCE86B26D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C26ABD1-6681-4FF5-924B-07DCE86B26D0}.ECOA|Any CPU.ActiveCfg = ECOA|Any CPU
+		{3C26ABD1-6681-4FF5-924B-07DCE86B26D0}.ECOA|Any CPU.Build.0 = ECOA|Any CPU
+		{3C26ABD1-6681-4FF5-924B-07DCE86B26D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C26ABD1-6681-4FF5-924B-07DCE86B26D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFA37BA6-CD85-4B5A-AFCA-9AB9FD0A171B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFA37BA6-CD85-4B5A-AFCA-9AB9FD0A171B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFA37BA6-CD85-4B5A-AFCA-9AB9FD0A171B}.ECOA|Any CPU.ActiveCfg = ECOA|Any CPU
+		{BFA37BA6-CD85-4B5A-AFCA-9AB9FD0A171B}.ECOA|Any CPU.Build.0 = ECOA|Any CPU
+		{BFA37BA6-CD85-4B5A-AFCA-9AB9FD0A171B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFA37BA6-CD85-4B5A-AFCA-9AB9FD0A171B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86F0959F-C7BB-4357-91F8-238F2C203DA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F0959F-C7BB-4357-91F8-238F2C203DA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F0959F-C7BB-4357-91F8-238F2C203DA2}.ECOA|Any CPU.ActiveCfg = ECOA|Any CPU
+		{86F0959F-C7BB-4357-91F8-238F2C203DA2}.ECOA|Any CPU.Build.0 = ECOA|Any CPU
+		{86F0959F-C7BB-4357-91F8-238F2C203DA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F0959F-C7BB-4357-91F8-238F2C203DA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4074213-B193-496B-8C22-347C7BF3F67C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4074213-B193-496B-8C22-347C7BF3F67C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4074213-B193-496B-8C22-347C7BF3F67C}.ECOA|Any CPU.ActiveCfg = Release|Any CPU
+		{A4074213-B193-496B-8C22-347C7BF3F67C}.ECOA|Any CPU.Build.0 = Release|Any CPU
+		{A4074213-B193-496B-8C22-347C7BF3F67C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4074213-B193-496B-8C22-347C7BF3F67C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42E7F71D-A5A7-40B6-9183-011A4C01B8F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E7F71D-A5A7-40B6-9183-011A4C01B8F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E7F71D-A5A7-40B6-9183-011A4C01B8F0}.ECOA|Any CPU.ActiveCfg = Release|Any CPU
+		{42E7F71D-A5A7-40B6-9183-011A4C01B8F0}.ECOA|Any CPU.Build.0 = Release|Any CPU
+		{42E7F71D-A5A7-40B6-9183-011A4C01B8F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E7F71D-A5A7-40B6-9183-011A4C01B8F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72ACAD7B-C4B6-448B-BFAF-EED6FAAA1C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72ACAD7B-C4B6-448B-BFAF-EED6FAAA1C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72ACAD7B-C4B6-448B-BFAF-EED6FAAA1C5F}.ECOA|Any CPU.ActiveCfg = Debug|Any CPU
+		{72ACAD7B-C4B6-448B-BFAF-EED6FAAA1C5F}.ECOA|Any CPU.Build.0 = Debug|Any CPU
+		{72ACAD7B-C4B6-448B-BFAF-EED6FAAA1C5F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{72ACAD7B-C4B6-448B-BFAF-EED6FAAA1C5F}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

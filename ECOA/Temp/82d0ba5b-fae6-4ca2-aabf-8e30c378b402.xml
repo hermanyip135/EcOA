@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfScrapAsset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ScrapAsset>
+        <AssetID>4c40add3-e03e-4bef-8d5a-c4b61288f71e</AssetID>
+        <AssetType>固定资产</AssetType>
+        <AssetClasses>电脑主机</AssetClasses>
+        <AssetAssetNo>GZ(1)-1-1-017822</AssetAssetNo>
+        <AssetTS>长城俊杰BQ240I5</AssetTS>
+        <AssetRecordedTime>2016/4/26 0:00:00</AssetRecordedTime>
+    </ScrapAsset>
+    <ScrapAsset>
+        <AssetID>e7a367d6-69e8-4689-a100-c91a029bc010</AssetID>
+        <AssetType>固定资产</AssetType>
+        <AssetClasses>电脑主机</AssetClasses>
+        <AssetAssetNo>GZ(1)-1-1-017846</AssetAssetNo>
+        <AssetTS>长城俊杰BQ240I5</AssetTS>
+        <AssetRecordedTime>2016/4/26 0:00:00</AssetRecordedTime>
+    </ScrapAsset>
+    <ScrapAsset>
+        <AssetID>c06acada-911b-4943-999b-d167ad74181d</AssetID>
+        <AssetType>固定资产</AssetType>
+        <AssetClasses>电脑主机</AssetClasses>
+        <AssetAssetNo>GZ(1)-1-1-017824</AssetAssetNo>
+        <AssetTS>长城俊杰BQ240I5</AssetTS>
+        <AssetRecordedTime>2016/4/26 0:00:00</AssetRecordedTime>
+    </ScrapAsset>
+    <ScrapAsset>
+        <AssetID>81668797-3e0d-4725-ab18-d9b3d4ac6e81</AssetID>
+        <AssetType>固定资产</AssetType>
+        <AssetClasses>电脑主机</AssetClasses>
+        <AssetAssetNo>GZ(1)-1-1-017848</AssetAssetNo>
+        <AssetTS>长城俊杰BQ240I5</AssetTS>
+        <AssetRecordedTime>2016/4/26 0:00:00</AssetRecordedTime>
+    </ScrapAsset>
+    <ScrapAsset>
+        <AssetID>011aeb7d-bfd6-4e00-8b7b-dde7c683a408</AssetID>
+        <AssetType>固定资产</AssetType>
+        <AssetClasses>电脑主机</AssetClasses>
+        <AssetAssetNo>GZ(1)-1-1-017823</AssetAssetNo>
+        <AssetTS>长城俊杰BQ240I5</AssetTS>
+        <AssetRecordedTime>2016/4/26 0:00:00</AssetRecordedTime>
+    </ScrapAsset>
+    <ScrapAsset>
+        <AssetID>ac3972ab-0eb2-4526-8139-e0a2adcecb02</AssetID>
+        <AssetType>固定资产</AssetType>
+        <AssetClasses>电脑主机</AssetClasses>
+        <AssetAssetNo>GZ(1)-1-1-017845</AssetAssetNo>
+        <AssetTS>长城俊杰BQ240I5</AssetTS>
+        <AssetRecordedTime>2016/4/26 0:00:00</AssetRecordedTime>
+    </ScrapAsset>
+    <ScrapAsset>
+        <AssetID>54df97f3-51eb-4f55-849c-e255a472aa7b</AssetID>
+        <AssetType>固定资产</AssetType>
+        <AssetClasses>电脑主机</AssetClasses>
+        <AssetAssetNo>GZ(1)-1-1-017851</AssetAssetNo>
+        <AssetTS>长城俊杰BQ240I5</AssetTS>
+        <AssetRecordedTime>2016/4/26 0:00:00</AssetRecordedTime>
+    </ScrapAsset>
+</ArrayOfScrapAsset>

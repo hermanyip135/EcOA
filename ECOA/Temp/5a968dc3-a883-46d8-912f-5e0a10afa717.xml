@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfScrapAsset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ScrapAsset>
+        <AssetID>72ce798b-96c4-47fa-9f82-ab8cca1be031</AssetID>
+        <AssetType>固定资产</AssetType>
+        <AssetClasses>电脑主机</AssetClasses>
+        <AssetAssetNo>GZ(1)-1-1-020780</AssetAssetNo>
+        <AssetTS>长城组装电脑</AssetTS>
+        <AssetRecordedTime>2016/10/18 0:00:00</AssetRecordedTime>
+        <AssetSurplusValue />
+        <AssetNumber>1</AssetNumber>
+    </ScrapAsset>
+</ArrayOfScrapAsset>

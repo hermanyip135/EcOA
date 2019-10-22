@@ -1,0 +1,75 @@
+﻿.menuBar	{
+	color:#002020;
+	font-size:12px;
+	width:100%;
+	line-height:15px;
+	padding:2px;
+	z-index:1000;
+	left:0;
+	top:0;
+}
+.menuRoot {
+	padding-top:3px;
+	padding-left:3px;
+	padding-right:2px;
+	padding-bottom:1px;
+	cursor:hand;
+}
+.menuRootOn {
+	padding-top:2px;
+	padding-left:2px;
+	padding-right:1px;
+	border:1px inset;
+	cursor:hand;
+}
+.menuRootHighlight {
+	padding-top:2px;
+	padding-left:2px;
+	padding-right:1px;
+	border:1px solid #888888;
+	border-left:1px solid #f0f0f0;
+	border-top:1px solid #f0f0f0;
+	cursor:hand;
+}
+.menuBox {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:1000;
+	padding:0px;
+	background-color:#eeeff0;
+	color:#201000;
+	font-size:12px;
+	border:1px solid #284860;
+}
+.menuItem {
+	padding:0px;
+	line-height:20px;
+	font-size:12px;
+	cursor:hand;
+}
+.menuItemOn {
+	padding:0px;
+	line-height:20px;
+	background-color:#88a8c0;
+	color:white;
+	font-size:12px;
+	cursor:hand;
+}
+.menuItemDis {
+	padding:0px;
+	line-height:20px;
+	background-color:#eeeff0;
+	color:#777777;
+	font-size:12px;
+	cursor:hand;
+}
+.menuItemDisOn {
+	padding:0px;
+	line-height:20px;
+	background-color:#88a8c0;
+	color:#777777;
+	font-size:12px;
+	cursor:hand;
+}
+

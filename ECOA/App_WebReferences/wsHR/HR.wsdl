@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="isTopManager">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="samAccountName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="isTopManagerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="isTopManagerResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManager">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="samAccountName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetManagerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerByEmpCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sEmpCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerByEmpCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetManagerByEmpCodeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerByDepartment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deptName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="position" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerByDepartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetManagerByDepartmentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAreaManager">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deptName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAreaManagerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAreaManagerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerByDeptNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deptNameID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerByDeptNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetManagerByDeptNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentManager">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deptNameID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentManagerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDepartmentManagerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentManagerCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deptNameID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentManagerCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDepartmentManagerCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="samAccountName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetJobResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDisplayName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="samAccountName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDisplayNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDisplayNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="samAccountName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDepartmentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="samAccountName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetADUserInfoBysamAccountName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="samAccountName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetADUserInfoBysamAccountNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetADUserInfoBysamAccountNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetADUserInfoByDisplayName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="displayName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetADUserInfoByDisplayNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetADUserInfoByDisplayNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="samAccountName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUserExist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="samAccountName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUserExistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckUserExistResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="isTopManagerSoapIn">
+    <wsdl:part name="parameters" element="tns:isTopManager" />
+  </wsdl:message>
+  <wsdl:message name="isTopManagerSoapOut">
+    <wsdl:part name="parameters" element="tns:isTopManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetManager" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerByEmpCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetManagerByEmpCode" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerByEmpCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetManagerByEmpCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerByDepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetManagerByDepartment" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerByDepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetManagerByDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAreaManagerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAreaManager" />
+  </wsdl:message>
+  <wsdl:message name="GetAreaManagerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAreaManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerByDeptNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetManagerByDeptNo" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerByDeptNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetManagerByDeptNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentManagerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartmentManager" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentManagerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentManagerCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartmentManagerCode" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentManagerCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentManagerCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetJobSoapIn">
+    <wsdl:part name="parameters" element="tns:GetJob" />
+  </wsdl:message>
+  <wsdl:message name="GetJobSoapOut">
+    <wsdl:part name="parameters" element="tns:GetJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDisplayNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDisplayName" />
+  </wsdl:message>
+  <wsdl:message name="GetDisplayNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDisplayNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartment" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployee" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetADUserInfoBysamAccountNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetADUserInfoBysamAccountName" />
+  </wsdl:message>
+  <wsdl:message name="GetADUserInfoBysamAccountNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetADUserInfoBysamAccountNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetADUserInfoByDisplayNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetADUserInfoByDisplayName" />
+  </wsdl:message>
+  <wsdl:message name="GetADUserInfoByDisplayNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetADUserInfoByDisplayNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmail" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckUserExistSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckUserExist" />
+  </wsdl:message>
+  <wsdl:message name="CheckUserExistSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckUserExistResponse" />
+  </wsdl:message>
+  <wsdl:portType name="HRSoap">
+    <wsdl:operation name="isTopManager">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">验证上司是否为部门负责人(*)</wsdl:documentation>
+      <wsdl:input message="tns:isTopManagerSoapIn" />
+      <wsdl:output message="tns:isTopManagerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManager">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取上司(*)</wsdl:documentation>
+      <wsdl:input message="tns:GetManagerSoapIn" />
+      <wsdl:output message="tns:GetManagerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerByEmpCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取上司[根据员工号](*)</wsdl:documentation>
+      <wsdl:input message="tns:GetManagerByEmpCodeSoapIn" />
+      <wsdl:output message="tns:GetManagerByEmpCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerByDepartment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取指定部门及职位的用户账号(*)</wsdl:documentation>
+      <wsdl:input message="tns:GetManagerByDepartmentSoapIn" />
+      <wsdl:output message="tns:GetManagerByDepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaManager">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取指定地区部门上司(*)</wsdl:documentation>
+      <wsdl:input message="tns:GetAreaManagerSoapIn" />
+      <wsdl:output message="tns:GetAreaManagerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerByDeptNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">指定部门ID获取负责人账号(*)</wsdl:documentation>
+      <wsdl:input message="tns:GetManagerByDeptNoSoapIn" />
+      <wsdl:output message="tns:GetManagerByDeptNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentManager">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">指定部门ID获取负责人姓名(*)</wsdl:documentation>
+      <wsdl:input message="tns:GetDepartmentManagerSoapIn" />
+      <wsdl:output message="tns:GetDepartmentManagerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentManagerCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">指定部门ID获取负责人工号(*)</wsdl:documentation>
+      <wsdl:input message="tns:GetDepartmentManagerCodeSoapIn" />
+      <wsdl:output message="tns:GetDepartmentManagerCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJob">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取职位(*)</wsdl:documentation>
+      <wsdl:input message="tns:GetJobSoapIn" />
+      <wsdl:output message="tns:GetJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDisplayName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取显示名(*)</wsdl:documentation>
+      <wsdl:input message="tns:GetDisplayNameSoapIn" />
+      <wsdl:output message="tns:GetDisplayNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取部门(*)</wsdl:documentation>
+      <wsdl:input message="tns:GetDepartmentSoapIn" />
+      <wsdl:output message="tns:GetDepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取员工信息(在流程架构里的)</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeeSoapIn" />
+      <wsdl:output message="tns:GetEmployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetADUserInfoBysamAccountName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取AD用户信息(在AD里的)</wsdl:documentation>
+      <wsdl:input message="tns:GetADUserInfoBysamAccountNameSoapIn" />
+      <wsdl:output message="tns:GetADUserInfoBysamAccountNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetADUserInfoByDisplayName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取AD用户信息(在AD里的)(*)</wsdl:documentation>
+      <wsdl:input message="tns:GetADUserInfoByDisplayNameSoapIn" />
+      <wsdl:output message="tns:GetADUserInfoByDisplayNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取Email(*)</wsdl:documentation>
+      <wsdl:input message="tns:GetEmailSoapIn" />
+      <wsdl:output message="tns:GetEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserExist">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">检查用户是否存在(*)</wsdl:documentation>
+      <wsdl:input message="tns:CheckUserExistSoapIn" />
+      <wsdl:output message="tns:CheckUserExistSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HRSoap" type="tns:HRSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="isTopManager">
+      <soap:operation soapAction="http://tempuri.org/isTopManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManager">
+      <soap:operation soapAction="http://tempuri.org/GetManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerByEmpCode">
+      <soap:operation soapAction="http://tempuri.org/GetManagerByEmpCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerByDepartment">
+      <soap:operation soapAction="http://tempuri.org/GetManagerByDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaManager">
+      <soap:operation soapAction="http://tempuri.org/GetAreaManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerByDeptNo">
+      <soap:operation soapAction="http://tempuri.org/GetManagerByDeptNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentManager">
+      <soap:operation soapAction="http://tempuri.org/GetDepartmentManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentManagerCode">
+      <soap:operation soapAction="http://tempuri.org/GetDepartmentManagerCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJob">
+      <soap:operation soapAction="http://tempuri.org/GetJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDisplayName">
+      <soap:operation soapAction="http://tempuri.org/GetDisplayName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartment">
+      <soap:operation soapAction="http://tempuri.org/GetDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <soap:operation soapAction="http://tempuri.org/GetEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetADUserInfoBysamAccountName">
+      <soap:operation soapAction="http://tempuri.org/GetADUserInfoBysamAccountName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetADUserInfoByDisplayName">
+      <soap:operation soapAction="http://tempuri.org/GetADUserInfoByDisplayName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmail">
+      <soap:operation soapAction="http://tempuri.org/GetEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserExist">
+      <soap:operation soapAction="http://tempuri.org/CheckUserExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HRSoap12" type="tns:HRSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="isTopManager">
+      <soap12:operation soapAction="http://tempuri.org/isTopManager" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManager">
+      <soap12:operation soapAction="http://tempuri.org/GetManager" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerByEmpCode">
+      <soap12:operation soapAction="http://tempuri.org/GetManagerByEmpCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerByDepartment">
+      <soap12:operation soapAction="http://tempuri.org/GetManagerByDepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaManager">
+      <soap12:operation soapAction="http://tempuri.org/GetAreaManager" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerByDeptNo">
+      <soap12:operation soapAction="http://tempuri.org/GetManagerByDeptNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentManager">
+      <soap12:operation soapAction="http://tempuri.org/GetDepartmentManager" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentManagerCode">
+      <soap12:operation soapAction="http://tempuri.org/GetDepartmentManagerCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJob">
+      <soap12:operation soapAction="http://tempuri.org/GetJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDisplayName">
+      <soap12:operation soapAction="http://tempuri.org/GetDisplayName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartment">
+      <soap12:operation soapAction="http://tempuri.org/GetDepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <soap12:operation soapAction="http://tempuri.org/GetEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetADUserInfoBysamAccountName">
+      <soap12:operation soapAction="http://tempuri.org/GetADUserInfoBysamAccountName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetADUserInfoByDisplayName">
+      <soap12:operation soapAction="http://tempuri.org/GetADUserInfoByDisplayName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmail">
+      <soap12:operation soapAction="http://tempuri.org/GetEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserExist">
+      <soap12:operation soapAction="http://tempuri.org/CheckUserExist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HR">
+    <wsdl:port name="HRSoap" binding="tns:HRSoap">
+      <soap:address location="http://gzs-terminal01/HRWebService/HR.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HRSoap12" binding="tns:HRSoap12">
+      <soap12:address location="http://gzs-terminal01/HRWebService/HR.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,601 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <%--<meta http-equiv="X-UA-Compatible" content="IE=edge"  />--%>
+    <script type="text/javascript" src="/Script/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="/Script/jquery-ui-1.10.1.custom.min.js"></script>
+    <script type="text/javascript" src="/Script/jquery.ui.datepicker-zh-CN.js"></script>
+
+    <script type="text/javascript" src="/Script/function.js"></script>
+    <style type="text/css" media="print">
+        .noprint {
+            display: none;
+        }
+    </style>
+    <style type="text/css">
+        /*背景css*/
+        .mainmask {
+            overflow: hidden;
+            position: absolute;
+            z-index: -7;
+        }
+
+        .maskno {
+            text-align: center;
+            color: #f2f3f2;
+            font-size: 30px;
+            font-weight: 700;
+            float: left;
+            display: inline-block;
+            opacity: 0.6;
+            transform: rotate(-30deg);
+        }
+    </style>
+    <link rel="Stylesheet" href="/Style/DotLuv/jquery-ui-1.10.1.custom.css" />
+    <link rel="Stylesheet" href="/Style/style.css" type="text/css" runat="server" />
+    <link href="/Style/dropdown/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/Style/dropdown/themes/lwis.celebrity/default.advanced.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="Style/css.css" />
+    <script src="/Script/jquery.backgroundpos.js" type="text/javascript"></script>
+
+    <script type="text/javascript"> //M_Begin-20141020-NoName-彩色化系统
+        $(function () {
+            //页面初始化
+            $("[id*=tbAround]").addClass("tbAround");
+            $("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdo]:even").addClass("rdoeven");
+            //附件列表
+            var $attach = $("[id*=gvAttach]");
+            $attach.find("tr:odd").addClass("AttachTrOdd");
+            $attach.find("tr:odd").addClass("AttachTrEven");
+            var $trf = $attach.find("tr:first");
+            $trf.addClass("AttachTrFirst");
+            $trf.find("td:eq(1)").addClass("tdf");
+            $attach.find("[id*=iBtnDelete]").attr("src", "/Images/delete.gif");
+
+            //同意、不同意、其他意见样式
+            $("label[for*=rdbYesIDx]").addClass("rdbYes");
+            $("label[for*=rdbNoIDx]").addClass("rdbNo");
+            $("label[for*=rdbOtherIDx]").addClass("rdbOther");
+
+            $("[id*=btnEditFlow]").addClass("btnEditFlow");
+            $("[id^=btnSignIDx]").addClass("btnSign");
+            /*这部分代码已移植至.css文件
+            //$("[id*=tbAround]").css({ "border": "1px solid #98b8b5", "border-collapse": "collapse", "margin": "0 auto" });
+            //$("[id*=tbAround] table").css({ "border": "1px solid #98b8b5" });
+            //$("[id*=tbAround] td").css({ "border": "1px solid #98b8b5", "color": "#022241" });
+            //$("[id*=tbAround] th").css({ "border": "1px solid #98b8b5", "color": "022241" });
+            //$("[id*=tbAround] :input").css("border", "1px solid #98b8b5");
+            //$("[id*=tbAround] th").css({ "line-height": "46px", "background-image": "url(/Images/th_there.png)" });
+            //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdb]:even").css("color", "#0d9405");
+            这部分代码已移植至.css文件_END*/
+
+            //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdo]:even").css("color", "#0d9405");
+            //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=r2d2b2]:even").css("color", "#0d9405");
+            //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdb]:odd").css("color", "#186ebe");
+            //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdo]:odd").css("color", "#186ebe");
+            //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=r2d2b2]:odd").css("color", "#186ebe");
+            $(":input[onclick*=addRow]").click(function () {
+                //$(":input:not(:submit):not(:button)").css("border", "1px solid #98b8b5");
+                //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdb]:even").css("color", "#0d9405");
+                //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdo]:even").css("color", "#0d9405");
+                //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdb]:odd").css("color", "#186ebe");
+                //$("[id*=tbAround]").find("tr:not(.noborder)").find("label[for*=rdo]:odd").css("color", "#186ebe");
+                //$("[id*=tbAround]").find("td").find("label:contains('新增')").css("color", "#0d9405");
+                //$("[id*=tbAround]").find("td").find("label:contains('删除')").css("color", "#fe0200");
+                //$("[id*=tbAround]").find("td").find("label:contains('调动')").css("color", "#186ebe");
+                //$("[id*=tbAround]").find("table td").css("border", "1px solid #98b8b5");
+                //$("[id*=tbAround]").find("table th").css("border", "1px solid #98b8b5");
+                //$("#tOwner").find("td").css("border", "none");
+                //$("#tClient").find("td").css("border", "none");
+                //$("#tEB").find("td").css("border", "none");
+                //$(":image").css("border", "none");
+                //$(":radio").css("border", "none");
+                //$(":checkbox").css("border", "none");
+                //$("[id*=tbAround]").find("tr.noborder").each(function (i) {
+                //    $("label:contains('同意'):not(:contains('不'))").css("color", "#008162");
+                //    $("label:contains('不同意')").css("color", "#fe0100");
+                //    $("label:contains('其他意见')").css("color", "#008162");
+                //});
+            });
+
+
+            //$("[id*=gvAttach]").css("margin", "0 auto");
+            //$("[id*=gvAttach]").find("td").css("border", "1px solid #8dbce3");
+            //$("[id*=gvAttach]").find("th").css("border", "1px solid #8dbce3");  
+            //$("[id*=gvAttach]").css({ "border-color": "#6b92b4", "border-width": "1px", "border-style": "Solid" });
+            //$("[id*=gvAttach]").find("tr:odd").css({ "background-color": "#D4EDFF" });
+            //$("[id*=gvAttach]").find("tr:even").css({ "background-color": "White" });
+            //$("[id*=gvAttach]").find("tr:first").css({ "color": "Black", "background-color": "#E9F6FF", "font-weight": "bold" });
+            //$("[id*=gvAttach]").find("tr").find("td:eq(1)").css({ "width": "40px" }); 
+            //$("[id*=gvAttach]").find("[id*=iBtnDelete]").attr("src", "/Images/delete.gif"); 
+
+            //审批流程
+            //$("[id*=tbAround]").find("tr[id^=trManager]:not(:first)").find("td").css("border-top-style", "none");
+            //$("[id*=tbAround]").find("tr[id^=trManager]").find("td:not(:first)").css("border-left-style", "none");
+            //$("[id*=tbAround]").find("tr.noborder").each(function (i) {
+            //    $("label:contains('完成')").css("color", "#008162");
+            //    $("label:contains('确认')").css("color", "#008162");
+            //    $("label:contains('同意'):not(:contains('不'))").css("color", "#008162");
+            //    $("label:contains('同　意')").css("color", "#008162");
+            //    $("label:contains('不同意')").css("color", "#fe0100");
+            //    $("label:contains('退回申请')").css("color", "#fe0100");
+            //    $("label:contains('其他意见')").css("color", "#008162");
+            //});
+
+            //按键设计
+            //$("[id$=btnSave][value=\"保存修改\"]").mousedown(function () { $(this).css("background-image", "url(/Images/btn_sa2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(/Images/btn_sa1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(/Images/btn_sa1.png)"); });
+            //$("[id*=btnReWrite]").mousedown(function () { $(this).css("background-image", "url(/Images/btnReWrite2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(/Images/btnReWrite1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(/Images/btnReWrite1.png)"); });
+            //$("[id*=btnSignSave]").mousedown(function () { $(this).css("background-image", "url(/Images/btnSignSave2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(/Images/btnSignSave1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(/Images/btnSignSave1.png)"); });
+            //$("[id*=btnSignBad]").mousedown(function () { $(this).css("background-image", "url(/Images/btnSignBad2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(/Images/btnSignBad1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(/Images/btnSignBad1.png)"); });
+            //$("[id*=btnSAlterC]").mousedown(function () { $(this).css("background-image", "url(/Images/btnSAlterC2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(/Images/btnSAlterC1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(/Images/btnSAlterC1.png)"); });
+            //$("[id*=btnEditFlow]").mousedown(function () { $(this).css("background-image", "url(/Images/btnEditFlow2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(/Images/btnEditFlow1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(/Images/btnEditFlow1.png)"); });
+            //$("[id*=btExcel]").mousedown(function () { $(this).css("background-image", "url(/Images/btExcel2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(/Images/btExcel1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(/Images/btExcel1.png)"); });
+
+            //$("[id*=btnInterestsExcel]").mousedown(function () { $(this).css("background-image", "url(/Images/btExcel2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(/Images/btExcel1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(/Images/btExcel1.png)"); });
+
+            //$("[id^=btnSignIDx]").mousedown(function () { $(this).css("background-image", "url(/Images/btn_sign2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(/Images/btn_sign1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(/Images/btn_sign1.png)"); });
+
+            //$("[id^=btDiagram]").mousedown(function () { $(this).css("background-image", "url(/Images/btnCancelDiagram2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(/Images/btnCancelDiagram1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(/Images/btnCancelDiagram1.png)"); });
+            //$("[id^=btnCancelSignIDx]").mousedown(function () { $(this).css("background-image", "url(/Images/btnCancelSignIDx2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(/Images/btnCancelSignIDx1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(/Images/btnCancelSignIDx1.png)"); });
+            //$("[id*=btnShouldJumpIDx]").mousedown(function () { $(this).css("background-image", "url(/Images/btnShouldJump2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(/Images/btnShouldJump1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(/Images/btnShouldJump1.png)"); });
+            //$("[id*=btnWillEnd]").mousedown(function () { $(this).css("background-image", "url(/Images/btnWillEnd2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(/Images/btnWillEnd1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(/Images/btnWillEnd1.png)"); });
+
+            //$("[id*=btnADelete]").mousedown(function () { $(this).css("background-image", "url(/Images/btnIsADelete2.png)"); })
+            //    .mouseup(function () { $(this).css("background-image", "url(/Images/btnIsADelete1.png)"); })
+            //    .mouseleave(function () { $(this).css("background-image", "url(/Images/btnIsADelete1.png)"); });
+
+            $("[id*=btnTransmit]").mousedown(function () { $(this).css("background-image", "url(/Images/btnTransmit2.png)"); })
+                .mouseup(function () { $(this).css("background-image", "url(/Images/btnTransmit1.png)"); })
+                .mouseleave(function () { $(this).css("background-image", "url(/Images/btnTransmit1.png)"); });
+            $("[id*=btnSavePlanTime]").mousedown(function () { $(this).css("background-image", "url(/Images/bsm_save2.png)"); })
+                .mouseup(function () { $(this).css("background-image", "url(/Images/bsm_save1.png)"); })
+                .mouseleave(function () { $(this).css("background-image", "url(/Images/bsm_save1.png)"); });
+            $("[id$=btnUploadDetailed]").mousedown(function () { $(this).css("background-image", "url(/Images/bsm_upload2.png)"); })
+                .mouseup(function () { $(this).css("background-image", "url(/Images/bsm_upload1.png)"); })
+                .mouseleave(function () { $(this).css("background-image", "url(/Images/bsm_upload1.png)"); });
+            $("[id$=btnUploadBadDebts]").mousedown(function () { $(this).css("background-image", "url(/Images/bsm_upload2.png)"); })
+                .mouseup(function () { $(this).css("background-image", "url(/Images/bsm_upload1.png)"); })
+                .mouseleave(function () { $(this).css("background-image", "url(/Images/bsm_upload1.png)"); });
+
+            //列表（表头）
+            //$("ul#nav").find("li#li1").find("a").mouseenter(function () { $(this).css({ "background-image": "url(/Images/ul_nav_left_n.png)", "color": "#000000" }); })
+            //    .mouseleave(function () { $(this).css({ "background-image": "url(/Images/ul_nav_left.png)", "color": "#FFFFFF" }) });
+            $("ul#nav").find("li#li1").mouseenter(function () { $(this).css({ "background-image": "url(/Images/ul_nav_left_n.png)", "color": "#000000" }); })
+                .mouseleave(function () { $(this).css({ "background-image": "url(/Images/ul_nav_left.png)", "color": "#FFFFFF" }) });
+
+            $("ul#nav").find("li#li2").mouseenter(function () { $(this).css({ "background-image": "url(/Images/ul_nav_right_n.png)", "color": "#000000" }); })
+                .mouseleave(function () { $(this).css({ "background-image": "url(/Images/ul_nav_right.png)", "color": "#FFFFFF" }) });
+            $("ul#nav").find("li#li7").mouseenter(function () { $(this).css({ "background-image": "url(/Images/ul_nav_right_1_n.png)", "color": "#000000" }); })
+                .mouseleave(function () { $(this).css({ "background-image": "url(/Images/ul_nav_right_1.png)", "color": "#FFFFFF" }) });
+            $("ul#nav").find("li#li6").mouseenter(function () { $(this).css({ "background-image": "url(/Images/ul_nav_right_3_n.png)", "color": "#000000" }); })
+                .mouseleave(function () { $(this).css({ "background-image": "url(/Images/ul_nav_right_3.png)", "color": "#FFFFFF" }) });
+            $("ul#nav").find("li#li5").find("a").mouseenter(function () { $(this).css({ "background-image": "url(/Images/ul_nav_right_3_n.png)", "color": "#000000" }); })
+                .mouseleave(function () { $(this).css({ "background-image": "url(/Images/ul_nav_right_3.png)", "color": "#FFFFFF" }) });
+            $("ul#nav").find("li#li4").find("a").mouseenter(function () { $(this).css({ "background-image": "url(/Images/ul_nav_right_4_n.png)", "color": "#000000" }); })
+                .mouseleave(function () { $(this).css({ "background-image": "url(/Images/ul_nav_right_4.png)", "color": "#FFFFFF" }) });
+
+
+
+            //$.each($("textarea"), function (idx, item) { autoTextarea(this); }); //使对话框自适应
+            //$("#li2 li.div").hover(
+            //    function () {
+            //        $(this).find("ul").show();
+            //    },
+            //    function () {
+            //        $(this).find("ul").hide();
+            //    });
+            $("#ttul li.div").hover(
+                    function () {
+                        //alert("触发");
+                        $(this).find("ul").show();
+                    },
+                    function () {
+                        $(this).find("ul").hide();
+                    });
+            $("#ttul li.dir").each(function () {
+                $(this).hover(function () {
+                    //alert("触发了");
+                    $(this).find("ul").show();
+                },
+                function () {
+                    $(this).find("ul").hide();
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function AddOtherAgree() {
+            $rdbNoIDxA = $("[id*=rdbNoIDx]");
+            $rdbNoIDxA.each(function () {
+                var idname = $(this).attr("id");
+                var otheridname = "rdbOtherIDx" + idname.replace("rdbNoIDx", "");
+                var text = $(this).next().html();
+
+                if ($("#" + otheridname).length == 0 && text == "不同意") {
+                    var name = $(this).attr("name");
+                    $(this).next().after("<input type='radio' id='" + otheridname + "' name='" + name + "' /><label for='" + otheridname + "'>其他意见</label>");
+                }
+            });
+        }
+        ///背景
+        function PageInit(show, empoyeeID) {
+            if (show) {
+                var height = $('#aspnetForm').height();
+                var width = $('#aspnetForm').outerWidth(true);
+                var perw = parseInt(width / 9);
+                var perh = parseInt(perw / 2);
+                var hcount = parseInt(height / perh);
+                $("#mainmask").height(height);
+                var loopcount = hcount * 15;
+                for (var i = 0; i < loopcount; i++) {
+                    $("#mainmask").append("<div class='maskno' style='width:" + perw + "px;height:" + perh + "px' >" + empoyeeID + "</div>");
+                }
+            }
+        }
+        $(document).ready(function () {
+            PageInit(true, '<%=employeeid%>');
+        });
+        ///end
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="margin-top: 0px;">
+    <form id="form1" runat="server">
+        <div class="mainmask noprint" id="mainmask"></div>
+        <div id="masterpage_form" class="noprint" style="background-image: url('/Images/banner.jpg'); height: 110px; padding-left: 10px;">
+            <img src="/Images/logo.png" style="margin-bottom: 5px; margin-top: 20px;" alt="logo" />
+            <ul id="nav" class="dropdown dropdown-horizontal">
+                <li id="li1">
+                    <a id="sec" href="/Apply/Apply_Search.aspx">查询</a>
+                </li>
+                <li style="padding-top: 1px; background-color: transparent;">
+                    <img src="/Images/ul_nav_line.png" alt="nav" /></li>
+                <li id="li2" class="dir">申请类型
+                <ul id="ttul" style="border: none;">
+                    <li class="first dir">地铺营运类
+                        <ul style="width: 260px; display: none;">
+                            <%--<li class="first"><a href="/Apply/Feasibility/Apply_Feasibility_Detail.aspx">新建分行可行性报告</a></li>--%>
+                            <li class="first"><a href="/Apply/Feasibility/201909/Apply_Feasibility_Detail_New.aspx">新建分行可行性报告</a></li>
+                            <li><a href="/Apply/TotalRev/Apply_TotalRev_Detail.aspx">新分行总启费用申请表</a></li>
+                            <%--<li><a href="/Apply/CallCenterFeasibility/Apply_CallCenterFeasibility_Detail.aspx">新建呼叫中心可行性报告</a></li>--%>
+                            <li><a href="/Apply/CallCenterFeasibility/201909/Apply_CallCenterFeasibility_Detail_New.aspx">新建呼叫中心可行性报告</a></li>
+                            <li><a href="/Apply/SuspendBusi/Apply_SuspendBusi_Detail.aspx">暂停营业申请表</a></li>
+                            <li><a href="/Apply/ResumeBusi/Apply_ResumeBusi_Detail.aspx">恢复营业申请表</a></li>
+                            <li><a href="/Apply/WithdrawShop/Apply_WithdrawShop_Detail.aspx">撤铺/转铺申请表</a></li>
+                            <li><a href="/Apply/BranchContract/Apply_NewBranchContract_Detail.aspx">分行续约申请报告</a></li>
+                            <li><a href="/Apply/Maintenance/Apply_Maintenance_Detail.aspx">大额维修申请表</a></li>
+                            <li><a href="/Apply/SYSPWDTransfer/Apply_SYSPWDTransfer_Detail.aspx">系统及密码交接表</a></li>
+                            <li><a href="/Apply/FinAffairsTransfer/Apply_FinAffairsTransfer_Detail.aspx">行政助理(财务事项)交接表</a></li>
+                            <li class="last"><a href="/Apply/Repair/Apply_Repair_Detail.aspx">新增、维修项目报价（结算）明细表</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">接盘类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/UndertakeProj/201908/Apply_UtNewProj_Detail_New.aspx">联动统筹项目报备/续约申请表</a></li>
+                            <li><a href="/Apply/UndertakeProj/201510/Apply_UtContract_Detail.aspx">物业部承接新项目/项目续约申请表</a></li>
+                            <li><a href="/Apply/EBAdjuct/Apply_EBAdjuct_Detail.aspx">发展商额外奖金新增申请及调整申请</a></li>
+                            <li><a href="/Apply/ProjCost/Apply_ProjCost_Detail.aspx">项目费用申请表</a></li>
+                            <li><a href="/Apply/ContractTerms/Apply_ContractTerms_Detail.aspx">合同条款申请表</a></li>
+                            <%--<li><a href="/Apply/AfterCommission/Apply_AfterCommission_Detail.aspx">物业部一手项目追佣申请表</a></li>--%>
+                            <%--<li><a href="/Apply/LegalCommission/Apply_LegalCommission_Detail.aspx">法律部追佣合作费处理申请</a></li>--%>
+                            <%--<li class="last"><a href="/Apply/UndertakeProj/Apply_NewUndertakeProj_Detail.aspx">物业部承接项目报备申请表</a></li>--%>
+                        </ul>
+                    </li>
+                    <li class="first dir">成交报数类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/ReduceComm/Apply_NewReduceComm_Detail.aspx">减让佣/现金奖申请表</a></li>
+                            <li><a href="/Apply/ReduceComm/Apply_NewReduceComm_Detail.aspx?t=2">减让佣/现金奖申请表(房友圈电商类)</a></li>
+                            <li><a href="/Apply/SpecialNumber/Apply_SpecialNumber_Detail.aspx">特殊上数申请表</a></li>
+                            <li><a href="/Apply/CoopCost/Apply_CoopCost_Detail.aspx">合作费申请表</a></li>
+
+                            <li><a href="/Apply/BadDebts/Apply_BadDebts_Detail.aspx">坏账申请表</a></li>
+                            <li><a href="/Apply/BackComm/Apply_BackComm_Detail.aspx">退佣申请表</a></li>
+                            <%--2016-11-18 Emma要求下线该申请--%>
+                            <%--<li><a href="/Apply/DealOffice/Apply_DealOffice_Detail.aspx">物业部成交商铺/写字楼备案申请表</a></li>--%>
+                            <li><a href="/Apply/PullafewRd/Apply_PullafewRd_Detail.aspx">三级市场一手项目欠必要性文件拉数申请</a></li>
+                            <li><a href="/Apply/ExemptionBadDebt/Apply_ExemptionBadDebt_Detail.aspx">三级市场一手项目豁免自动坏申请</a></li>
+                            <li class="last"><a href="/Apply/SolHold/Apply_SolHold_Detail.aspx">物业部批量解hold申请</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">项目部申请类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/ProjAgentClause/Apply_ProjAgentClause_Detail.aspx">项目销售代理合同条款申请表</a></li>
+                            <%-- <li><a href="/Apply/ProjWorkCloth/Apply_ProjWorkCloth_Detail.aspx">项目工衣申请表</a></li>  --%>
+                            <li><a href="/Apply/OweSubmit/ProjWorkCloth/Apply_ProjWorkCloth_Detail.aspx">项目工衣申请表</a></li>
+                            <li><a href="/Apply/ProjDormSubsiby/Apply_ProjDormSubsiby_Detail.aspx">项目宿舍及津贴费用申请表</a></li>
+                            <li><a href="/Apply/BusinessTravel/Apply_BusinessTravel_Detail.aspx">项目差旅申请表</a></li>
+                            <li><a href="/Apply/ProjRepoData/Apply_ProjRepoData_Detail.aspx">项目报数申请表</a></li>
+                            <li><a href="/Apply/ProjLinkRepoData/Apply_ProjLinkRepoData_Detail.aspx">项目联动报数申请表</a></li>
+                            <li><a href="/Apply/ChangeData/Apply_ChangeData_Detail.aspx">变更资料申请表</a></li>
+                            <li><a href="/Apply/CommissionAdjust/Apply_CommissionAdjust_Detail.aspx">应收佣金调整报告</a></li>
+                            <li><a href="/Apply/WirelessFixedLine/Apply_WirelessFixedLine_Detail.aspx">无线固话申请表</a></li>
+                            <%--<li><a href="/Apply/PunishTerms/Apply_PunishTerms_Detail.aspx">项目部代理合同扣罚条款签名确认表</a></li>--%>
+                            <li><a href="/Apply/ProjectCarAllowance/Apply_ProjectCarAllowance_Detail.aspx">小汽车津贴申请表（项目部）</a></li>
+                            <li><a href="/Apply/PullafewTwo/Apply_PullafewTwo_Detail.aspx">二级市场一手项目欠必要性文件拉数申请</a></li>
+                            <li><a href="/Apply/ProjReDaAdd/Apply_ProjReDaAdd_Detail.aspx">项目报数申请表(物业部加签)</a></li>
+                            <li><a href="/Apply/ProjBaComm/Apply_ProjBaComm_Detail.aspx">项目部实收佣金调整申请表</a></li>
+                            <li><a href="/Apply/PartTime/Apply_PartTime_Detail.aspx">项目部兼职申请</a></li>
+                            <li><a href="/Apply/CommissionAssign/Apply_CommissionAssign_Detail.aspx">项目部佣金分配指引</a></li>
+                            <li><a href="/Apply/ProjOfficialSeal/Apply_ProjOfficialSeal_Detail.aspx">公章使用申请表(项目部)</a></li>
+                            <li class="last"><a href="/Apply/ExtraBonus/Apply_ExtraBonus_Detail.aspx">项目发展商额外奖金报备（仅适用于项目部）</a></li>
+                            <li class="last"><a href="/Apply/ProjGeneralApply/Apply_ProjGeneralApply_Detail.aspx">项目部通用申请</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">汇瀚按揭类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/NetSign/Apply_NetSign_Detail.aspx">超成数备案</a></li>
+                            <li><a href="/Apply/Guarantee/Apply_Guarantee_Detail.aspx">担保申请</a></li>
+                            <li><a href="/Apply/Changens/Apply_Changens_Detail.aspx">网签变更、特殊申请表</a></li>
+                            <%--<li><a href="/Apply/Specialcase/Apply_Specialcase_Detail.aspx">特殊个案申请表</a></li>--%>
+                            <li><a href="/Apply/HoldCoisn/20160712/Apply_HoldCoisn_Detail.aspx">解除汇瀚HOLD佣申请</a></li>
+                            <li><a href="/Apply/Record/Apply_Record_Detail.aspx">备案必须的内容</a></li>
+                            <li class="last"><a href="/Apply/SignedG/Apply_SignedG_Detail.aspx">关于签署两方版本担保协议书的申请</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">资产类
+                        <ul style="width: 260px; display: none;">
+                            <%-- <li class="first"><a href="/Apply/Scrap/Apply_Scrap_Detail.aspx">报废申请表</a></li>--%>
+                            <li class="first"><a href="/Apply/Scrap/New/Apply_Scrap_Detail.aspx">报废申请表</a></li>
+                            <li><a href="/Apply/AssetTransfer/New/Apply_AssetTransfer_Detail.aspx">资产调动表</a></li>
+                            <li><a href="/Apply/Secondment/Apply_Secondment_Detail.aspx">资产借调申请表</a></li>
+                            <li><a href="/Apply/ITBuy/20151207/Apply_ITBuy_Detail.aspx">计算机及相关设备购买申请表</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">软件系统类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/ITPower/Apply_ITPower_Detail.aspx">(物业部/工商铺)IT权限申请表(仅适用于三级市场系统、佣金系统、内部网（SPS）、电子传真)</a></li>
+                            <li><a href="/Apply/SysPower/Apply_SysPower_Detail.aspx">(后勤/汇瀚/二级市场)IT权限申请表</a></li>
+                            <li><a href="/Apply/SysReq/Apply_SysReq_Detail.aspx">软件系统开发需求申请表</a></li>
+                            <li><a href="/Apply/ITTest/Apply_ITTest.aspx">软件系统测试需求申请表</a></li>
+                            <li><a href="/Apply/UIReq/Apply_UIReq_Detail.aspx">UI设计需求申请表</a></li>
+                            <%--     <li class="last"><a href="/Apply/ITSpecialModify/Apply_ITSpecialModify_Detail.aspx">软件系统特殊修改申请表</a></li>--%>
+                        </ul>
+                    </li>
+                    <li class="first dir">薪酬福利类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/HousingFundBaseAdjust/Apply_HousingFundBaseAdjust_Detail.aspx">公积金缴存基数年度调整申请表<(营业部)</a></li>
+                            <li><a href="/Apply/PersInterests/201903/Apply_PersInterests_Detail.aspx">员工个人利益申报表(新表)</a></li>
+                            <li class="first"><a href="/Apply/PersInterests/Apply_NewPersInterests_Detail.aspx">员工个人利益申报表</a></li>
+                            <li><a href="/Apply/BuyBuilding/Apply_NewBuyBuilding_Detail.aspx">员工购租楼宇申报及免佣福利申请表</a></li>
+                            <li><a href="/Apply/CarAllowance/Apply_CarAllowance_Detail.aspx">小汽车津贴申请表</a></li>
+                            <li><a href="/Apply/CommissionOfMonth/Apply_CommissionOfMonth_Detail.aspx">关于享受本月佣金按全年一次性奖金发放申请表</a></li>
+                            <%--<li><a href="/Apply/SocialSecurity/Apply_SocialSecurity_Detail.aspx">社保公积金特殊缴纳申请表</a></li>--%>
+                            <li><a href="/Apply/OpenProve/Apply_OpenProve_Detail.aspx">薪酬福利类证明开具申请表</a></li>
+                            <li><a href="/Apply/HousingFundChange/Apply_HousingFundChange_Detail.aspx">公积金特殊申请表</a></li>
+                            <li class="last"><a href="/Apply/FurtherEducation/Apply_FurtherEducation_Detail.aspx">进修津贴申请表</a></li>
+                            <li class="last"><a href="/Apply/HousingFundAdjustment/Apply_HousingFundAdjustment_Detail.aspx">公积金缴存比例年度调整申请表</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="first dir">人事事务类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/OweSubmit/Apply_OweSubmit_Detail.aspx">延缓提交入职资料申请</a></li>
+                            <li><a href="/Apply/TaiwanDeclare/Apply_TaiwanDeclare_Detail.aspx">三级市场中台人员申报表</a></li>
+                            <li><a href="/Apply/Tourism/Apply_Tourism_Detail.aspx">营运部门自组织外出活动申请</a></li>
+                            <%-- 2019-09-16 新增 --%>
+                            <li><a href="/Apply/LinkageCoordination/Apply_LinkageCoordination_Detail.aspx?t=Inservice">联动统筹中心入职申请（新增）</a></li>
+                            <li><a href="/Apply/LinkageCoordination/Apply_LinkageCoordination_Detail.aspx?t=Dimission">联动统筹中心离职申请（新增）</a></li>
+                            <li class="last"><a href="/Apply/LinkageCoordination/Apply_LinkageCoordination_Detail.aspx?t=PersonalChange">联动统筹中心调动申请（新增）</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="first dir">招聘类
+                        <ul style="width: 260px; display: none;">
+                            <%--<li class="first"><a href="/Apply/SpecialAdd/Apply_SpecialAdd_Detail.aspx">特殊增编申请表</a></li>--%>
+                            <li class="first"><a href="/Apply/Recruit/Apply_Recruit_Detail.aspx">招聘需求申请</a></li>
+                            <li class="last"><a href="/Apply/WYRecruit/Apply_WYRecruit_Detail.aspx">营业部自主招聘申请</a></li>
+                            <li><a href="/Apply/StaffDataCheck/Apply_StaffDataCheck_Detail.aspx">六级及以上营业人员入职资料核查表</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">费用申请报销类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/CostOfActivity/Apply_CostOfActivity_Detail.aspx">三级市场活动费用申请表</a></li>
+                            <li><a href="/Apply/Marketing/Apply_Marketing_Detail.aspx">市场推广费用申请</a></li>
+
+                            <li><a href="/Apply/BorrowMoney/Apply_BorrowMoney_Detail.aspx">临时借用资金申请表</a></li>
+
+                            <%if (Purview.Contains("OA_Search_091"))
+                              {%>
+                            <li><a href="/Apply/BorrowMoney/Apply_BorrowMoney_Import.aspx">临时借用资金导入</a></li>
+                            <%} %>
+                            <%if (Purview.Contains("OA_Search_090"))
+                              {%>
+                            <li><a href="/Apply/BorrowMoney/Apply_BorrowMoney_Search.aspx">临时借用资金查询</a></li>
+                            <%} %>
+
+                            <%--  <li class="first"><a href="/Apply/BuyBudiData/Apply_BuyBudiData_Detail.aspx">物业部购买楼盘资料申请</a></li>--%>
+                        </ul>
+                    </li>
+                    <li class="first dir">通用/其他
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/GeneralApply/Apply_GeneralApply_Detail.aspx">通用申请表</a></li>
+                            <li><a href="/Apply/OfficialSeal/Apply_OfficialSeal_Detail.aspx">公章使用申请表</a></li>
+                            <li><%--<a href="/Apply/Fax/Apply_Fax_Detail.aspx">电子传真申请</a>--%></li>
+                            <li><a href="/Apply/ElectronicFax/Apply_ElectronicFax_Detail.aspx">电子传真申请</a></li>
+                            <li><a href="/Apply/SysLogist/Apply_SysLogist_Detail.aspx">申请内容修改申请表</a></li>
+                            <li><a href="/Apply/Propaganda/Apply_NewPropaganda_Detail.aspx">广告宣传需求申请表</a></li>
+                            <li><a href="/Apply/Budgetab/Apply_Budgetab_Detail.aspx">广告宣传预算使用异常申请表</a></li>
+                            <li><a href="/Apply/Loan/Apply_Loan_Detail.aspx">放款申请表</a></li>
+                            <li class="last"><a href="/Apply/WrongSave/Apply_WrongSave_Detail.aspx">错存帐户调整申请表</a></li>
+                            <li class="last"><a href="/Apply/CPNShoot/Apply_CPNShoot_Detail.aspx">CPN拍摄需求申请表</a></li>
+                        </ul>
+                    </li>
+                    <li class="first dir">考勤类
+                        <ul style="width: 260px; display: none;">
+                            <li class="first"><a href="/Apply/OndutyVacation/Apply_OndutyVacation_Detail.aspx">假期申请表(直属董事总经理人员适用)</a></li>
+                            <li><a href="/Apply/MaternityLeave/Apply_MaternityLeave_Detail.aspx">生育假</a></li>
+
+                        </ul>
+                    </li>
+                    <%--    <li class="first dir">房友圈
+                        <ul style="width:260px;display:none;">
+                                  <li class="first"><a href="/Apply/ChangeFyq/Apply_ChangeFyq_Detail.aspx">房友圈网签变更、特殊申请表</a></li>
+                                <li ><a href="/Apply/FyqNotUnProject/Apply_FyqNotUnProject_Detail.aspx">房友圈按揭不承办知会函</a></li>
+                             <li ><a href="/Apply/FyqBackProject/Apply_FyqBackProject_Detail.aspx">房友圈退案申请表</a></li>
+                        </ul>
+                    </li>--%>
+                </ul>
+                </li>
+                <li id="li4" style="float: right;"><a href="javascript:window.close();">退出</a></li>
+                <li style="float: right; padding-top: 1px; background-color: transparent;">
+                    <img src="/Images/ul_nav_line.png" /></li>
+                <li id="li5" style="float: right;"><a href="/Login.aspx">重新登录</a></li>
+                <li style="float: right; padding-top: 1px; background-color: transparent;">
+                    <img src="/Images/ul_nav_line.png" /></li>
+
+                <li id="li6" class="dir" style="float: right;">使用说明
+                <ul style="border: none;">
+                    <li><a href="/资料/使用说明/中原电子审批系统-使用说明.docx" target="_blank">系统使用说明</a></li>
+                    <li><a href="/资料/使用说明/电子审批系统新增功能操作说明.docx" target="_blank">新增功能说明</a></li>
+                </ul>
+                </li>
+
+                <%--<li id="li6" style="float:right;"><a href="/资料/使用说明/中原电子审批系统-使用说明.docx" target="_blank">使用说明</a></li>--%>
+
+                <li style="float: right; padding-top: 1px; background-color: transparent;">
+                    <img src="/Images/ul_nav_line.png" /></li>
+                <li id="li7" class="dir" style="float: right;">设置
+                <ul style="border: none;">
+                    <li><a href="/SysSetting/Agent_Setting.aspx">代理人</a></li>
+                </ul>
+                </li>
+                <li id="li8" style="float: right; line-height: 40px; margin-right: 20px; font-size: 15px; font-weight: bold; color: Black; background-color: Transparent;">当前用户：<asp:Label ID="lblUser" runat="server" Text=""></asp:Label></li>
+                <%--            <li id="li3" style="float:left;line-height:40px;margin-right:20px; font-size: 15px; font-weight: bold; color:Black; background-color:Transparent; ">
+                <div id="divWaitForMe" style="background-image: url('/Images/lb_waitforme.png'); background-repeat: no-repeat; padding-left: 6px; width: 201px;">
+                    <asp:LinkButton ID="lbtnUnhandledApplyCount" runat="server" OnClick="lbtnUnhandledApplyCount_Click">0</asp:LinkButton>
+                </div>
+                <div id="divDeleteA" style="background-image: url('/Images/lb_waitforme2.png'); background-repeat: no-repeat; padding-left: 6px; width: 201px;">
+                    <asp:LinkButton ID="lbDeleteA" runat="server" OnClick="lbDeleteA_Click">0</asp:LinkButton>
+                </div>
+            </li>--%>
+            </ul>
+
+
+
+            <div style="font-size: 18px; font-weight: bold; margin-left: 10px;">
+                <div id="divWaitForMe" style="background-image: url('/Images/lb_waitforme.png'); background-repeat: no-repeat; padding-left: 6px; float: left; margin-left: 5px; line-height: 40px; padding-right: 10px; display: none">
+                    <asp:LinkButton ID="lbtnUnhandledApplyCount" runat="server" OnClick="lbtnUnhandledApplyCount_Click">0</asp:LinkButton>
+                </div>
+                <div id="divDeleteA" style="background-image: url('/Images/lb_waitforme2.png'); background-repeat: no-repeat; padding-left: 6px; float: left; margin-left: 5px; line-height: 40px; padding-right: 15px; display: none">
+                    <asp:LinkButton ID="lbDeleteA" runat="server" OnClick="lbDeleteA_Click">0</asp:LinkButton>
+                </div>
+            </div>
+
+
+
+            <%--        <div id="divWaitForMe" style="line-height:40px;margin-left:10px;font-size: 18px; font-weight: bold; background-image: url('/Images/lb_waitforme.png'); background-repeat: no-repeat; padding-left: 6px; width: 201px; float:left">
+            <asp:LinkButton ID="lbtnUnhandledApplyCount" runat="server" OnClick="lbtnUnhandledApplyCount_Click">0</asp:LinkButton>
+        </div>
+        <div id="divDeleteA" style="line-height:40px;margin-left:5px;font-size: 18px; font-weight: bold; background-image: url('/Images/lb_waitforme2.png'); background-repeat: no-repeat; padding-left: 6px; width: 201px; float:left">
+            <asp:LinkButton ID="lbDeleteA" runat="server" OnClick="lbDeleteA_Click">0</asp:LinkButton>
+        </div>--%>
+        </div>
+        <div id="masterpage_form_bottom" class="noprint" style="clear: both; padding-bottom: 10px; background-image: url('/Images/banner_bottom.png'); height: 40px;"></div>
+
+        <div style="min-width: 800px; width: 80%; margin: 0px auto;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div style="min-width: 800px; width: 100%; margin: 0px auto;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <%=sbJS.ToString() %>
+    <script type="text/javascript">
+        $.each($("textarea:not([id*=txtDescribe])"), function (idx, item) { autoTextarea(this); }); //使对话框自适应
+        //$("#tabs-5 texterea").each(function () {
+        //    $(this).css({ "height": "auto" });
+        //});
+
+        var $rdbNoIDx = $("[id*=rdbNoIDx]");
+        $rdbNoIDx.each(function () {
+            var text = $(this).next().html();
+            if (text == "不同意" && $(this).attr("allow") != "sayno") {
+                $(this).attr("disabled", "disabled");
+            }
+            else if ($(this).attr("allow") == "sayno") {
+                $(this).removeAttr("disabled");
+            }
+        });
+        var $fieldradio = $(".fieldradio");
+        $fieldradio.each(function () {
+            $radio = $(this).find("input[type='radio'][value='0']");
+            var text = $radio.next().html();
+            if (text == "不同意") {
+                $radio.attr("disabled", "disabled");
+            }
+
+            //最后一步审核流程允许不同意
+            var MaxIdx = 0;
+            $("#tbflows tr").each(function () {
+                //非隐藏的最后一步流程
+                if ($(this).css("display") != "none") {
+                    MaxIdx = parseInt($(this).attr("idx"));
+                }
+            });
+            //找出该流程的不同意按钮
+            if (MaxIdx != 0 && MaxIdx != undefined) {
+                $radio = $("#tbflows tr[idx=" + MaxIdx + "]").find(".fieldradio input[type='radio'][value='0']");
+                if ($radio != undefined && $radio.length > 0) {
+                    $radio.removeAttr("disabled");
+                }
+            }
+        });
+
+        $("#trGeneralManager [id*=rdbNoIDx]").each(function () {
+            $(this).removeAttr("disabled");
+        });
+        $("#trAddAnoF3 input[type=radio]").each(function () {
+            $(this).removeAttr("disabled");
+        });
+
+        $td = $("td:contains('后勤事务部意见')")
+        if ($td.length > 0) {
+            var rowspan = $td.attr("rowspan")
+        }
+        if (rowspan != null && rowspan > 0) {
+            for (var i = 0; i < rowspan ; i++) {
+                $td.parent().next().hide();
+            }
+        }
+        var tableId = $td.parent().parent().parent().attr("id");
+        if (tableId != 'ctl00_ContentPlaceHolder1_gvData') {
+
+            $td.parent().hide();
+
+        }
+    </script>
+</body>
+</html>

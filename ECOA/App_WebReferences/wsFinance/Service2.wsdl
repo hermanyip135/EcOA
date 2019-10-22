@@ -1,0 +1,1359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetAccountList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAccountListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sReportNO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReportDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInCopartner">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sReportNO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInCopartnerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInCopartnerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeptOfZongJian">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZJCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEndDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBeginDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeptOfZongJianResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDeptOfZongJianResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExchangeDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sPropertyID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExchangeDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetExchangeDateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsExistByRptNoAndCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sReportNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsExistByRptNoAndCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsExistByRptNoAndCodeResult" type="tns:ArrayOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBoolean">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="boolean" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getAgencyDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sHouseNO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAgencyDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAgencyDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAgencyDetail2016">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sHouseNO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAgencyDetail2016Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAgencyDetail2016Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAgencyDetail2016ByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sPropertyKeyID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAgencyDetail2016ByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAgencyDetail2016ByIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAgencyDetail2016Old">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sHouseNO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAgencyDetail2016OldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAgencyDetail2016OldResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmpNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sEmpID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmpNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEmpNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSupply">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sInvoiceNO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSupplyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSupplyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSupplyByInvoiceNO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="INOs" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSupplyByInvoiceNOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSupplyByInvoiceNOResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHRStructure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUnitID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHRStructureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHRStructureResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManages">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetManagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetManagesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagesByNames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sNames" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagesByNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetManagesByNamesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployee">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmployeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnderlingByHRStructure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sEmpCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnderlingByHRStructureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnderlingByHRStructureResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnderlingByHRStructureByDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnderlingByHRStructureByDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnderlingByHRStructureByDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetManageMinByAnn">
+        <s:complexType />
+      </s:element>
+      <s:element name="fnGetManageMinByAnnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fnGetManageMinByAnnResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetManageMinByEmpNameInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sEmpName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetManageMinByEmpNameInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fnGetManageMinByEmpNameInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetManageMinByEmpName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sEmpName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetManageMinByEmpNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fnGetManageMinByEmpNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmployeeCommSum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sEmployeeID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtBegin" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtEnd" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLoginEmpCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmployeeCommSumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEmployeeCommSumResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmployeeExReceDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sEmployeeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDateBegin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDateEnd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmployeeExReceDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEmployeeExReceDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetFinReceAge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sBuildingName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iTypeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetFinReceAgeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fnGetFinReceAgeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetFinReceAge2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sBuildingName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iTypeID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iDepartmentTypeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetFinReceAge2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fnGetFinReceAge2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetExchangeCharNameByBuildingName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sBuildingName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetExchangeCharNameByBuildingNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fnGetExchangeCharNameByBuildingNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetAreaManageByReportNOs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sReportNOs" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetAreaManageByReportNOsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fnGetAreaManageByReportNOsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAccountListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountList" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReportDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReportDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetReportDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReportDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInCopartnerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInCopartner" />
+  </wsdl:message>
+  <wsdl:message name="GetInCopartnerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInCopartnerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDeptOfZongJianSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDeptOfZongJian" />
+  </wsdl:message>
+  <wsdl:message name="GetDeptOfZongJianSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDeptOfZongJianResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExchangeDate" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExchangeDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsExistByRptNoAndCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:IsExistByRptNoAndCode" />
+  </wsdl:message>
+  <wsdl:message name="IsExistByRptNoAndCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:IsExistByRptNoAndCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAgencyDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:getAgencyDetail" />
+  </wsdl:message>
+  <wsdl:message name="getAgencyDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:getAgencyDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAgencyDetail2016SoapIn">
+    <wsdl:part name="parameters" element="tns:getAgencyDetail2016" />
+  </wsdl:message>
+  <wsdl:message name="getAgencyDetail2016SoapOut">
+    <wsdl:part name="parameters" element="tns:getAgencyDetail2016Response" />
+  </wsdl:message>
+  <wsdl:message name="getAgencyDetail2016ByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getAgencyDetail2016ByID" />
+  </wsdl:message>
+  <wsdl:message name="getAgencyDetail2016ByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getAgencyDetail2016ByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAgencyDetail2016OldSoapIn">
+    <wsdl:part name="parameters" element="tns:getAgencyDetail2016Old" />
+  </wsdl:message>
+  <wsdl:message name="getAgencyDetail2016OldSoapOut">
+    <wsdl:part name="parameters" element="tns:getAgencyDetail2016OldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEmpNoSoapIn">
+    <wsdl:part name="parameters" element="tns:getEmpNo" />
+  </wsdl:message>
+  <wsdl:message name="getEmpNoSoapOut">
+    <wsdl:part name="parameters" element="tns:getEmpNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSupplySoapIn">
+    <wsdl:part name="parameters" element="tns:getSupply" />
+  </wsdl:message>
+  <wsdl:message name="getSupplySoapOut">
+    <wsdl:part name="parameters" element="tns:getSupplyResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSupplyByInvoiceNOSoapIn">
+    <wsdl:part name="parameters" element="tns:getSupplyByInvoiceNO" />
+  </wsdl:message>
+  <wsdl:message name="getSupplyByInvoiceNOSoapOut">
+    <wsdl:part name="parameters" element="tns:getSupplyByInvoiceNOResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHRStructureSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHRStructure" />
+  </wsdl:message>
+  <wsdl:message name="GetHRStructureSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHRStructureResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetManagesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetManages" />
+  </wsdl:message>
+  <wsdl:message name="GetManagesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetManagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetManagesByNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetManagesByNames" />
+  </wsdl:message>
+  <wsdl:message name="GetManagesByNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetManagesByNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployee" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnderlingByHRStructureSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnderlingByHRStructure" />
+  </wsdl:message>
+  <wsdl:message name="GetUnderlingByHRStructureSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnderlingByHRStructureResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnderlingByHRStructureByDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnderlingByHRStructureByDate" />
+  </wsdl:message>
+  <wsdl:message name="GetUnderlingByHRStructureByDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnderlingByHRStructureByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnGetManageMinByAnnSoapIn">
+    <wsdl:part name="parameters" element="tns:fnGetManageMinByAnn" />
+  </wsdl:message>
+  <wsdl:message name="fnGetManageMinByAnnSoapOut">
+    <wsdl:part name="parameters" element="tns:fnGetManageMinByAnnResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnGetManageMinByEmpNameInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:fnGetManageMinByEmpNameInfo" />
+  </wsdl:message>
+  <wsdl:message name="fnGetManageMinByEmpNameInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:fnGetManageMinByEmpNameInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnGetManageMinByEmpNameSoapIn">
+    <wsdl:part name="parameters" element="tns:fnGetManageMinByEmpName" />
+  </wsdl:message>
+  <wsdl:message name="fnGetManageMinByEmpNameSoapOut">
+    <wsdl:part name="parameters" element="tns:fnGetManageMinByEmpNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEmployeeCommSumSoapIn">
+    <wsdl:part name="parameters" element="tns:getEmployeeCommSum" />
+  </wsdl:message>
+  <wsdl:message name="getEmployeeCommSumSoapOut">
+    <wsdl:part name="parameters" element="tns:getEmployeeCommSumResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEmployeeExReceDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:getEmployeeExReceDetail" />
+  </wsdl:message>
+  <wsdl:message name="getEmployeeExReceDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:getEmployeeExReceDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnGetFinReceAgeSoapIn">
+    <wsdl:part name="parameters" element="tns:fnGetFinReceAge" />
+  </wsdl:message>
+  <wsdl:message name="fnGetFinReceAgeSoapOut">
+    <wsdl:part name="parameters" element="tns:fnGetFinReceAgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnGetFinReceAge2SoapIn">
+    <wsdl:part name="parameters" element="tns:fnGetFinReceAge2" />
+  </wsdl:message>
+  <wsdl:message name="fnGetFinReceAge2SoapOut">
+    <wsdl:part name="parameters" element="tns:fnGetFinReceAge2Response" />
+  </wsdl:message>
+  <wsdl:message name="fnGetExchangeCharNameByBuildingNameSoapIn">
+    <wsdl:part name="parameters" element="tns:fnGetExchangeCharNameByBuildingName" />
+  </wsdl:message>
+  <wsdl:message name="fnGetExchangeCharNameByBuildingNameSoapOut">
+    <wsdl:part name="parameters" element="tns:fnGetExchangeCharNameByBuildingNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnGetAreaManageByReportNOsSoapIn">
+    <wsdl:part name="parameters" element="tns:fnGetAreaManageByReportNOs" />
+  </wsdl:message>
+  <wsdl:message name="fnGetAreaManageByReportNOsSoapOut">
+    <wsdl:part name="parameters" element="tns:fnGetAreaManageByReportNOsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="GetAccountList">
+      <wsdl:input message="tns:GetAccountListSoapIn" />
+      <wsdl:output message="tns:GetAccountListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportDetail">
+      <wsdl:input message="tns:GetReportDetailSoapIn" />
+      <wsdl:output message="tns:GetReportDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInCopartner">
+      <wsdl:input message="tns:GetInCopartnerSoapIn" />
+      <wsdl:output message="tns:GetInCopartnerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptOfZongJian">
+      <wsdl:input message="tns:GetDeptOfZongJianSoapIn" />
+      <wsdl:output message="tns:GetDeptOfZongJianSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeDate">
+      <wsdl:input message="tns:GetExchangeDateSoapIn" />
+      <wsdl:output message="tns:GetExchangeDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsExistByRptNoAndCode">
+      <wsdl:input message="tns:IsExistByRptNoAndCodeSoapIn" />
+      <wsdl:output message="tns:IsExistByRptNoAndCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyDetail">
+      <wsdl:input message="tns:getAgencyDetailSoapIn" />
+      <wsdl:output message="tns:getAgencyDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyDetail2016">
+      <wsdl:input message="tns:getAgencyDetail2016SoapIn" />
+      <wsdl:output message="tns:getAgencyDetail2016SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyDetail2016ByID">
+      <wsdl:input message="tns:getAgencyDetail2016ByIDSoapIn" />
+      <wsdl:output message="tns:getAgencyDetail2016ByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyDetail2016Old">
+      <wsdl:input message="tns:getAgencyDetail2016OldSoapIn" />
+      <wsdl:output message="tns:getAgencyDetail2016OldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmpNo">
+      <wsdl:input message="tns:getEmpNoSoapIn" />
+      <wsdl:output message="tns:getEmpNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSupply">
+      <wsdl:input message="tns:getSupplySoapIn" />
+      <wsdl:output message="tns:getSupplySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSupplyByInvoiceNO">
+      <wsdl:input message="tns:getSupplyByInvoiceNOSoapIn" />
+      <wsdl:output message="tns:getSupplyByInvoiceNOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHRStructure">
+      <wsdl:input message="tns:GetHRStructureSoapIn" />
+      <wsdl:output message="tns:GetHRStructureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManages">
+      <wsdl:input message="tns:GetManagesSoapIn" />
+      <wsdl:output message="tns:GetManagesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagesByNames">
+      <wsdl:input message="tns:GetManagesByNamesSoapIn" />
+      <wsdl:output message="tns:GetManagesByNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取在职人员</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeeSoapIn" />
+      <wsdl:output message="tns:GetEmployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnderlingByHRStructure">
+      <wsdl:input message="tns:GetUnderlingByHRStructureSoapIn" />
+      <wsdl:output message="tns:GetUnderlingByHRStructureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnderlingByHRStructureByDate">
+      <wsdl:input message="tns:GetUnderlingByHRStructureByDateSoapIn" />
+      <wsdl:output message="tns:GetUnderlingByHRStructureByDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnGetManageMinByAnn">
+      <wsdl:input message="tns:fnGetManageMinByAnnSoapIn" />
+      <wsdl:output message="tns:fnGetManageMinByAnnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnGetManageMinByEmpNameInfo">
+      <wsdl:input message="tns:fnGetManageMinByEmpNameInfoSoapIn" />
+      <wsdl:output message="tns:fnGetManageMinByEmpNameInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnGetManageMinByEmpName">
+      <wsdl:input message="tns:fnGetManageMinByEmpNameSoapIn" />
+      <wsdl:output message="tns:fnGetManageMinByEmpNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmployeeCommSum">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">应收查询</wsdl:documentation>
+      <wsdl:input message="tns:getEmployeeCommSumSoapIn" />
+      <wsdl:output message="tns:getEmployeeCommSumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmployeeExReceDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">成交业绩和应收业绩明细查询</wsdl:documentation>
+      <wsdl:input message="tns:getEmployeeExReceDetailSoapIn" />
+      <wsdl:output message="tns:getEmployeeExReceDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnGetFinReceAge">
+      <wsdl:input message="tns:fnGetFinReceAgeSoapIn" />
+      <wsdl:output message="tns:fnGetFinReceAgeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnGetFinReceAge2">
+      <wsdl:input message="tns:fnGetFinReceAge2SoapIn" />
+      <wsdl:output message="tns:fnGetFinReceAge2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnGetExchangeCharNameByBuildingName">
+      <wsdl:input message="tns:fnGetExchangeCharNameByBuildingNameSoapIn" />
+      <wsdl:output message="tns:fnGetExchangeCharNameByBuildingNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnGetAreaManageByReportNOs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用于ECOA，根据逗号分隔成交编号获取不重复区域负责人</wsdl:documentation>
+      <wsdl:input message="tns:fnGetAreaManageByReportNOsSoapIn" />
+      <wsdl:output message="tns:fnGetAreaManageByReportNOsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAccountList">
+      <soap:operation soapAction="http://tempuri.org/GetAccountList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportDetail">
+      <soap:operation soapAction="http://tempuri.org/GetReportDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInCopartner">
+      <soap:operation soapAction="http://tempuri.org/GetInCopartner" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptOfZongJian">
+      <soap:operation soapAction="http://tempuri.org/GetDeptOfZongJian" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeDate">
+      <soap:operation soapAction="http://tempuri.org/GetExchangeDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsExistByRptNoAndCode">
+      <soap:operation soapAction="http://tempuri.org/IsExistByRptNoAndCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyDetail">
+      <soap:operation soapAction="http://tempuri.org/getAgencyDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyDetail2016">
+      <soap:operation soapAction="http://tempuri.org/getAgencyDetail2016" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyDetail2016ByID">
+      <soap:operation soapAction="http://tempuri.org/getAgencyDetail2016ByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyDetail2016Old">
+      <soap:operation soapAction="http://tempuri.org/getAgencyDetail2016Old" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmpNo">
+      <soap:operation soapAction="http://tempuri.org/getEmpNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSupply">
+      <soap:operation soapAction="http://tempuri.org/getSupply" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSupplyByInvoiceNO">
+      <soap:operation soapAction="http://tempuri.org/getSupplyByInvoiceNO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHRStructure">
+      <soap:operation soapAction="http://tempuri.org/GetHRStructure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManages">
+      <soap:operation soapAction="http://tempuri.org/GetManages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagesByNames">
+      <soap:operation soapAction="http://tempuri.org/GetManagesByNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <soap:operation soapAction="http://tempuri.org/GetEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnderlingByHRStructure">
+      <soap:operation soapAction="http://tempuri.org/GetUnderlingByHRStructure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnderlingByHRStructureByDate">
+      <soap:operation soapAction="http://tempuri.org/GetUnderlingByHRStructureByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetManageMinByAnn">
+      <soap:operation soapAction="http://tempuri.org/fnGetManageMinByAnn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetManageMinByEmpNameInfo">
+      <soap:operation soapAction="http://tempuri.org/fnGetManageMinByEmpNameInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetManageMinByEmpName">
+      <soap:operation soapAction="http://tempuri.org/fnGetManageMinByEmpName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmployeeCommSum">
+      <soap:operation soapAction="http://tempuri.org/getEmployeeCommSum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmployeeExReceDetail">
+      <soap:operation soapAction="http://tempuri.org/getEmployeeExReceDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetFinReceAge">
+      <soap:operation soapAction="http://tempuri.org/fnGetFinReceAge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetFinReceAge2">
+      <soap:operation soapAction="http://tempuri.org/fnGetFinReceAge2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetExchangeCharNameByBuildingName">
+      <soap:operation soapAction="http://tempuri.org/fnGetExchangeCharNameByBuildingName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetAreaManageByReportNOs">
+      <soap:operation soapAction="http://tempuri.org/fnGetAreaManageByReportNOs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAccountList">
+      <soap12:operation soapAction="http://tempuri.org/GetAccountList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetReportDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInCopartner">
+      <soap12:operation soapAction="http://tempuri.org/GetInCopartner" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptOfZongJian">
+      <soap12:operation soapAction="http://tempuri.org/GetDeptOfZongJian" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeDate">
+      <soap12:operation soapAction="http://tempuri.org/GetExchangeDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsExistByRptNoAndCode">
+      <soap12:operation soapAction="http://tempuri.org/IsExistByRptNoAndCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyDetail">
+      <soap12:operation soapAction="http://tempuri.org/getAgencyDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyDetail2016">
+      <soap12:operation soapAction="http://tempuri.org/getAgencyDetail2016" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyDetail2016ByID">
+      <soap12:operation soapAction="http://tempuri.org/getAgencyDetail2016ByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyDetail2016Old">
+      <soap12:operation soapAction="http://tempuri.org/getAgencyDetail2016Old" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmpNo">
+      <soap12:operation soapAction="http://tempuri.org/getEmpNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSupply">
+      <soap12:operation soapAction="http://tempuri.org/getSupply" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSupplyByInvoiceNO">
+      <soap12:operation soapAction="http://tempuri.org/getSupplyByInvoiceNO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHRStructure">
+      <soap12:operation soapAction="http://tempuri.org/GetHRStructure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManages">
+      <soap12:operation soapAction="http://tempuri.org/GetManages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagesByNames">
+      <soap12:operation soapAction="http://tempuri.org/GetManagesByNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <soap12:operation soapAction="http://tempuri.org/GetEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnderlingByHRStructure">
+      <soap12:operation soapAction="http://tempuri.org/GetUnderlingByHRStructure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnderlingByHRStructureByDate">
+      <soap12:operation soapAction="http://tempuri.org/GetUnderlingByHRStructureByDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetManageMinByAnn">
+      <soap12:operation soapAction="http://tempuri.org/fnGetManageMinByAnn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetManageMinByEmpNameInfo">
+      <soap12:operation soapAction="http://tempuri.org/fnGetManageMinByEmpNameInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetManageMinByEmpName">
+      <soap12:operation soapAction="http://tempuri.org/fnGetManageMinByEmpName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmployeeCommSum">
+      <soap12:operation soapAction="http://tempuri.org/getEmployeeCommSum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmployeeExReceDetail">
+      <soap12:operation soapAction="http://tempuri.org/getEmployeeExReceDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetFinReceAge">
+      <soap12:operation soapAction="http://tempuri.org/fnGetFinReceAge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetFinReceAge2">
+      <soap12:operation soapAction="http://tempuri.org/fnGetFinReceAge2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetExchangeCharNameByBuildingName">
+      <soap12:operation soapAction="http://tempuri.org/fnGetExchangeCharNameByBuildingName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetAreaManageByReportNOs">
+      <soap12:operation soapAction="http://tempuri.org/fnGetAreaManageByReportNOs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://gzs-terminal01/FinanceWS/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://gzs-terminal01/FinanceWS/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

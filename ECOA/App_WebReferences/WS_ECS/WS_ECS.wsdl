@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnDicReportCashPrize_InsertFromECOA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sJson" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnDicReportCashPrize_InsertFromECOAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fnDicReportCashPrize_InsertFromECOAResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnAutoInsertCashPrizeSupplement">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sCcesEstateID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCashPrizeNum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dateBegin" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dateEnd" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMoneySet" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnAutoInsertCashPrizeSupplementResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="fnGetAllEstateInCCES">
+        <s:complexType />
+      </s:element>
+      <s:element name="fnGetAllEstateInCCESResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fnGetAllEstateInCCESResult" type="tns:ArrayOfRows" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRows">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="rows" nillable="true" type="tns:rows" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="rows">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="rowId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EstateID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EstateName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EstateName2" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="fnGetAllEstateStringInCCES">
+        <s:complexType />
+      </s:element>
+      <s:element name="fnGetAllEstateStringInCCESResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fnGetAllEstateStringInCCESResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnDicReportCashPrize_InsertFromECOASoapIn">
+    <wsdl:part name="parameters" element="tns:fnDicReportCashPrize_InsertFromECOA" />
+  </wsdl:message>
+  <wsdl:message name="fnDicReportCashPrize_InsertFromECOASoapOut">
+    <wsdl:part name="parameters" element="tns:fnDicReportCashPrize_InsertFromECOAResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnAutoInsertCashPrizeSupplementSoapIn">
+    <wsdl:part name="parameters" element="tns:fnAutoInsertCashPrizeSupplement" />
+  </wsdl:message>
+  <wsdl:message name="fnAutoInsertCashPrizeSupplementSoapOut">
+    <wsdl:part name="parameters" element="tns:fnAutoInsertCashPrizeSupplementResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnGetAllEstateInCCESSoapIn">
+    <wsdl:part name="parameters" element="tns:fnGetAllEstateInCCES" />
+  </wsdl:message>
+  <wsdl:message name="fnGetAllEstateInCCESSoapOut">
+    <wsdl:part name="parameters" element="tns:fnGetAllEstateInCCESResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnGetAllEstateStringInCCESSoapIn">
+    <wsdl:part name="parameters" element="tns:fnGetAllEstateStringInCCES" />
+  </wsdl:message>
+  <wsdl:message name="fnGetAllEstateStringInCCESSoapOut">
+    <wsdl:part name="parameters" element="tns:fnGetAllEstateStringInCCESResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_ECSSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnDicReportCashPrize_InsertFromECOA">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">从ECOA系统导数据到ECS系统</wsdl:documentation>
+      <wsdl:input message="tns:fnDicReportCashPrize_InsertFromECOASoapIn" />
+      <wsdl:output message="tns:fnDicReportCashPrize_InsertFromECOASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnAutoInsertCashPrizeSupplement">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">自动生成现金奖补充</wsdl:documentation>
+      <wsdl:input message="tns:fnAutoInsertCashPrizeSupplementSoapIn" />
+      <wsdl:output message="tns:fnAutoInsertCashPrizeSupplementSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnGetAllEstateInCCES">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取CCES所有楼盘名称</wsdl:documentation>
+      <wsdl:input message="tns:fnGetAllEstateInCCESSoapIn" />
+      <wsdl:output message="tns:fnGetAllEstateInCCESSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnGetAllEstateStringInCCES">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取CCES所有楼盘名称</wsdl:documentation>
+      <wsdl:input message="tns:fnGetAllEstateStringInCCESSoapIn" />
+      <wsdl:output message="tns:fnGetAllEstateStringInCCESSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_ECSSoap" type="tns:WS_ECSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnDicReportCashPrize_InsertFromECOA">
+      <soap:operation soapAction="http://tempuri.org/fnDicReportCashPrize_InsertFromECOA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnAutoInsertCashPrizeSupplement">
+      <soap:operation soapAction="http://tempuri.org/fnAutoInsertCashPrizeSupplement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetAllEstateInCCES">
+      <soap:operation soapAction="http://tempuri.org/fnGetAllEstateInCCES" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetAllEstateStringInCCES">
+      <soap:operation soapAction="http://tempuri.org/fnGetAllEstateStringInCCES" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_ECSSoap12" type="tns:WS_ECSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnDicReportCashPrize_InsertFromECOA">
+      <soap12:operation soapAction="http://tempuri.org/fnDicReportCashPrize_InsertFromECOA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnAutoInsertCashPrizeSupplement">
+      <soap12:operation soapAction="http://tempuri.org/fnAutoInsertCashPrizeSupplement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetAllEstateInCCES">
+      <soap12:operation soapAction="http://tempuri.org/fnGetAllEstateInCCES" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetAllEstateStringInCCES">
+      <soap12:operation soapAction="http://tempuri.org/fnGetAllEstateStringInCCES" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_ECS">
+    <wsdl:port name="WS_ECSSoap" binding="tns:WS_ECSSoap">
+      <soap:address location="http://gzs-terminal01/EcCommission/WS/WS_ECS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_ECSSoap12" binding="tns:WS_ECSSoap12">
+      <soap12:address location="http://gzs-terminal01/EcCommission/WS/WS_ECS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

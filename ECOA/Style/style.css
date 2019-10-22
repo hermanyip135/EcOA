@@ -1,0 +1,763 @@
+﻿body {
+    font-size: 12px;
+    background-image: url('../Images/bg_new.jpg');
+    height: 260px;
+}
+
+
+
+.file_number {
+    color: #022241;
+}
+
+.txt_of_search {
+    border: 1px solid #8e9190;
+}
+
+div.flow {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+[id^=btnSignIDx] {
+    background-image: url(../Images/btn_sign1.png);
+    height: 25px;
+    width: 45px;
+    font-size: 0px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+[id*=btDiagram] {
+    background-image: url(../Images/btnCancelDiagram1.png);
+    height: 25px;
+    width: 45px;
+    font-size: 0px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+[id*=btnADelete] {
+    background-image: url(../Images/btnIsADelete1.png);
+    height: 25px;
+    width: 122px;
+    font-size: 0px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+[id^=btnCancelSignIDx] {
+    background-image: url(../Images/btnCancelSignIDx1.png);
+    height: 25px;
+    width: 45px;
+    font-size: 0px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+[id*=btnShouldJumpIDx] {
+    background-image: url(../Images/btnShouldJump1.png);
+    height: 25px;
+    width: 45px;
+    font-size: 0px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+[id*=btnWillEnd] {
+    background-image: url(../Images/btnWillEnd1.png);
+    height: 25px;
+    width: 45px;
+    font-size: 0px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+[id*=btnTransmit] {
+    background-image: url(../Images/btnTransmit1.png);
+    height: 25px;
+    width: 45px;
+    font-size: 0px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+[id*=btnUploadDetailed] {
+    background-image: url(../Images/bsm_upload1.png); 
+    height: 20px; 
+    width: 30px;
+    font-size: 0px;
+	cursor:pointer;
+    color: #6885ee;
+}
+
+[id*=btnAddRow] {
+    background-image: url(../Images/bsm_add1.png); 
+    height: 20px; 
+    width: 60px;
+    font-size: 0px;
+	cursor:pointer;
+    color: #FFFFFF;
+}
+
+[id*=btnDeleteRow] {
+    background-image: url(../Images/bsm_delete1.png); 
+    height: 20px; 
+    width: 60px;
+    font-size: 0px;
+	cursor:pointer;
+    color: #FFFFFF;
+}
+
+[id$=btnUploadBadDebts] {
+    background-image: url(../Images/bsm_upload1.png); 
+    height: 20px; 
+    width: 30px;
+    font-size: 0px;
+	cursor:pointer;
+    color: #6885ee;
+}
+
+[id*=btnSavePlanTime] {
+    background-image: url(../Images/bsm_save1.png); 
+    height: 20px; 
+    width: 30px;
+    font-size: 0px;
+	cursor:pointer;
+    color: #FFFFFF;
+}
+
+[id*=btnSaveLogisticsFlow] {
+    background-image: url(../Images/bsm_save1.png); 
+    height: 20px; 
+    width: 30px;
+    font-size: 0px;
+	cursor:pointer;
+    color: #FFFFFF;
+}
+
+[id*=btnsaveflow] {
+    background-image: url(../Images/bsm_save1.png); 
+    height: 20px; 
+    width: 30px;
+    font-size: 0px;
+	cursor:pointer;
+    color: #FFFFFF;
+}
+
+[id*=btnSaveCanSeeEmp] {
+    background-image: url(../Images/bsm_save1.png); 
+    height: 20px; 
+    width: 30px;
+    font-size: 0px;
+	cursor:pointer;
+    color: #FFFFFF;
+}
+
+ul#nav li#li1 { 
+    background-color: transparent;
+}
+
+ul#nav li#li1 a#sec { 
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background-color: transparent; 
+    background-image: url(/Images/ul_nav_left.png); 
+    height: 26px;
+}
+
+ul#nav li#li1 { 
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background-color: transparent; 
+    background-image: url(/Images/ul_nav_left.png); 
+    height: 26px;
+}
+
+ul#nav li#li2 { 
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background-color: transparent; 
+    background-image: url(/Images/ul_nav_right.png); 
+    height: 26px;
+}
+
+ul#nav li#li7 { 
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background-color: transparent; 
+    background-image: url(/Images/ul_nav_right_1.png); 
+    width: 40px; 
+    height: 26px;
+}
+
+ul#nav li#li6 { 
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background-color: transparent; 
+    background-image: url(/Images/ul_nav_right_3.png); 
+    height: 26px;
+}
+
+ul#nav li#li5 a { 
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background-color: transparent; 
+    background-image: url(/Images/ul_nav_right_3.png); 
+    height: 26px;
+}
+
+ul#nav li#li4 { 
+    background-color: transparent; 
+}
+
+ul#nav li#li4 a { 
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background-color: transparent; 
+    background-image: url(/Images/ul_nav_right_4.png); 
+    width: 40px; 
+    height: 26px; 
+    background-repeat: no-repeat;
+}
+
+[id*=btExcel]{ 
+    background-image: url(/Images/btExcel1.png); 
+    height: 36px; 
+    width: 88px;
+    font-size: 0px;
+    cursor:pointer;
+    color: #6885ee;
+}
+
+[id*=btnEditFlow] {
+    background-image: url(/Images/btnEditFlow1.png);
+    height: 30px;
+    width: 94px;
+    font-size: 0px;
+    cursor: pointer;
+    color: #6885ee;
+}
+
+[id*=btnSignSave] {
+    background-image: url(/Images/btn_save1.png);
+    height: 36px;
+    width: 113px;
+    font-size: 0px;
+    cursor: pointer;
+    color: #6885ee;
+}
+
+[id*=btnSignCompelete] {
+    background-image: url(/Images/btn_SignCompelete.png);
+    height: 36px;
+    width: 130px;
+    font-size: 0px;
+    cursor: pointer;
+    color: #6885ee;
+}
+
+[id*=btnReWrite]{ 
+    background-image: url(/Images/btnReWrite1.png); 
+    height: 36px; 
+    width: 88px;
+    font-size: 0px;
+    cursor:pointer;
+    color: #6885ee;
+}
+
+[id*=btnSave][value="保存"]{ 
+    background-image: url(/Images/btn_save1.png); 
+    height: 36px; 
+    width: 62px; 
+    font-size: 0px;
+    cursor:pointer;
+    color: #6885ee;
+}
+
+[id*=btndengji]{ 
+    background-image: url(/Images/btn_dengji.png); 
+    height: 36px; 
+    width: 62px; 
+    font-size: 0px;
+    cursor:pointer;
+    color: #6885ee;
+}
+
+[id*=btnSaveInfo]{ 
+    background-image: url(/Images/btn_saveinfo.png); 
+    height: 36px; 
+    width: 172px; 
+    font-size: 0px;
+    cursor:pointer;
+    color: #6885ee;
+}
+
+[id*=btnSAlterC]{ 
+    background-image: url(/Images/btnSAlterC1.png); 
+    height: 36px; 
+    width: 109px;
+    font-size: 0px;
+    cursor:pointer;
+    color: #6885ee;
+}
+
+[id$=btnNew][value="新建"]{ 
+    background-image: url(/Images/btn_newa1.png); 
+    height: 29px; 
+    width: 65px; 
+    font-size: 0px;
+    cursor:pointer;
+    color: #6885ee;
+}
+
+[id$=btnSave][value="保存修改"]{ 
+    background-image: url(/Images/btn_sa1.png); 
+    height: 29px; 
+    width: 97px; 
+    font-size: 0px;
+    cursor:pointer;
+    color: #6885ee;
+}
+
+[id*=btnSignSave] {
+    height: 36px;
+    width: 130px;
+    font-size: 0px;
+    cursor: pointer;
+    background-image: url('../Images/btnSignSave1.png');
+    color: #6885ee;
+}
+[id*=btnSignBad] {
+    height: 36px;
+    width: 130px;
+    font-size: 0px;
+    cursor: pointer;
+    background-image: url('../Images/btnSignBad1.png');
+    color: #6885ee;
+}
+
+[id$=btnSPDF] {
+    height: 36px;
+    width: 104px;
+    font-size: 0px;
+    cursor: pointer;
+    background-image: url('../Images/btnspdf1.png');
+    color: #6885ee;
+}
+
+[id*=btnDownload]{ 
+    background-image: url(/Images/btn_down1.png); 
+    height: 36px; 
+    width: 123px; 
+    margin-left: 0px; 
+    font-size: 0px;
+    cursor:pointer;
+    color: #6885ee;
+}
+
+[id$=btnUpload][value*="上传附件..."] { 
+    background-image: url(/Images/btn_upload1.png); 
+    height: 36px; 
+    width: 104px; 
+    margin-left: 0px; 
+    font-size: 0px;
+    cursor:pointer;
+    color: #6885ee;
+}
+
+[id*=btnPrint]{ 
+    background-image: url(/Images/btn_print1.png); 
+    height: 36px; 
+    width: 62px; 
+    font-size: 0px;
+    cursor:pointer;
+    color: #6885ee;
+}
+
+[id*=btnBack]{ 
+    background-image: url(/Images/btnback1.png); 
+    height: 36px; 
+    width: 62px;
+    font-size: 0px;
+    cursor:pointer;
+    color: #6885ee;
+}
+
+[id*=btnSearch] {
+    background-image: url(../Images/search1.png);
+    height: 36px;
+    width: 62px;
+    font-size: 0px;
+    cursor: pointer;
+    color: #6885ee;
+}
+
+[id$=btnSaveCompleteResult] {
+    background-image: url(../Images/btn_savecomplete.png);
+    height: 36px; 
+    width: 134px; 
+    margin-left: 0px; 
+    font-size: 0px;
+    cursor:pointer;
+    color: #6885ee;
+}
+
+
+
+#tbAround {
+    border: 1px solid #98b8b5;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#tbAround table {
+    border: 1px solid #98b8b5;
+}
+
+#tbAround td {
+    border: 1px solid #98b8b5;
+    color: #022241;
+}
+
+#tbAround th {
+    border: 1px solid #98b8b5;
+    color: #022241;
+}
+
+#tbAround2 {
+    border: 1px solid #98b8b5;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#tbAround2 table {
+    border: 1px solid #98b8b5;
+}
+
+#tbAround2 td {
+    border: 1px solid #98b8b5;
+    color: #022241;
+}
+
+#tbAround2 th {
+    border: 1px solid #98b8b5;
+    color: #022241;
+}
+
+#tbAround3 {
+    border: 1px solid #98b8b5;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#tbAround3 table {
+    border: 1px solid #98b8b5;
+}
+
+#tbAround3 td {
+    border: 1px solid #98b8b5;
+    color: #022241;
+}
+
+#tbAround3 th {
+    border: 1px solid #98b8b5;
+    color: #022241;
+}
+
+
+
+
+
+
+            
+.tl
+{
+    text-align:left;
+    }
+
+.tr
+{
+    text-align:right;
+    }
+
+.tc
+{
+    text-align:center;
+    }
+
+.tdu
+{
+    text-decoration:underline;
+    }
+    
+.ML5
+{
+    margin-left:5px;
+}
+
+.ML10
+{
+    margin-left:10px;
+}
+
+.ML20
+{
+    margin-left:20px;
+}
+
+.MR5
+{
+    margin-right:5px;
+}
+
+.MR10
+{
+    margin-right:10px;
+}
+
+.MR20
+{
+    margin-right:20px;
+}
+
+.MT5
+{
+    margin-top:5px;
+}
+
+.MT10
+{
+    margin-top:10px;
+}
+
+.MT20
+{
+    margin-top:20px;
+}
+
+.PL5
+{
+    padding-left:5px;
+}
+
+.PL10
+{
+    padding-left:10px;
+}
+
+.PL20
+{
+    padding-left:20px;
+}
+
+.PR5
+{
+    padding-right:5px;
+}
+
+.PR10
+{
+    padding-right:10px;
+}
+
+.PR20
+{
+    padding-right:20px;
+}
+
+hide
+{
+    display:none;
+}
+/* ================================================================================= */
+/* =========================↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓MENU↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓========================== */
+/* ================================================================================= */
+/* ul li以横排显示 */
+/* 所有class为menu的div中的ul样式 */
+div.menu ul    
+{
+    list-style:none;/* 去掉ul前面的符号 */   
+     margin: 0px; /* 与外界元素的距离为0 */    
+     padding: 0px; /* 与内部元素的距离为0 */    
+     width: auto; /* 宽度根据元素内容调整 */
+ }
+ /* 所有class为menu的div中的ul中的li样式 */
+ div.menu ul li    
+ {
+     float:left; /* 向左漂移，将竖排变为横排 */
+ }
+ /* 所有class为menu的div中的ul中的a样式(包括尚未点击的和点击过的样式) */
+ div.menu ul li a, div.menu ul li a:visited
+ {    
+     background-color: #465c71; /* 背景色465c71 */    
+     border: 1px #4e667d solid; /* 边框4e667d */    
+     color: #dde4ec; /* 文字颜色dde4ec */    
+     display: block; /* 此元素将显示为块级元素，此元素前后会带有换行符 */    
+     line-height: 2.35em; /* 行高 */    
+     padding: 5px 25px; /* 内部填充的距离 */    
+     text-decoration: none; /* 不显示超链接下划线 */    
+     white-space: nowrap; /* 对于文本内的空白处，不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。 */
+ }
+ /* 所有class为menu的div中的ul中的a样式(鼠标移动到元素中的样式) */
+ div.menu ul li a:hover,div.menu ul li.current a
+ {
+     background-color: #bfcbd6; /* 背景色bfcbd6 */    
+     color: #465c71; /* 文字颜色465c71 */    
+     text-decoration: none; /* 不显示超链接下划线 */
+ }
+
+ /* 所有class为menu的div中的ul中的a样式(鼠标点击元素时的样式) */
+ div.menu ul li a:active 
+ {
+     background-color: #465c71; /* 背景色465c71 */    
+     color: #cfdbe6; /* 文字颜色cfdbe6 */    
+     text-decoration: none; /* 不显示超链接下划线 */
+}
+
+ div.menu ul li.current dd a
+ {
+     background-color: #465c71; /* 背景色465c71 */    
+     color: #cfdbe6; /* 文字颜色cfdbe6 */    
+     text-decoration: none; /* 不显示超链接下划线 */
+}
+
+ div.menu ul li.current dd a:hover,div.menu ul li.current dd.current a
+ {
+     background-color: #bfcbd6; /* 背景色bfcbd6 */    
+     color: #465c71; /* 文字颜色465c71 */    
+     text-decoration: none; /* 不显示超链接下划线 */
+ }
+
+ div.menu ul li.current dd a:active 
+ {
+     background-color: #465c71; /* 背景色465c71 */    
+     color: #cfdbe6; /* 文字颜色cfdbe6 */    
+     text-decoration: none; /* 不显示超链接下划线 */
+}
+/* ================================================================================= */
+/* =========================↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑MENU↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑============================ */
+/* ================================================================================= */
+
+.flow {
+    margin: 0px auto;
+    width: 740px;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.flow .item {
+    display: inline;
+    width: 110px;
+    height: 25px;
+    padding: 7px 2px 7px 5px;
+    background-color: #E3E1BF;
+}
+
+.flow .item2 {
+    display: inline;
+    width: 110px;
+    height: 25px;
+    padding: 7px 2px 7px 5px;
+}
+
+.flow span.auditing {
+    border: 1px solid #287997;
+    background-color: #3DCBFF;
+    padding: 2px 5px;
+    margin: 0px 1px 0px 1px;
+}
+
+.flow span.other {
+    border: 1px solid #c7923b;
+    background-color: #fefab8; /*#9E9E9E*/
+    color: #161617; /*#eeeeee*/
+    padding: 2px 5px 2px 5px;
+    margin: 0px 1px 0px 1px;
+}
+
+.flow .forward
+{
+     /*width:25px; 
+     height:25px; 
+     vertical-align: -8px;*/
+     vertical-align: -2px;
+}
+
+.ui-autocomplete {
+    max-height: 350px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+
+h1
+{
+    font-family:LiSu;
+    font-weight:lighter;
+    margin:0 0 1px 0;
+}
+
+
+/*-------------------------------------------------*/
+    table.sample {
+			border-width: 1px;
+			border-spacing: 2px;
+			border-style: outset;
+			border-color: gray;
+			border-collapse: collapse;
+			background-color: white;
+		}
+
+		table.sample th {
+			border-width: 1px;
+			padding: 1px;
+			border-style: inset;
+			border-color: gray;
+			background-color: white;
+		}
+
+		table.sample td {
+			border-width: 1px;
+			padding: 1px;
+			border-style: inset;
+			border-color: gray;
+			background-color: white;
+		}
+
+		 tr, td
+		 {
+			 border: 1px solid #000000;
+		 }
+
+		td
+		{
+			padding: 5px 0 5px 0;
+		}
+
+		tr.noborder, tr.noborder td
+		{
+			border-width: 0;
+            border: none;
+		}
+
+		.signdate
+		{
+			width: 100px;
+			margin-left: 400px;
+			margin-top: 10px;
+		}
+
+        .hide
+        {
+            display:none;
+        }
+        /*-------------------------------------------------*/
+ul#nav li#li2 {width:80px}
+ul.dropdown .dir{position:relative}

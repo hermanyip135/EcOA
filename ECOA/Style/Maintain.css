@@ -1,0 +1,549 @@
+﻿html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {/*, table, caption, tbody, tfoot, thead, tr, th, td*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+
+body 
+{
+    margin:0px;
+    padding:0px;
+    font-size:12px;
+	/*background: url('../images/bg.png') repeat 0px 0px;*/
+	background: repeat 0px 0px;
+	background-color:#fff479;
+	border-top: 1px solid #ffffff;
+	font-family: 微软雅黑;
+    line-height: 1;
+}
+
+ul {
+list-style: none;
+}
+
+p {
+	font-size: 0.95em;
+	line-height: 1.2em;
+}
+
+#container
+{
+    margin:0px auto;
+    width:100%;
+}
+
+/*Header*/
+#header {
+	background: transparent !important;
+}
+
+#header .inside	
+{
+    padding-top: 31px !important;
+	padding-bottom: 20px !important;
+	max-width: 1024px;
+	margin: 0 auto;	
+	position: relative;
+	padding: 20px 0 20px 0;	
+	background: transparent url(../images/header_bkg.png);
+}
+#header #logo {
+	margin-left: 5px;
+}
+#logo a {
+	display: block;
+	width: 341px;
+	height: 89px;
+	background: transparent url(../images/logo_maintain.png) no-repeat 0px 0px;
+}
+#logo a span, #logo h1.sm_logo a span {
+	display: none;
+}
+#header #logo h1.sm_logo {
+	display: none;
+}
+#logo h1.sm_logo a {
+	display: block;
+	width: 78px;
+	height: 89px;
+	background: transparent url(images/logo_maintain_small.png) no-repeat 0px 0px;
+}
+
+/*Main Navigation*/
+#mainNav {
+	right: 10px;
+	font-family: BryantMedium;
+	margin-top: 0;
+	top: 76px;
+}
+
+#mainNav {
+right: 3%;
+position: absolute;
+top: 50%;
+height: 20px;
+margin-top: -10px;
+font-family: Helvetica, arial, sans-serif;
+}
+
+#mainNav ul a {
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #939393;
+}
+#header #mainNav ul li.sfHover a, 
+#header #mainNav ul li a:hover, 
+#header #mainNav ul li:hover, 
+#header #mainNav ul li.current a, 
+#header #mainNav ul li.current-cat a, 
+#header #mainNav ul li.current_page_item a, 
+#header #mainNav ul li.current-menu-item a, 
+#header #mainNav ul li.current-post-ancestor a, 
+#header #mainNav ul li.current_page_parent a, 
+#header #mainNav ul li.current-category-parent a, 
+#header #mainNav ul li.current-category-ancestor a, 
+#header #mainNav ul li.current-portfolio-ancestor a, 
+#header #mainNav ul li.current-projects-ancestor a,
+.single-projects #header #mainNav ul li.menu-item-20 a {
+	color: #f86b76 !important;
+}
+#mainNav li {
+	/*margin-left: 45px;*/
+	margin-left: 2.8125em;
+}
+
+.sf-menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+
+.sf-menu {
+	line-height:	1.0;
+}
+
+.sf-menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:			120px; /* left offset of submenus need to match (see below) */	
+}
+
+.sf-menu ul li {
+	width:			100%;
+}
+
+.sf-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+
+.sf-menu li {
+	float:			left;
+	position:		relative;
+	width: 			auto;
+}
+
+.sf-menu a {
+	display:		block;
+	position:		relative;
+}
+
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			0px;
+	top:			45px; /* match top ul list item height */
+	z-index:		100;
+}
+
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			120px; /* match ul width */
+	top:			0px!important;
+}
+
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			120px; /* match ul width */
+	top:			0px!important;
+}
+
+/* Second level+ dropdowns */
+
+#mainNav ul ul {
+	padding: 0 0px 0 0px !important;
+	margin-top: -1px;
+	background: #000 url(images/header_bkg.png);
+}
+	
+
+#mainNav ul ul ul {	
+	padding-top: 20px !important;
+	margin-left: -1.25em;
+	margin-top: -5px;	
+}
+
+#mainNav ul ul li {	
+	float: none;
+	background: none;	
+	margin: 0 5px 10px 15px !important;		
+}
+
+#mainNav ul ul li a {
+	padding: 0px 0 10px 0;
+	font-weight: normal;
+	border: none !important;
+}
+
+#mainNav ul li.sfHover ul a { color: #7b7b7b!important; }
+
+#mainNav ul li.sfHover ul a:hover { color: #fff!important; }
+
+/** arrow **/
+
+#mainNav .sf-menu a.sf-with-ul {
+	position: relative;
+	min-width:		1px;
+}
+
+.sf-sub-indicator {
+	position: absolute;
+	bottom: 0px;	
+	display:		block;
+	width: 100%;
+	text-indent: 	-999em;
+	overflow:		hidden;
+	z-index: 200;
+	height: 40px;
+}
+
+.sfHover .sf-sub-indicator {
+	
+	bottom: -10px;	
+}
+
+#mainNav .sf-menu li ul .sf-sub-indicator {
+	display: none;
+}
+
+#mainNav .sf-menu li ul .sfHover .sf-sub-indicator {
+	
+	position: absolute;
+	top: 0;
+	right: -1px;
+	left: none;
+	display: block;	
+}
+
+.sfHover a.sf-with-ul .sf-sub-indicator {
+	height: 30px;
+}
+
+.children .sf-sub-indicator {
+	display: none;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+a:hover {
+	color: #f86b76 !important;
+}
+    
+/*Custom +----+ separator*/
+.separator {
+	display: block;
+	clear: both;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	height: 7px;
+	border: none;
+}
+.separator .inside-separator {
+	max-width: 1024px;
+	margin: 0 auto;
+	height: 7px;
+	padding: 0;
+	position: relative;
+	background: transparent url('../images/separator.png') no-repeat center center;
+}
+.separator .left, .separator .right {
+	display: block;
+	position: absolute;
+	width: 8px;
+	height: 7px;
+	background: transparent url('../images/separator_plus.png') no-repeat 0px 0px;
+}
+.separator .left {
+	left: 0px;
+}
+.separator .right {
+	right: 0px;
+}
+
+/*Main*/
+#main {
+	background: transparent !important;
+	max-width: 1024px;
+	margin:0px auto;
+	padding-top: 0px;
+}
+#pageHead {
+	text-align: center;
+	border-bottom: none !important;
+}
+#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
+	margin-bottom: 20px;
+}
+#main h1, h3.gform_title {
+	font-family: ClarendonLTStdRoman;
+	font-size: 2em;
+	font-weight: normal;
+	line-height: 1em;
+	color: #6a6a6a;
+}
+#main h2, #main .section-header h2 {
+	font-family: ClarendonLTStdRoman;
+	font-size: 2em;
+	font-weight: normal;
+	line-height: 0.5625em;
+	color: #6a6a6a;
+}
+#main h3, span.gform_description, #main .section-header h3 {
+	font-family: BryantMedium;
+	font-size: 1.2em;
+	font-weight: normal;
+	line-height: 1em;
+	color: #3cc5e6;
+}
+#main h4 {
+	font-family: ClarendonLTStdRoman;
+	font-size: 1.6em;
+	font-weight: normal;
+	line-height: 0.75em;
+	color: #6a6a6a;
+}
+#main h5 {
+	font-family: ClarendonLTStdRoman;
+	font-size: 4.5em;
+	font-weight: normal;
+	line-height: 1.5em;
+	text-align: center;
+	color: #6a6a6a;
+}
+
+/*main*/
+#main {
+	width: 100%;
+	margin: 0 auto;
+}
+#main .inside {
+	max-width: 1024px;
+	padding: 30px 0 35px;
+	margin: 0 auto;
+}
+#main .gform_wrapper {
+	padding: 0 13px;
+}
+/*#main div.gform_body {
+	padding-top: 25px;
+}*/
+#main div.gform_footer {
+	float: left;
+	/*margin-left: 14px;*/
+}
+#main li.gfield {
+	float: left;
+	position: relative;
+	width: 311px;
+	/*height: 41px;*/
+	margin-right: 14px;
+	margin-bottom: 20px;
+}
+#main li.gfield label {
+	position: absolute;
+	top: 12px;
+	left: 10px;
+	font-family: ClarendonLTStdRoman;
+	font-size: 18px;
+	/*color: #6a6a6a;*/
+}
+#main li.gfield label .gfield_required {
+	display: none;
+}
+#main li.gfield input {
+	width: 214px;
+	height: 41px;
+	padding: 0px 10px 0px 87px;
+	font-family: 微软雅黑;
+	font-size: 14px;
+	line-height: 41px;
+	/*color: #3cc5e6;*/
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	outline: none;
+}
+
+#main li.gfield input[type="text"]  {
+	border: none;
+	background: #ffffff;
+}
+
+
+#main li.gfield select {
+	border: none;
+	background: #ffffff;
+	width: 311px;
+	height: 41px;
+	padding: 8px 0px 14px 87px;
+	font-family: 微软雅黑;
+	font-size: 14px;
+	line-height: 41px;
+	/*color: #3cc5e6;*/
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	outline: none;
+}
+
+#main li.gfield textarea {
+	border: none;
+	background: #ffffff;
+	height: 21px;
+	/*width: 224px;height: 21px;*/
+	width: 874px;
+	height: 100px;
+	padding: 10px 0px 10px 87px;
+	font-family: 微软雅黑;
+	font-size: 14px;
+	line-height: 1.2;
+	/*color: #3cc5e6;*/
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	outline: none; 
+}
+/*
+#main li#field_1_3 {
+	width: 227px;
+	margin-right: 0;
+}
+#main li#field_1_3 input {
+	padding-left: 80px;
+	width: 137px;
+}*/
+#main .gform_wrapper input.button {
+	display: block;
+	width: 175px;
+	min-width: 175px;
+	height: 41px;
+	line-height: 38px;
+	font-family: BryantRegular;
+	font-size: 18px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	margin: 0 auto;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	cursor:pointer;
+}
+
+/*#main .gform_wrapper input.button {
+	display: block;
+	width: 175px;
+	min-width: 175px;
+	height: 41px;
+	line-height: 41px;
+	font-family: BryantRegular;
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: uppercase;
+	background: #6a6a6a;
+	border: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	margin: 0 auto;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none;
+	cursor:pointer;
+}
+
+#main .gform_wrapper input.button:hover {
+	background: #3cc5e6 !important;
+}*/
+
+#main .section-header h2 {
+	text-align: center;
+	padding-top: 26px;
+	line-height: 1em;
+}
+
+#main .section-header h3 {
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 6px;
+}
+
+#main div.validation_error {
+	margin: 1em 0 0;
+	color: #F86B76;
+}
+
+#main .validation_message {
+	margin: 10px 0 0;
+	color: #F86B76;
+	font-weight: 600;
+	font-size: 12px;
+	display: block;
+	background: transparent url(images/white_arrow_form.png) no-repeat 20px 0px;
+	padding-top: 11px;
+}
+#main .instruction {
+	display: block;
+	padding: 10px 25px;
+	background: #ffffff;
+	margin-top: 21px;
+}
+#main .validation_message span {
+	background: #ffffff;
+	display: block;
+	padding: 10px 25px;
+}
+
+#main div #count{
+    float: right; 
+    line-height: 40px; 
+    font-family: 微软雅黑; 
+    font-size: 16px; 
+    margin-left: 40px;
+}
+
+#main div #count span{
+    margin-left: 10px;
+}
+
+#main li.gfield .btn 
+{
+    min-width:100px;
+	width:auto;
+	padding: 0px 10px 0px 10px;
+	float:left;
+	margin-left:5px;
+}

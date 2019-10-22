@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetEstateList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strJson" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFormat" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEstateListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEstateListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropertyList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strJson" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFormat" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropertyListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPropertyListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveContract_GZ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strJson" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFormat" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveContract_GZResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveContract_GZResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveContractAdjust_GZ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strJson" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFormat" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveContractAdjust_GZResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveContractAdjust_GZResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveContractFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strJson" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFormat" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveContractFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveContractFileResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetEstateListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEstateList" />
+  </wsdl:message>
+  <wsdl:message name="GetEstateListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEstateListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPropertyList" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPropertyListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveContract_GZSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveContract_GZ" />
+  </wsdl:message>
+  <wsdl:message name="SaveContract_GZSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveContract_GZResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveContractAdjust_GZSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveContractAdjust_GZ" />
+  </wsdl:message>
+  <wsdl:message name="SaveContractAdjust_GZSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveContractAdjust_GZResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveContractFileSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveContractFile" />
+  </wsdl:message>
+  <wsdl:message name="SaveContractFileSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveContractFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEstateListHttpPostIn">
+    <wsdl:part name="strJson" type="s:string" />
+    <wsdl:part name="strFormat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEstateListHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyListHttpPostIn">
+    <wsdl:part name="strJson" type="s:string" />
+    <wsdl:part name="strFormat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyListHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SaveContract_GZHttpPostIn">
+    <wsdl:part name="strJson" type="s:string" />
+    <wsdl:part name="strFormat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaveContract_GZHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SaveContractAdjust_GZHttpPostIn">
+    <wsdl:part name="strJson" type="s:string" />
+    <wsdl:part name="strFormat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaveContractAdjust_GZHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SaveContractFileHttpPostIn">
+    <wsdl:part name="strJson" type="s:string" />
+    <wsdl:part name="strFormat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaveContractFileHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="ContractService_GZSoap">
+    <wsdl:operation name="GetEstateList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">楼盘列表</wsdl:documentation>
+      <wsdl:input message="tns:GetEstateListSoapIn" />
+      <wsdl:output message="tns:GetEstateListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">房间列表</wsdl:documentation>
+      <wsdl:input message="tns:GetPropertyListSoapIn" />
+      <wsdl:output message="tns:GetPropertyListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveContract_GZ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">成交报告保存</wsdl:documentation>
+      <wsdl:input message="tns:SaveContract_GZSoapIn" />
+      <wsdl:output message="tns:SaveContract_GZSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveContractAdjust_GZ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">变更报告保存</wsdl:documentation>
+      <wsdl:input message="tns:SaveContractAdjust_GZSoapIn" />
+      <wsdl:output message="tns:SaveContractAdjust_GZSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveContractFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">附件接口</wsdl:documentation>
+      <wsdl:input message="tns:SaveContractFileSoapIn" />
+      <wsdl:output message="tns:SaveContractFileSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ContractService_GZHttpPost">
+    <wsdl:operation name="GetEstateList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">楼盘列表</wsdl:documentation>
+      <wsdl:input message="tns:GetEstateListHttpPostIn" />
+      <wsdl:output message="tns:GetEstateListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">房间列表</wsdl:documentation>
+      <wsdl:input message="tns:GetPropertyListHttpPostIn" />
+      <wsdl:output message="tns:GetPropertyListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveContract_GZ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">成交报告保存</wsdl:documentation>
+      <wsdl:input message="tns:SaveContract_GZHttpPostIn" />
+      <wsdl:output message="tns:SaveContract_GZHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveContractAdjust_GZ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">变更报告保存</wsdl:documentation>
+      <wsdl:input message="tns:SaveContractAdjust_GZHttpPostIn" />
+      <wsdl:output message="tns:SaveContractAdjust_GZHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveContractFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">附件接口</wsdl:documentation>
+      <wsdl:input message="tns:SaveContractFileHttpPostIn" />
+      <wsdl:output message="tns:SaveContractFileHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ContractService_GZSoap" type="tns:ContractService_GZSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEstateList">
+      <soap:operation soapAction="http://tempuri.org/GetEstateList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyList">
+      <soap:operation soapAction="http://tempuri.org/GetPropertyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveContract_GZ">
+      <soap:operation soapAction="http://tempuri.org/SaveContract_GZ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveContractAdjust_GZ">
+      <soap:operation soapAction="http://tempuri.org/SaveContractAdjust_GZ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveContractFile">
+      <soap:operation soapAction="http://tempuri.org/SaveContractFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ContractService_GZSoap12" type="tns:ContractService_GZSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEstateList">
+      <soap12:operation soapAction="http://tempuri.org/GetEstateList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyList">
+      <soap12:operation soapAction="http://tempuri.org/GetPropertyList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveContract_GZ">
+      <soap12:operation soapAction="http://tempuri.org/SaveContract_GZ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveContractAdjust_GZ">
+      <soap12:operation soapAction="http://tempuri.org/SaveContractAdjust_GZ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveContractFile">
+      <soap12:operation soapAction="http://tempuri.org/SaveContractFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ContractService_GZHttpPost" type="tns:ContractService_GZHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetEstateList">
+      <http:operation location="/GetEstateList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyList">
+      <http:operation location="/GetPropertyList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveContract_GZ">
+      <http:operation location="/SaveContract_GZ" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveContractAdjust_GZ">
+      <http:operation location="/SaveContractAdjust_GZ" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveContractFile">
+      <http:operation location="/SaveContractFile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ContractService_GZ">
+    <wsdl:port name="ContractService_GZSoap" binding="tns:ContractService_GZSoap">
+      <soap:address location="http://cces3gzwy.centaline.com.cn/WebService/ContractService_GZ.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ContractService_GZSoap12" binding="tns:ContractService_GZSoap12">
+      <soap12:address location="http://cces3gzwy.centaline.com.cn/WebService/ContractService_GZ.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ContractService_GZHttpPost" binding="tns:ContractService_GZHttpPost">
+      <http:address location="http://cces3gzwy.centaline.com.cn/WebService/ContractService_GZ.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

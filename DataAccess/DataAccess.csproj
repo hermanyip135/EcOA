@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FBBAE5DD-38E8-4DE5-99BA-B92B45FA4047}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccess</RootNamespace>
+    <AssemblyName>DataAccess</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/DataAccess/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ECOA|AnyCPU'">
+    <OutputPath>bin\ECOA\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DA_OfficeAutomation_Document_Fax_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_LinkageCoordination_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_LinkageCoordination_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UtNewProj_New_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_AddressArea_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_AddressArea_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BorrowMoney_Import_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BorrowMoney_Import_Operate.cs" />
+    <Compile Include="DA_OfficeAutomation_Document_ITSpecialModify_Inherit.cs" />
+    <Compile Include="InterBase\DalDetailBase.cs" />
+    <Compile Include="Operate\DA_Department_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BorrowMoney_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BorrowMoney_Search_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BusinessTravel_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BusinessTravel_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ChangeFyq_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ChangeFyq_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CommissionAssign_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CommissionAssign_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CPNShoot_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CPNShoot_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ExemptionBadDebt_AreaComm_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ExemptionBadDebt_AreaComm_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ExemptionBadDebt_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ExemptionBadDebt_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ExemptionBadDebt_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ExemptionBadDebt_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Fax_Detail_Flow_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Fax_Detail_Flow_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Fax_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Fax_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Fax_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_FinAffairsTransfer_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_FinAffairsTransfer_Detail_Operate.cs" />
+    <Compile Include="Operate\Da_OfficeAutomation_Document_FinAffairsTransfer_HandleDetail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_FinAffairsTransfer_HandleDetail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_FinAffairsTransfer_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_FinAffairsTransfer_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_FyqBackProject_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_FyqBackProject_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_FyqNotUnProject_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_FyqNotUnProject_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_HousingFundAdjustment_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_HousingFundAdjustment_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_HousingFundBaseAdjust_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_HousingFundBaseAdjust_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_HousingFundBaseAdjust_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_HousingFundBaseAdjust_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_HousingFundChange_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_HousingFundChange_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Image_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Image_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ITSpecialModify_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ITTest_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Loan_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Loan_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Loan_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Loan_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_OndutyVacation_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_OndutyVacation_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PartTime_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Print_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Print_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjectOfficialSeal_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjectOfficialSeal_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjectOfficialSeal_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjectOfficialSeal_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjGeneralApply_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjGeneralApply_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Propaganda_Project_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Propaganda_Score_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Propaganda_Score_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_RecruitHRResult_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Recruit_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Recruit_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_StaffDataCheck_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_StaffDataCheck_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SYSPWDTransfer_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_TaiwanDeclare_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_TaiwanDeclare_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UIReq_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UIReq_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UtContract_PlanScale_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UtContract_PlanScale_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UtNewProj_New_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UtNewProj_New_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UtNewProj_New_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_WYRecruit_Operate.cs" />
+    <Compile Include="InterBase\DalBase.cs" />
+    <Compile Include="InterBase\IDal.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CallCenterFeasibility_Competitors_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CallCenterFeasibility_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CallCenterFeasibility_Menber_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CallCenterFeasibility_YearRent_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_HoldCoisn_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_HoldCoisn_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_OpenProve_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_OpenProve_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_OpenProve_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_OpenProve_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PartTime_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PartTime_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Record_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Record_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SolHold_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SolHold_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SpecialAdd_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SpecialAdd_Operate.cs" />
+    <Compile Include="InterBase\DbHelperSQL.cs" />
+    <Compile Include="Operate\DA_CCES_Inherit.cs" />
+    <Compile Include="Operate\DA_Dic_OfficeAutomation_Document_Inherit.cs" />
+    <Compile Include="Operate\DA_Dic_OfficeAutomation_Document_Operate.cs" />
+    <Compile Include="Operate\DA_Dic_OfficeAutomation_FlowState_Operate.cs" />
+    <Compile Include="Operate\DA_Employee_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Attach_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Attach_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_AfterCommission_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_AfterCommission_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Assets_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BorrowMoney_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BorrowMoney_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BranchContract_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BranchContract_LeaseTerm_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BranchContract_LeaseTerm_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BranchContract_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BranchContract_Statistical_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BranchContract_Statistical_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Budgetab_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Budgetab_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BuyBudiData_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BuyBudiData_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ChangeData_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ChangeData_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ChangeData_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ChangeData_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ChangeNS_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ChangeNS_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CommissionAdjust_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CommissionAdjust_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CommissionAdjust_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CommissionAdjust_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CommissionOfMonth_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CommissionOfMonth_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CommissionOfMonth_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CommissionOfMonth_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ContractTerms_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ContractTerms_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CostOfActivity_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CostOfActivity_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_EBAdjuct_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_EBAdjuct_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_EBAdjuct_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_EBAdjuct_LeaseTerm_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_EBAdjuct_LeaseTerm_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_EBAdjuct_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_EBAdjuct_Statistical_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_EBAdjuct_Statistical_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Feasibility_BuildingSituation_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Feasibility_BuildingSituation_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Feasibility_Competitors_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Feasibility_Competitors_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Feasibility_DealOfRecord_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Feasibility_DealOfRecord_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Feasibility_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Feasibility_Menber_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Feasibility_Menber_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Feasibility_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Feasibility_Statistical_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Feasibility_Statistical_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Feasibility_YearRent_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Feasibility_YearRent_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Flow_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Flow_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_FurtherEducation_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_FurtherEducation_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_GeneralApply_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_GeneralApply_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_GeneralApply_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_GeneralApply_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Guarantee_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Guarantee_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ITPower_Detail_Apply_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ITPower_Detail_Apply_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ITPower_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ITPower_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ITPower_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ITPower_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_LastSure_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_LegalCommission_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_LegalCommission_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Maintenance_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Maintenance_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Marketing_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Marketing_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_NetSign_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_NetSign_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_NewPersInterests_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_NewPersInterests_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_NewPersInterests_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_NewPersInterests_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_OfficialSeal_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_OfficialSeal_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_OfficialSeal_FileSpecies_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_OfficialSeal_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_OfficialSeal_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_OweSubmit_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_OweSubmit_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PortAssessment_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PortAssessment_Menber_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PortAssessment_Menber_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PortAssessment_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjBaComm_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjBaComm_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjBaComm_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjBaComm_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjectCarAllowance_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjectCarAllowance_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjReDaAdd_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjReDaAdd_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Propaganda_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Propaganda_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Propaganda_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Propaganda_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Propaganda_Statistical_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Propaganda_Statistical_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewRd_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewRd_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewRd_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewRd_LeaseTerm_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewRd_LeaseTerm_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewRd_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewRd_Statistical_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewRd_Statistical_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewTwo_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewTwo_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewTwo_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewTwo_LeaseTerm_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewTwo_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewTwo_Statistical_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewTwo_Statistical_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PunishTerms_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PunishTerms_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PunishTerms_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PullafewTwo_LeaseTerm_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PunishTerms_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Repair_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Repair_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Repair_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Repair_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Secondment_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Secondment_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SignedG_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SignedG_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SocialSecurity_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SocialSecurity_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SpecialAdd_Statistical_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SpecialAdd_Statistical_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SpecialCase_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SpecialCase_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SpecialNumber_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SpecialNumber_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SysLogist_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SysLogist_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SysReq_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_TotalRev_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_TotalRev_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Tourism_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Tourism_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UtContract_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UtContract_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UtContract_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UtContract_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UtNewProj_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UtNewProj_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UtNewProj_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UtNewProj_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_WirelessFixedLine_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_WirelessFixedLine_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_WirelessFixedLine_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_WirelessFixedLine_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_WrongSave_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_WrongSave_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Flow_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Flow_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Log_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Log_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Main_Inherit.cs" />
+    <Compile Include="InterBase\ICommonDBAccess.cs" />
+    <Compile Include="InterBase\SqlInteractionBase.cs" />
+    <Compile Include="Operate\DA_Login_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Main_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_MCOA_Attach_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Message_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ReduceComm_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ReduceComm_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CoopCost_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UndertakeProj_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UndertakeProj_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ExtraBonus_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ExtraBonus_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ResumeBusi_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_WithdrawShop_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SuspendBusi_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjAgentClause_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjWorkCloth_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjDormSubsiby_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjRepoData_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjLinkRepoData_Operate.cs" />
+    <Compile Include="Operate\DA_PMS_Project_Main_Inherit.cs" />
+    <Compile Include="Operate\DA_PMS_Project_Main_Operate.cs" />
+    <Compile Include="Operate\DA_SecondOR_Inherit.cs" />
+    <Compile Include="Operate\DA_User_Permission_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SysReq_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SysPower_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SysPower_Operate.cs" />
+    <Compile Include="Operate\DA_Dic_OfficeAutomation_SoftSystem_Operate.cs" />
+    <Compile Include="Operate\DA_Dic_OfficeAutomation_ITStaff_Operate.cs" />
+    <Compile Include="Operate\DA_Dic_OfficeAutomation_ApplyDetail_Operate.cs" />
+    <Compile Include="Operate\DA_Dic_OfficeAutomation_ApplyType_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SysPower_Detail_Apply_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SysPower_Detail_Apply_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SysPower_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SysPower_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Agent_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Agent_Inherit.cs" />
+    <Compile Include="Operate\DA_Dic_OfficeAutomation_AssetType_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Scrap_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Scrap_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Scrap_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_Scrap_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Message_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_AssetTransfer_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_AssetTransfer_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_AssetTransfer_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_AssetTransfer_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_DealOffice_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_DealOffice_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ITBuy_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ITBuy_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PersInterests_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_PersInterests_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BuyBuilding_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BuyBuilding_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CarAllowance_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CarAllowance_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BackComm_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BackComm_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BackComm_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BackComm_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BadDebts_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BadDebts_Detail_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BadDebts_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_BadDebts_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ReduceComm_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ReduceComm_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjCost_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjCost_Operate.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_CoopCost_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UndertakeProj_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_UndertakeProj_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ExtraBonus_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ExtraBonus_Detail_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ResumeBusi_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_WithdrawShop_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SuspendBusi_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjAgentClause_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjWorkCloth_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjDormSubsiby_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjRepoData_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ProjLinkRepoData_Inherit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_ITTest_Operate.cs" />
+    <Compile Include="Operate\TypeUnit.cs" />
+    <Compile Include="Operate\DA_OfficeAutomation_Document_SYSPWDTransfer_Operate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\KDHR\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SendMessage\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsMCOAWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_CCES\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{a4074213-b193-496b-8c22-347c7bf3f67c}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataEntity\DataEntity.csproj">
+      <Project>{4F3FAFF9-B5FC-4DCF-BA3E-85010B428E05}</Project>
+      <Name>DataEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SqlDatabase\SqlDatabase.csproj">
+      <Project>{A66C35E0-2D2E-463F-83EB-D0512F8F04CA}</Project>
+      <Name>SqlDatabase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\KDHR\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\KDHR\Service.wsdl" />
+    <None Include="Web References\wsMCOAWS\MCOAWS.wsdl" />
+    <None Include="Web References\wsMCOAWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS_CCES\ContractService_GZ.wsdl" />
+    <None Include="Web References\WS_CCES\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.1.1.25/LCS/LCSService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SendMessage\</RelPath>
+      <UpdateFromURL>http://10.1.1.25/LCS/LCSService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataAccess_SendMessage_LCSService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://cces3gzwy.centaline.com.cn/WebService/ContractService_GZ.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_CCES\</RelPath>
+      <UpdateFromURL>http://cces3gzwy.centaline.com.cn/WebService/ContractService_GZ.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataAccess_WS_CCES_ContractService_GZ</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://gzs-terminal01/HumanWS/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\KDHR\</RelPath>
+      <UpdateFromURL>http://gzs-terminal01/HumanWS/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataAccess_KDHR_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://wap.gzcentaline.com.cn/MCOA_MobileAppWS/MCOAWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsMCOAWS\</RelPath>
+      <UpdateFromURL>http://wap.gzcentaline.com.cn/MCOA_MobileAppWS/MCOAWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataAccess_wsMCOAWS_McoaWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\SendMessage\LCSService.disco" />
+    <None Include="Web References\SendMessage\LCSService.wsdl" />
+    <None Include="Web References\SendMessage\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Multi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\wsMCOAWS\MCOAWS.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WS_CCES\ContractService_GZ.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\KDHR\Service.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

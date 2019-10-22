@@ -1,0 +1,15 @@
+D:\Wrok\ECOA\sourcecode\DataEntity\bin\Release\DataEntity.dll
+D:\Wrok\ECOA\sourcecode\DataEntity\bin\Release\DataEntity.pdb
+D:\Wrok\ECOA\sourcecode\DataEntity\obj\Release\DataEntity.dll
+D:\Wrok\ECOA\sourcecode\DataEntity\obj\Release\DataEntity.pdb
+D:\Wrok\ECOA\sourcecode\DataEntity\obj\Release\DataEntity.csprojResolveAssemblyReference.cache
+E:\files\ZYCode\ECOA\Terminal01\DataEntity\bin\Release\DataEntity.dll
+E:\files\ZYCode\ECOA\Terminal01\DataEntity\bin\Release\DataEntity.pdb
+E:\files\ZYCode\ECOA\Terminal01\DataEntity\obj\Release\DataEntity.csprojResolveAssemblyReference.cache
+E:\files\ZYCode\ECOA\Terminal01\DataEntity\obj\Release\DataEntity.dll
+E:\files\ZYCode\ECOA\Terminal01\DataEntity\obj\Release\DataEntity.pdb
+E:\files\ZYCode\ECOA\Local\DataEntity\bin\Release\DataEntity.dll
+E:\files\ZYCode\ECOA\Local\DataEntity\bin\Release\DataEntity.pdb
+E:\files\ZYCode\ECOA\Local\DataEntity\obj\Release\DataEntity.csprojResolveAssemblyReference.cache
+E:\files\ZYCode\ECOA\Local\DataEntity\obj\Release\DataEntity.dll
+E:\files\ZYCode\ECOA\Local\DataEntity\obj\Release\DataEntity.pdb
